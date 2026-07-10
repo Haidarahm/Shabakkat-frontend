@@ -3,14 +3,16 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import Chip from "@/components/ui/Chip";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import { accentText } from "@/lib/colorMap";
+import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
 export default function ServiceDetailBlock({ service }: { service: ServiceDetail }) {
   const textColumn = (
     <div>
       <Eyebrow>{`${service.index} — ${service.eyebrow}`}</Eyebrow>
-      <h2 className="mt-3.5 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]">
-        {service.title}
-      </h2>
+      <AnimatedTitle
+        text={service.title}
+        className="mt-3.5 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]"
+      />
       <p className="mt-[18px] text-[15.5px] leading-[1.75] text-text-body">{service.description}</p>
 
       {service.businessValue && (

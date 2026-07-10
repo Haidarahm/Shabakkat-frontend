@@ -5,6 +5,7 @@ import JumpNav from "@/components/services/JumpNav";
 import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
 import SimpleItemGrid from "@/components/services/SimpleItemGrid";
 import { servicesDetail, professionalServices, equipmentSupply } from "@/data/servicesDetail";
+import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
 export default function Services() {
   return (
@@ -17,9 +18,11 @@ export default function Services() {
         heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
-        <h1 className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]">
-          Full-spectrum telecom &amp; ICT services
-        </h1>
+        <AnimatedTitle
+          as="h1"
+          text="Full-spectrum telecom & ICT services"
+          className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
+        />
         <p className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]">
           From civil works to cybersecurity — everything an operator or enterprise needs to build, run, and protect
           their network.

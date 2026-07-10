@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
 interface FinalCtaProps {
   title: string;
@@ -16,9 +17,10 @@ export default function FinalCta({
   return (
     <div className="section-px bg-bg-tint py-14 text-center sm:py-16 lg:py-[90px]">
       <div className="mx-auto max-w-[720px]">
-        <h2 className="font-heading text-[24px] font-semibold uppercase text-navy sm:text-[28px] lg:text-[34px]">
-          {title}
-        </h2>
+        <AnimatedTitle
+          text={title}
+          className="font-heading text-[24px] font-semibold uppercase text-navy sm:text-[28px] lg:text-[34px]"
+        />
         <p className="mt-4 mb-7 text-base text-text-body-alt">{description}</p>
         <Button href={ctaHref} size="lg">
           {ctaLabel}

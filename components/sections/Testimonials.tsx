@@ -1,5 +1,6 @@
 import { testimonials, awards } from "@/data/testimonials";
 import { accentText } from "@/lib/colorMap";
+import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
 export default function Testimonials() {
   return (
@@ -8,9 +9,10 @@ export default function Testimonials() {
         <div className="h-[3px] w-[26px] bg-red" />
         WHAT OUR CLIENTS SAY
       </div>
-      <h2 className="mb-9 mt-4 font-heading text-[24px] font-semibold uppercase text-navy sm:text-[28px] lg:text-[34px]">
-        Client testimonials
-      </h2>
+      <AnimatedTitle
+        text="Client testimonials"
+        className="mb-9 mt-4 font-heading text-[24px] font-semibold uppercase text-navy sm:text-[28px] lg:text-[34px]"
+      />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
         {testimonials.map((t) => (
           <div key={t.author} className="rounded border border-border bg-white p-7">

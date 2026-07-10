@@ -19,6 +19,7 @@ import HseSection from "@/components/sections/HseSection";
 import Testimonials from "@/components/sections/Testimonials";
 import FinalCta from "@/components/sections/FinalCta";
 import Button from "@/components/ui/Button";
+import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
 export default function Home() {
   return (
@@ -31,9 +32,11 @@ export default function Home() {
         heightClassName="h-[520px] min-h-[520px] sm:h-[600px] sm:min-h-[600px] lg:h-screen lg:min-h-[640px]"
       >
         <div className="mx-auto mb-5 h-[3px] w-[60px] bg-red" />
-        <h1 className="mx-auto max-w-[960px] font-heading text-[28px] font-semibold uppercase leading-[1.2] text-white sm:text-[36px] lg:text-[50px] lg:leading-[1.16]">
-          Shabakkat serves operators &amp; enterprises with a full spectrum of ICT services
-        </h1>
+        <AnimatedTitle
+          as="h1"
+          text="Shabakkat serves operators & enterprises with a full spectrum of ICT services"
+          className="mx-auto max-w-[960px] font-heading text-[28px] font-semibold uppercase leading-[1.2] text-white sm:text-[36px] lg:text-[50px] lg:leading-[1.16]"
+        />
         <p className="mx-auto mt-4 max-w-[640px] text-sm text-white/85 sm:text-base lg:text-[17px]">
           Your partner for network rollout, managed services, and turnkey telecom solutions across the Middle East
           and Africa since 2005.

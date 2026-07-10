@@ -6,6 +6,7 @@ import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import ContactForm from "@/components/contact/ContactForm";
 import OfficeCard from "@/components/contact/OfficeCard";
 import { headOffice, regionalOffices } from "@/data/offices";
+import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
 export default function Contact() {
   return (
@@ -19,9 +20,11 @@ export default function Contact() {
         align="bottom"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
-        <h1 className="font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]">
-          Get in touch
-        </h1>
+        <AnimatedTitle
+          as="h1"
+          text="Get in touch"
+          className="font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
+        />
         <p className="mt-2.5 text-sm text-white/85 lg:text-[15.5px]">
           Talk to our team about your network rollout, managed services, or ICT project.
         </p>
@@ -61,9 +64,10 @@ export default function Contact() {
 
       <div className="section-px bg-bg-tint py-14 text-center sm:py-16 lg:py-20">
         <div className="mx-auto max-w-[640px]">
-          <h2 className="font-heading text-[22px] font-semibold uppercase text-navy sm:text-[26px] lg:text-[30px]">
-            Let&apos;s build something reliable, together
-          </h2>
+          <AnimatedTitle
+            text="Let's build something reliable, together"
+            className="font-heading text-[22px] font-semibold uppercase text-navy sm:text-[26px] lg:text-[30px]"
+          />
           <a
             href="mailto:info@shabakkat.com"
             className="mt-3.5 inline-block rounded-[2px] bg-navy px-8 py-[15px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-navy-dark"
