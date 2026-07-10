@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --raw-navy: #0b3d66;
+  --raw-navy-dark: #082c4d;
+  --raw-cyan: #009fce;
+  --raw-red: #e63946;
+  --raw-bg: #ffffff;
+  --raw-bg-muted: #f6f7f8;
+  --raw-bg-tint: #eaf4fb;
+  --raw-border: #e7e8e9;
+  --raw-border-tint: #dcebf5;
+  --raw-text-body: #4a4f54;
+  --raw-text-body-alt: #3d4a56;
+  --raw-text-muted: #8a8f94;
+  --raw-text-subtle: #5a6672;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-navy: var(--raw-navy);
+  --color-navy-dark: var(--raw-navy-dark);
+  --color-cyan: var(--raw-cyan);
+  --color-red: var(--raw-red);
+  --color-bg-muted: var(--raw-bg-muted);
+  --color-bg-tint: var(--raw-bg-tint);
+  --color-border: var(--raw-border);
+  --color-border-tint: var(--raw-border-tint);
+  --color-text-body: var(--raw-text-body);
+  --color-text-body-alt: var(--raw-text-body-alt);
+  --color-text-muted: var(--raw-text-muted);
+  --color-text-subtle: var(--raw-text-subtle);
+  --font-heading: var(--font-oswald);
+  --font-body: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: var(--raw-navy);
+  background: var(--raw-bg);
+  font-family: var(--font-body), sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--raw-navy);
+  color: #fff;
 }

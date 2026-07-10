@@ -1,0 +1,53 @@
+import SectionHeading from "@/components/ui/SectionHeading";
+import { timeline } from "@/data/timeline";
+import { accentBorder, accentText, accentBg } from "@/lib/colorMap";
+
+const tagPillClasses = (color: "red" | "cyan" | "navy") =>
+  `rounded-full px-2.5 py-[3px] font-heading text-[10px] tracking-[0.05em] ${accentText[color]} ${accentBg[color]}/10`;
+
+export default function Timeline() {
+  return (
+    <div className="px-14 py-20">
+      <SectionHeading eyebrow="OUR JOURNEY" title="Mega projects timeline" />
+      <div className="relative mx-auto mt-5 max-w-[1080px]">
+        <div className="absolute bottom-1 left-1/2 top-1 w-0.5 -translate-x-1/2 bg-[#ECECEC]" />
+        {timeline.map((entry) => (
+          <div key={entry.year} className="relative grid grid-cols-[1fr_64px_1fr] items-center py-[26px]">
+            <div className={`pr-8 ${entry.side === "left" ? "text-right" : ""}`}>
+              {entry.side === "left" && (
+                <div>
+                  <div className="flex flex-wrap items-center justify-end gap-2.5">
+                    <div className="text-xs text-text-muted">{entry.country}</div>
+                    <div className={tagPillClasses(entry.color)}>{entry.tag}</div>
+                    <div className="font-heading text-base text-navy">{entry.client}</div>
+                  </div>
+                  <div className="mt-2 font-heading text-[14.5px] text-text-body-alt">{entry.title}</div>
+                  <div className="mt-1.5 text-[13.5px] leading-[1.6] text-text-muted">{entry.description}</div>
+                </div>
+              )}
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className={`whitespace-nowrap font-heading text-[13px] ${accentText[entry.color]}`}>
+                {entry.year}
+              </div>
+              <div className={`h-3.5 w-3.5 rounded-full border-[3px] bg-white ${accentBorder[entry.color]}`} />
+            </div>
+            <div className={`pl-8 ${entry.side === "right" ? "text-left" : ""}`}>
+              {entry.side === "right" && (
+                <div>
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <div className="font-heading text-base text-navy">{entry.client}</div>
+                    <div className={tagPillClasses(entry.color)}>{entry.tag}</div>
+                    <div className="text-xs text-text-muted">{entry.country}</div>
+                  </div>
+                  <div className="mt-2 font-heading text-[14.5px] text-text-body-alt">{entry.title}</div>
+                  <div className="mt-1.5 text-[13.5px] leading-[1.6] text-text-muted">{entry.description}</div>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

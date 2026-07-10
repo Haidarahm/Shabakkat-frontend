@@ -1,0 +1,56 @@
+import SectionHeading from "@/components/ui/SectionHeading";
+import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
+
+const workforce = [
+  { label: "Engineers", value: 85, color: "bg-red" },
+  { label: "Management", value: 5, color: "bg-cyan" },
+  { label: "Business Dev.", value: 5, color: "bg-navy" },
+  { label: "Marketing & Sales", value: 5, color: "bg-text-muted" },
+];
+
+export default function CompanyOverview() {
+  return (
+    <div className="grid grid-cols-2 items-center gap-16 px-14 py-20">
+      <div>
+        <SectionHeading eyebrow="WHO WE ARE" title="A comprehensive telecommunications solution provider" />
+        <p className="mt-5 text-base leading-[1.75] text-text-body">
+          Established in 2005, Shabakkat has serviced Telecom Operators, Vendors, Enterprises, and Governmental
+          Sectors across 13 countries in the Middle East and Africa. With headquarters in Kuwait City and regional
+          offices in Saudi Arabia, Iraq, and Morocco, our team of 800+ professionals has executed hundreds of
+          projects for the region&apos;s most prominent Communications Service Providers.
+        </p>
+        <p className="mt-4 text-base leading-[1.75] text-text-body">
+          We continually strive to understand our clients&apos; needs, address their concerns, and empower their
+          businesses with premium, tailored services — capitalizing on our knowledge base across Managed Services,
+          Consultation and Resourcing, Professional Services, Full Turnkey Site Build, and more.
+        </p>
+        <div className="mt-7 flex gap-3.5">
+          <div className="border-l-[3px] border-red bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
+            HQ: Kuwait City
+          </div>
+          <div className="border-l-[3px] border-cyan bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
+            4 Regional Offices
+          </div>
+        </div>
+        <div className="mt-7">
+          <div className="mb-3 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
+            Our 800+ Workforce
+          </div>
+          <div className="flex h-3.5 overflow-hidden rounded-[3px]">
+            {workforce.map((w) => (
+              <div key={w.label} className={w.color} style={{ width: `${w.value}%` }} />
+            ))}
+          </div>
+          <div className="mt-3 flex flex-wrap gap-[18px] text-[12.5px] text-text-body">
+            {workforce.map((w) => (
+              <div key={w.label}>
+                <span className="font-heading text-navy">{w.value}%</span> {w.label}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <PhotoPlaceholder label="PHOTO — corporate HQ / office team collaboration" className="h-[440px] rounded" />
+    </div>
+  );
+}
