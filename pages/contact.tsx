@@ -13,15 +13,21 @@ export default function Contact() {
       title="Contact"
       description="Talk to the Shabakkat team about your network rollout, managed services, or ICT project."
     >
-      <Hero photoLabel="PHOTO — Shabakkat corporate office, full-bleed" heightClassName="h-[300px]" align="bottom">
+      <Hero
+        photoLabel="PHOTO — Shabakkat corporate office, full-bleed"
+        heightClassName="h-[240px] sm:h-[270px] lg:h-[300px]"
+        align="bottom"
+      >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
-        <h1 className="font-heading text-[38px] font-semibold uppercase text-white">Get in touch</h1>
-        <p className="mt-2.5 text-[15.5px] text-white/85">
+        <h1 className="font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]">
+          Get in touch
+        </h1>
+        <p className="mt-2.5 text-sm text-white/85 lg:text-[15.5px]">
           Talk to our team about your network rollout, managed services, or ICT project.
         </p>
       </Hero>
 
-      <div className="grid grid-cols-2 gap-16 px-14 py-[72px]">
+      <div className="section-px section-py grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <SectionHeading eyebrow="SEND AN INQUIRY" title="Tell us about your project" />
           <ContactForm />
@@ -40,9 +46,9 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="bg-bg-muted px-14 py-[72px]">
+      <div className="section-px section-py bg-bg-muted">
         <SectionHeading eyebrow="OUR OFFICES" title="Regional presence" />
-        <div className="mt-8 grid grid-cols-3 gap-5">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {regionalOffices.map((office) => (
             <OfficeCard key={office.name} office={office} />
           ))}
@@ -53,9 +59,9 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="bg-bg-tint px-14 py-20 text-center">
+      <div className="section-px bg-bg-tint py-14 text-center sm:py-16 lg:py-20">
         <div className="mx-auto max-w-[640px]">
-          <h2 className="font-heading text-[30px] font-semibold uppercase text-navy">
+          <h2 className="font-heading text-[22px] font-semibold uppercase text-navy sm:text-[26px] lg:text-[30px]">
             Let&apos;s build something reliable, together
           </h2>
           <a

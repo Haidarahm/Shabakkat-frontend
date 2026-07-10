@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   return (
     <form className="mt-7 flex flex-col gap-5" onSubmit={handleSubmit}>
-      <div className="grid grid-cols-2 gap-[18px]">
+      <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2">
         <div>
           <label className={labelClasses} htmlFor="name">
             Full Name
@@ -62,7 +62,7 @@ export default function ContactForm() {
           <input className={inputClasses} type="text" id="company" name="company" placeholder="Company name" />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-[18px]">
+      <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2">
         <div>
           <label className={labelClasses} htmlFor="email">
             Email

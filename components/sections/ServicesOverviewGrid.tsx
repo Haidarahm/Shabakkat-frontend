@@ -6,14 +6,14 @@ import { servicesOverview } from "@/data/servicesOverview";
 
 export default function ServicesOverviewGrid() {
   return (
-    <div className="bg-bg-muted px-14 py-20">
-      <div className="flex items-end justify-between">
+    <div className="section-px section-py bg-bg-muted">
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
         <SectionHeading eyebrow="WHAT WE DO" title="Full-spectrum services" />
         <Button href="/services" variant="outline">
           VIEW ALL SERVICES
         </Button>
       </div>
-      <div className="mt-9 grid grid-cols-5 gap-4">
+      <div className="mt-9 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
         {servicesOverview.map((service) => (
           <Link
             key={service.title}

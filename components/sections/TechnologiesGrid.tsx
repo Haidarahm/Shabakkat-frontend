@@ -4,9 +4,9 @@ import { accentText } from "@/lib/colorMap";
 
 export default function TechnologiesGrid() {
   return (
-    <div className="bg-bg-muted px-14 py-20">
+    <div className="section-px section-py bg-bg-muted">
       <SectionHeading eyebrow="MULTI-VENDOR, MULTI-TECHNOLOGY" title="Technologies & expertise" />
-      <div className="mt-8 grid grid-cols-4 gap-5">
+      <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {technologies.map((tech) => (
           <div key={tech.title} className="rounded border border-border bg-white p-6">
             <div className={`font-heading text-[15px] ${accentText[tech.color]}`}>{tech.title}</div>

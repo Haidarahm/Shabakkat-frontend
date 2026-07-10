@@ -47,7 +47,7 @@ export default function JumpNav() {
       onMouseUp={endDrag}
       onMouseLeave={endDrag}
       onClickCapture={onClickCapture}
-      className="sticky top-[84px] z-[90] flex cursor-grab select-none gap-2.5 overflow-x-auto border-b border-border bg-bg-muted px-14 py-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="section-px sticky top-[72px] z-[90] flex cursor-grab select-none gap-2.5 overflow-x-auto border-b border-border bg-bg-muted py-4 [-ms-overflow-style:none] [scrollbar-width:none] lg:top-[84px] [&::-webkit-scrollbar]:hidden"
     >
       {jumpNavLinks.map((link) => (
         <a

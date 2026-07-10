@@ -10,7 +10,7 @@ const workforce = [
 
 export default function CompanyOverview() {
   return (
-    <div className="grid grid-cols-2 items-center gap-16 px-14 py-20">
+    <div className="section-px section-py grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div>
         <SectionHeading eyebrow="WHO WE ARE" title="A comprehensive telecommunications solution provider" />
         <p className="mt-5 text-base leading-[1.75] text-text-body">
@@ -50,7 +50,10 @@ export default function CompanyOverview() {
           </div>
         </div>
       </div>
-      <PhotoPlaceholder label="PHOTO — corporate HQ / office team collaboration" className="h-[440px] rounded" />
+      <PhotoPlaceholder
+        label="PHOTO — corporate HQ / office team collaboration"
+        className="h-[260px] rounded sm:h-[340px] lg:h-[440px]"
+      />
     </div>
   );
 }

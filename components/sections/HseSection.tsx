@@ -9,8 +9,11 @@ const items = [
 
 export default function HseSection() {
   return (
-    <div className="grid grid-cols-2 items-center gap-14 px-14 py-20">
-      <PhotoPlaceholder label="PHOTO — engineers in field, safety gear" className="h-[340px] rounded" />
+    <div className="section-px section-py grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+      <PhotoPlaceholder
+        label="PHOTO — engineers in field, safety gear"
+        className="h-[220px] rounded sm:h-[280px] lg:h-[340px]"
+      />
       <div>
         <SectionHeading eyebrow="HSE COMMITMENT" title="Health, safety & environment" />
         <p className="mt-4 text-[15.5px] leading-[1.75] text-text-body">

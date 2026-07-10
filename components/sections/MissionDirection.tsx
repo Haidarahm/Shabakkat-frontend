@@ -8,11 +8,11 @@ const directionPoints = [
 
 export default function MissionDirection() {
   return (
-    <div className="bg-bg-muted px-14 py-20">
-      <div className="grid grid-cols-2 gap-14">
-        <div className="rounded border border-border-tint bg-bg-tint p-12">
+    <div className="section-px section-py bg-bg-muted">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="rounded border border-border-tint bg-bg-tint p-6 sm:p-8 lg:p-12">
           <Eyebrow>OUR MISSION</Eyebrow>
-          <h2 className="mt-[18px] font-heading text-[30px] font-semibold uppercase text-navy">
+          <h2 className="mt-[18px] font-heading text-[22px] font-semibold uppercase text-navy sm:text-[26px] lg:text-[30px]">
             Enabling a smarter connected world
           </h2>
           <p className="mt-[18px] text-[15.5px] leading-[1.75] text-text-body-alt">
@@ -27,7 +27,7 @@ export default function MissionDirection() {
         </div>
         <div>
           <Eyebrow>OUR DIRECTION</Eyebrow>
-          <h2 className="mt-4 font-heading text-[34px] font-semibold uppercase leading-[1.15] text-navy">
+          <h2 className="mt-4 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]">
             People, technology, and process
           </h2>
           <p className="mt-4 text-[15.5px] leading-[1.7] text-text-body">

@@ -16,13 +16,13 @@ const roleAccent: Record<(typeof footprintLocations)[number]["role"], string> = 
 
 export default function GlobalFootprint() {
   return (
-    <div className="bg-bg-muted px-14 py-20">
+    <div className="section-px section-py bg-bg-muted">
       <SectionHeading
         eyebrow="WHERE WE OPERATE"
         title="Global footprint"
         description="Headquartered in Kuwait City with regional offices in Saudi Arabia, Iraq, and Morocco, Shabakkat has delivered projects across 13 countries throughout the Middle East and Africa."
       />
-      <div className="mt-7 grid grid-cols-[1.5fr_1fr] items-start gap-9">
+      <div className="mt-7 grid grid-cols-1 items-start gap-9 lg:grid-cols-[1.5fr_1fr]">
         <div>
           <PhotoPlaceholder
             label="MAP — Middle East & Africa footprint"
@@ -37,7 +37,7 @@ export default function GlobalFootprint() {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-2 content-start gap-2.5">
+        <div className="grid grid-cols-1 content-start gap-2.5 sm:grid-cols-2">
           {footprintLocations.map((loc) => (
             <div
               key={loc.name}

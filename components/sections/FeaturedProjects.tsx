@@ -5,9 +5,9 @@ import { featuredProjects } from "@/data/featuredProjects";
 
 export default function FeaturedProjects() {
   return (
-    <div className="bg-bg-muted px-14 py-20">
+    <div className="section-px section-py bg-bg-muted">
       <SectionHeading eyebrow="FEATURED PROJECTS" title="Proof at scale" />
-      <div className="mt-8 grid grid-cols-3 gap-5">
+      <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {featuredProjects.map((project) => (
           <Link
             key={project.title}

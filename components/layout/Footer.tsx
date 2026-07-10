@@ -5,8 +5,8 @@ const socials = ["in", "f", "x"];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-bg-muted px-14 pb-7 pt-16 text-text-subtle">
-      <div className="grid grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
+    <footer className="section-px border-t border-border bg-bg-muted pb-7 pt-10 text-text-subtle lg:pt-16">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-10">
         <div>
           <div className="font-heading text-xl font-semibold uppercase text-navy">Shabakkat</div>
           <p className="mt-4 max-w-[280px] text-[13.5px] leading-[1.7]">
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-10 flex justify-between border-t border-border pt-[22px] text-[12.5px]">
+      <div className="mt-10 flex flex-col gap-2 border-t border-border pt-[22px] text-[12.5px] sm:flex-row sm:justify-between sm:gap-0">
         <div>© 2026 Shabakkat. All rights reserved.</div>
         <div>Privacy Policy</div>
       </div>

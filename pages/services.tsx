@@ -12,12 +12,15 @@ export default function Services() {
       title="Services"
       description="Full-spectrum telecom & ICT services — from civil works to cybersecurity — for operators and enterprises."
     >
-      <Hero photoLabel="PHOTO — engineers & ICT infrastructure, full-bleed" heightClassName="h-[360px]">
+      <Hero
+        photoLabel="PHOTO — engineers & ICT infrastructure, full-bleed"
+        heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
+      >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
-        <h1 className="mx-auto mb-2.5 font-heading text-[38px] font-semibold uppercase text-white">
+        <h1 className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]">
           Full-spectrum telecom &amp; ICT services
         </h1>
-        <p className="mx-auto max-w-[640px] text-[15.5px] text-white/85">
+        <p className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]">
           From civil works to cybersecurity — everything an operator or enterprise needs to build, run, and protect
           their network.
         </p>

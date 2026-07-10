@@ -19,7 +19,7 @@ export default function Hero({ photoLabel, heightClassName, align = "center", ch
         }}
       />
       <div
-        className={`absolute inset-0 z-10 flex flex-col px-14 text-center ${
+        className={`section-px absolute inset-0 z-10 flex flex-col text-center ${
           align === "center" ? "items-center justify-center" : "items-start justify-end pb-9 text-left"
         }`}
       >

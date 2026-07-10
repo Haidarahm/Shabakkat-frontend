@@ -7,6 +7,7 @@ interface ButtonProps {
   variant?: "primary" | "outline" | "outline-light";
   size?: "md" | "lg";
   className?: string;
+  onClick?: () => void;
 }
 
 const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
@@ -26,10 +27,12 @@ export default function Button({
   variant = "primary",
   size = "md",
   className = "",
+  onClick,
 }: ButtonProps) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={`inline-block rounded-[2px] font-heading text-sm tracking-[0.05em] transition-colors ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
     >
       {children}

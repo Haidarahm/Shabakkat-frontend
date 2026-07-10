@@ -4,13 +4,13 @@ import { competitors } from "@/data/competitors";
 
 export default function CompetitiveLandscape() {
   return (
-    <div className="px-14 py-20">
+    <div className="section-px section-py">
       <SectionHeading
         eyebrow="REGIONAL LANDSCAPE"
         title="Positioned among the Gulf's telecom infrastructure specialists"
         description="The GCC's telecom infrastructure and managed-services market includes established regional players. Shabakkat differentiates through its full-spectrum portfolio — spanning rollout, managed services, NOC, power, cybersecurity, and revenue assurance — under a single accountable partner."
       />
-      <div className="mt-8 grid grid-cols-3 gap-5">
+      <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {competitors.map((c) => (
           <Card key={c.name} className="p-6">
             <div className="font-heading text-[16px] text-navy">{c.name}</div>

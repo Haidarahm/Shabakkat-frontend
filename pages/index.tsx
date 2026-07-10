@@ -26,16 +26,19 @@ export default function Home() {
       title="Home"
       description="Shabakkat serves operators & enterprises with a full spectrum of ICT services across the Middle East and Africa since 2005."
     >
-      <Hero photoLabel="PHOTO — mountaintop telecom towers over coastline, full-bleed" heightClassName="h-screen min-h-[640px]">
+      <Hero
+        photoLabel="PHOTO — mountaintop telecom towers over coastline, full-bleed"
+        heightClassName="h-[520px] min-h-[520px] sm:h-[600px] sm:min-h-[600px] lg:h-screen lg:min-h-[640px]"
+      >
         <div className="mx-auto mb-5 h-[3px] w-[60px] bg-red" />
-        <h1 className="mx-auto max-w-[960px] font-heading text-[50px] font-semibold uppercase leading-[1.16] text-white">
+        <h1 className="mx-auto max-w-[960px] font-heading text-[28px] font-semibold uppercase leading-[1.2] text-white sm:text-[36px] lg:text-[50px] lg:leading-[1.16]">
           Shabakkat serves operators &amp; enterprises with a full spectrum of ICT services
         </h1>
-        <p className="mx-auto mt-4 max-w-[640px] text-[17px] text-white/85">
+        <p className="mx-auto mt-4 max-w-[640px] text-sm text-white/85 sm:text-base lg:text-[17px]">
           Your partner for network rollout, managed services, and turnkey telecom solutions across the Middle East
           and Africa since 2005.
         </p>
-        <div className="mt-7 flex justify-center gap-4">
+        <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <Button href="/services">OUR SERVICES</Button>
           <Button href="/contact" variant="outline-light">
             CONTACT US

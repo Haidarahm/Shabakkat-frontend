@@ -5,7 +5,7 @@ import { accentBg } from "@/lib/colorMap";
 
 export default function ProcessSteps() {
   return (
-    <div className="px-14 py-20">
+    <div className="section-px section-py">
       <SectionHeading
         eyebrow="OUR PHILOSOPHY"
         title="Empowering our clients through a continuous cycle"
@@ -13,7 +13,7 @@ export default function ProcessSteps() {
       />
       <div className="relative mt-11">
         <div
-          className="absolute top-[26px] z-0 h-0.5"
+          className="absolute top-[26px] z-0 hidden h-0.5 lg:block"
           style={{
             left: "calc(10% + 26px)",
             right: "calc(10% + 26px)",
@@ -21,7 +21,7 @@ export default function ProcessSteps() {
               "repeating-linear-gradient(90deg, #DADCDE 0 8px, transparent 8px 16px)",
           }}
         />
-        <div className="relative z-10 grid grid-cols-5 gap-4">
+        <div className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {processSteps.map((step) => (
             <div key={step.number}>
               <div className="flex items-center justify-center">

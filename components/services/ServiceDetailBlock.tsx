@@ -8,7 +8,7 @@ export default function ServiceDetailBlock({ service }: { service: ServiceDetail
   const textColumn = (
     <div>
       <Eyebrow>{`${service.index} — ${service.eyebrow}`}</Eyebrow>
-      <h2 className="mt-3.5 font-heading text-[34px] font-semibold uppercase leading-[1.15] text-navy">
+      <h2 className="mt-3.5 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]">
         {service.title}
       </h2>
       <p className="mt-[18px] text-[15.5px] leading-[1.75] text-text-body">{service.description}</p>
@@ -96,12 +96,14 @@ export default function ServiceDetailBlock({ service }: { service: ServiceDetail
     </div>
   );
 
-  const photoColumn = <PhotoPlaceholder label={service.photoLabel} className="h-[420px] rounded" />;
+  const photoColumn = (
+    <PhotoPlaceholder label={service.photoLabel} className="h-[220px] rounded sm:h-[300px] lg:h-[420px]" />
+  );
 
   return (
     <div
       id={service.id}
-      className={`grid scroll-mt-[160px] grid-cols-2 items-start gap-14 px-14 py-[72px] ${
+      className={`section-px grid scroll-mt-[132px] grid-cols-1 items-start gap-8 py-10 sm:py-12 lg:scroll-mt-[160px] lg:grid-cols-2 lg:gap-14 lg:py-[72px] ${
         service.background === "muted" ? "bg-bg-muted" : ""
       }`}
     >
