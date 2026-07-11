@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, type Variants } from "framer-motion";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
@@ -8,6 +9,16 @@ const directionPoints = [
   { color: "bg-cyan", text: "Delivering Special Projects" },
   { color: "bg-red", text: "Managing Operations End-to-End" },
 ];
+
+const pointList: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const pointItem: Variants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
+};
 
 export default function MissionDirection() {
   const [missionTitleDone, setMissionTitleDone] = useState(false);
@@ -47,17 +58,24 @@ export default function MissionDirection() {
             Capitalizing on 800+ distinctive people, Shabakkat operates across three models — sourcing the right
             expertise from Asia, the US, Europe, and MEA to pair skill with place.
           </AnimatedParagraph>
-          <div className="mt-5 flex flex-col gap-3">
+          <motion.div
+            className="mt-5 flex flex-col gap-3"
+            variants={pointList}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.6 }}
+          >
             {directionPoints.map((point) => (
-              <div
+              <motion.div
                 key={point.text}
-                className="flex items-center gap-3.5 rounded border border-border bg-white px-5 py-4"
+                variants={pointItem}
+                className="origin-left flex items-center gap-3.5 rounded border border-border bg-white px-5 py-4"
               >
                 <div className={`h-2 w-2 flex-shrink-0 rounded-full ${point.color}`} />
                 <div className="font-heading text-[14.5px]">{point.text}</div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
