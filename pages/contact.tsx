@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -7,8 +8,11 @@ import ContactForm from "@/components/contact/ContactForm";
 import OfficeCard from "@/components/contact/OfficeCard";
 import { headOffice, regionalOffices } from "@/data/offices";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
+import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
 export default function Contact() {
+  const [heroTitleDone, setHeroTitleDone] = useState(false);
+
   return (
     <Layout
       title="Contact"
@@ -24,10 +28,11 @@ export default function Contact() {
           as="h1"
           text="Get in touch"
           className="font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
+          onAnimationComplete={() => setHeroTitleDone(true)}
         />
-        <p className="mt-2.5 text-sm text-white/85 lg:text-[15.5px]">
+        <AnimatedParagraph active={heroTitleDone} className="mt-2.5 text-sm text-white/85 lg:text-[15.5px]">
           Talk to our team about your network rollout, managed services, or ICT project.
-        </p>
+        </AnimatedParagraph>
       </Hero>
 
       <div className="section-px section-py grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">

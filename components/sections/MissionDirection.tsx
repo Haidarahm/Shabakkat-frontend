@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
+import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
 const directionPoints = [
   { color: "bg-red", text: "Network Expertise on Demand" },
@@ -8,6 +10,9 @@ const directionPoints = [
 ];
 
 export default function MissionDirection() {
+  const [missionTitleDone, setMissionTitleDone] = useState(false);
+  const [directionTitleDone, setDirectionTitleDone] = useState(false);
+
   return (
     <div className="section-px section-py bg-bg-muted">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
@@ -16,13 +21,17 @@ export default function MissionDirection() {
           <AnimatedTitle
             text="Enabling a smarter connected world"
             className="mt-[18px] font-heading text-[22px] font-semibold uppercase text-navy sm:text-[26px] lg:text-[30px]"
+            onAnimationComplete={() => setMissionTitleDone(true)}
           />
-          <p className="mt-[18px] text-[15.5px] leading-[1.75] text-text-body-alt">
+          <AnimatedParagraph
+            active={missionTitleDone}
+            className="mt-[18px] text-[15.5px] leading-[1.75] text-text-body-alt"
+          >
             Shabakkat&apos;s mission is to help clients reach their potential through technology. We remain at the
             forefront of ICT innovation to engineer and implement solutions that deliver measurable, significant,
             and timely business value — partnering with clients to achieve their goals and finding true reward in
             helping them reach market prominence.
-          </p>
+          </AnimatedParagraph>
           <div className="mt-6 font-heading text-[15px] tracking-[0.04em] text-red">
             &quot;Your Partner For Success&quot;
           </div>
@@ -32,11 +41,12 @@ export default function MissionDirection() {
           <AnimatedTitle
             text="People, technology, and process"
             className="mt-4 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]"
+            onAnimationComplete={() => setDirectionTitleDone(true)}
           />
-          <p className="mt-4 text-[15.5px] leading-[1.7] text-text-body">
+          <AnimatedParagraph active={directionTitleDone} className="mt-4 text-[15.5px] leading-[1.7] text-text-body">
             Capitalizing on 800+ distinctive people, Shabakkat operates across three models — sourcing the right
             expertise from Asia, the US, Europe, and MEA to pair skill with place.
-          </p>
+          </AnimatedParagraph>
           <div className="mt-5 flex flex-col gap-3">
             {directionPoints.map((point) => (
               <div

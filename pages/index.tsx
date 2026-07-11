@@ -18,10 +18,14 @@ import Certifications from "@/components/sections/Certifications";
 import HseSection from "@/components/sections/HseSection";
 import Testimonials from "@/components/sections/Testimonials";
 import FinalCta from "@/components/sections/FinalCta";
+import { useState } from "react";
 import Button from "@/components/ui/Button";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
+import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
 export default function Home() {
+  const [heroTitleDone, setHeroTitleDone] = useState(false);
+
   return (
     <Layout
       title="Home"
@@ -36,11 +40,15 @@ export default function Home() {
           as="h1"
           text="Shabakkat serves operators & enterprises with a full spectrum of ICT services"
           className="mx-auto max-w-[960px] font-heading text-[28px] font-semibold uppercase leading-[1.2] text-white sm:text-[36px] lg:text-[50px] lg:leading-[1.16]"
+          onAnimationComplete={() => setHeroTitleDone(true)}
         />
-        <p className="mx-auto mt-4 max-w-[640px] text-sm text-white/85 sm:text-base lg:text-[17px]">
+        <AnimatedParagraph
+          active={heroTitleDone}
+          className="mx-auto mt-4 max-w-[640px] text-sm text-white/85 sm:text-base lg:text-[17px]"
+        >
           Your partner for network rollout, managed services, and turnkey telecom solutions across the Middle East
           and Africa since 2005.
-        </p>
+        </AnimatedParagraph>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <Button href="/services">OUR SERVICES</Button>
           <Button href="/contact" variant="outline-light">

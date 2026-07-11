@@ -1,4 +1,7 @@
-import SectionHeading from "@/components/ui/SectionHeading";
+import { useState } from "react";
+import Eyebrow from "@/components/ui/Eyebrow";
+import AnimatedTitle from "@/components/ui/AnimatedTitle";
+import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 
 const workforce = [
@@ -9,21 +12,32 @@ const workforce = [
 ];
 
 export default function CompanyOverview() {
+  const [titleDone, setTitleDone] = useState(false);
+
   return (
     <div className="section-px section-py grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div>
-        <SectionHeading eyebrow="WHO WE ARE" title="A comprehensive telecommunications solution provider" />
-        <p className="mt-5 text-base leading-[1.75] text-text-body">
+        <Eyebrow>WHO WE ARE</Eyebrow>
+        <AnimatedTitle
+          text="A comprehensive telecommunications solution provider"
+          className="mt-4 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]"
+          onAnimationComplete={() => setTitleDone(true)}
+        />
+        <AnimatedParagraph active={titleDone} className="mt-5 text-base leading-[1.75] text-text-body">
           Established in 2005, Shabakkat has serviced Telecom Operators, Vendors, Enterprises, and Governmental
           Sectors across 13 countries in the Middle East and Africa. With headquarters in Kuwait City and regional
           offices in Saudi Arabia, Iraq, and Morocco, our team of 800+ professionals has executed hundreds of
           projects for the region&apos;s most prominent Communications Service Providers.
-        </p>
-        <p className="mt-4 text-base leading-[1.75] text-text-body">
+        </AnimatedParagraph>
+        <AnimatedParagraph
+          active={titleDone}
+          delay={0.06}
+          className="mt-4 text-base leading-[1.75] text-text-body"
+        >
           We continually strive to understand our clients&apos; needs, address their concerns, and empower their
           businesses with premium, tailored services — capitalizing on our knowledge base across Managed Services,
           Consultation and Resourcing, Professional Services, Full Turnkey Site Build, and more.
-        </p>
+        </AnimatedParagraph>
         <div className="mt-7 flex gap-3.5">
           <div className="border-l-[3px] border-red bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
             HQ: Kuwait City

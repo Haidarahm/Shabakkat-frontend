@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
@@ -6,8 +7,11 @@ import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
 import SimpleItemGrid from "@/components/services/SimpleItemGrid";
 import { servicesDetail, professionalServices, equipmentSupply } from "@/data/servicesDetail";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
+import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
 export default function Services() {
+  const [heroTitleDone, setHeroTitleDone] = useState(false);
+
   return (
     <Layout
       title="Services"
@@ -22,11 +26,15 @@ export default function Services() {
           as="h1"
           text="Full-spectrum telecom & ICT services"
           className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
+          onAnimationComplete={() => setHeroTitleDone(true)}
         />
-        <p className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]">
+        <AnimatedParagraph
+          active={heroTitleDone}
+          className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
+        >
           From civil works to cybersecurity — everything an operator or enterprise needs to build, run, and protect
           their network.
-        </p>
+        </AnimatedParagraph>
       </Hero>
 
       <JumpNav />
