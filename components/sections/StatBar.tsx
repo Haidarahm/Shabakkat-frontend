@@ -1,7 +1,11 @@
 import { stats } from "@/data/stats";
 import { accentText } from "@/lib/colorMap";
+import CountUp from "@/components/ui/CountUp";
 
 export default function StatBar() {
+  if (typeof window !== "undefined") {
+    console.log("StatBar CLIENT render");
+  }
   return (
     <div className="grid grid-cols-2 border-b border-border-tint bg-bg-tint sm:grid-cols-3 lg:grid-cols-5">
       {stats.map((stat, i) => (
@@ -10,7 +14,8 @@ export default function StatBar() {
           className={`px-5 py-5 text-center sm:py-7 ${i < stats.length - 1 ? "lg:border-r lg:border-navy/[0.14]" : ""}`}
         >
           <div className={`font-heading text-[22px] sm:text-[26px] lg:text-[30px] ${accentText[stat.color]}`}>
-            {stat.value}
+            <CountUp to={stat.value} duration={2} />
+            {stat.suffix}
           </div>
           <div className="text-[11.5px] uppercase tracking-[0.05em] text-text-subtle">{stat.label}</div>
         </div>

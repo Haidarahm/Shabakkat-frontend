@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, type Variants } from "framer-motion";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
@@ -10,6 +11,16 @@ const workforce = [
   { label: "Business Dev.", value: 5, color: "bg-navy" },
   { label: "Marketing & Sales", value: 5, color: "bg-text-muted" },
 ];
+
+const barContainer: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const barFill = (value: number): Variants => ({
+  hidden: { width: "0%" },
+  visible: { width: `${value}%`, transition: { duration: 1, ease: "easeOut" } },
+});
 
 export default function CompanyOverview() {
   const [titleDone, setTitleDone] = useState(false);
@@ -50,11 +61,17 @@ export default function CompanyOverview() {
           <div className="mb-3 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
             Our 800+ Workforce
           </div>
-          <div className="flex h-3.5 overflow-hidden rounded-[3px]">
+          <motion.div
+            className="flex h-3.5 overflow-hidden rounded-[3px]"
+            variants={barContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.6 }}
+          >
             {workforce.map((w) => (
-              <div key={w.label} className={w.color} style={{ width: `${w.value}%` }} />
+              <motion.div key={w.label} className={w.color} variants={barFill(w.value)} />
             ))}
-          </div>
+          </motion.div>
           <div className="mt-3 flex flex-wrap gap-[18px] text-[12.5px] text-text-body">
             {workforce.map((w) => (
               <div key={w.label}>
