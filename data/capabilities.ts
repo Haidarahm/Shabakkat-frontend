@@ -2,7 +2,6 @@ export interface Capability {
   title: string;
   description: string;
   href: string;
-  highlighted?: boolean;
 }
 
 export const capabilities: Capability[] = [
@@ -10,7 +9,6 @@ export const capabilities: Capability[] = [
     title: "Project & Vendor Management",
     description: "Multi-vendor rollout coordination, program governance, and turnkey project delivery.",
     href: "/services#consultancy-resourcing",
-    highlighted: true,
   },
   {
     title: "OSS (CS/PS Core)",
