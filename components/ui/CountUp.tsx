@@ -26,7 +26,6 @@ export default function CountUp({
   onStart,
   onEnd,
 }: CountUpProps) {
-  console.log("CountUp render", { to, from });
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(direction === "down" ? to : from);
 
@@ -71,10 +70,8 @@ export default function CountUp({
   );
 
   useEffect(() => {
-    console.log("CountUp mount effect", { hasRef: !!ref.current, to, from });
     if (ref.current) {
       ref.current.textContent = formatValue(direction === "down" ? to : from);
-      console.log("CountUp set text to", ref.current.textContent);
     }
   }, [from, to, direction, formatValue]);
 

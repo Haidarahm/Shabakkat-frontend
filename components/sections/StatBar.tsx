@@ -3,9 +3,6 @@ import { accentText } from "@/lib/colorMap";
 import CountUp from "@/components/ui/CountUp";
 
 export default function StatBar() {
-  if (typeof window !== "undefined") {
-    console.log("StatBar CLIENT render");
-  }
   return (
     <div className="grid grid-cols-2 border-b border-border-tint bg-bg-tint sm:grid-cols-3 lg:grid-cols-5">
       {stats.map((stat, i) => (
