@@ -1,5 +1,7 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
+import StaggerGrid from "@/components/ui/StaggerGrid";
+import StaggerItem from "@/components/ui/StaggerItem";
 import { processSteps } from "@/data/processSteps";
 import { accentBg } from "@/lib/colorMap";
 
@@ -21,9 +23,9 @@ export default function ProcessSteps() {
               "repeating-linear-gradient(90deg, #DADCDE 0 8px, transparent 8px 16px)",
           }}
         />
-        <div className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <StaggerGrid className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {processSteps.map((step) => (
-            <div key={step.number}>
+            <StaggerItem key={step.number}>
               <div className="flex items-center justify-center">
                 <div
                   className={`flex h-[52px] w-[52px] items-center justify-center rounded-full font-heading text-base text-white shadow-[0_0_0_6px_#fff] ${accentBg[step.color]}`}
@@ -35,9 +37,9 @@ export default function ProcessSteps() {
                 <div className="font-heading text-[14.5px] text-navy">{step.title}</div>
                 <div className="mt-2 text-[13px] leading-[1.6] text-text-body">{step.description}</div>
               </Card>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGrid>
       </div>
     </div>
   );

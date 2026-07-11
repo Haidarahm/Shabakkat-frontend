@@ -1,6 +1,8 @@
 import { testimonials, awards } from "@/data/testimonials";
 import { accentText } from "@/lib/colorMap";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
+import StaggerGrid from "@/components/ui/StaggerGrid";
+import StaggerItem from "@/components/ui/StaggerItem";
 
 export default function Testimonials() {
   return (
@@ -13,16 +15,18 @@ export default function Testimonials() {
         text="Client testimonials"
         className="mb-9 mt-4 font-heading text-[24px] font-semibold uppercase text-navy sm:text-[28px] lg:text-[34px]"
       />
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+      <StaggerGrid className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
         {testimonials.map((t) => (
-          <div key={t.author} className="rounded border border-border bg-white p-7">
-            <div className="text-[14.5px] leading-[1.7] text-text-body-alt">&ldquo;{t.quote}&rdquo;</div>
-            <div className={`mt-[18px] font-heading text-[13.5px] ${accentText[t.color]}`}>
-              — {t.author}, {t.role}
+          <StaggerItem key={t.author}>
+            <div className="h-full rounded border border-border bg-white p-7">
+              <div className="text-[14.5px] leading-[1.7] text-text-body-alt">&ldquo;{t.quote}&rdquo;</div>
+              <div className={`mt-[18px] font-heading text-[13.5px] ${accentText[t.color]}`}>
+                — {t.author}, {t.role}
+              </div>
             </div>
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGrid>
       <div className="mt-6 flex flex-wrap gap-3.5">
         {awards.map((award) => (
           <div
