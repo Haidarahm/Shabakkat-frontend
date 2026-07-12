@@ -26,6 +26,7 @@ export default function GlobalFootprint() {
         <div>
           <PhotoPlaceholder
             label="MAP — Middle East & Africa footprint"
+            src="/images/footprint/mea-map.jpg"
             className="aspect-[1480/1400] w-full rounded border border-border"
           />
           <div className="mt-3.5 flex gap-4 text-[11.5px] text-text-muted">

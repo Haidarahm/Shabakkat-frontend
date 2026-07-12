@@ -3,15 +3,16 @@ import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 
 interface HeroProps {
   photoLabel: string;
+  photoSrc?: string;
   heightClassName: string;
   align?: "center" | "bottom";
   children: ReactNode;
 }
 
-export default function Hero({ photoLabel, heightClassName, align = "center", children }: HeroProps) {
+export default function Hero({ photoLabel, photoSrc, heightClassName, align = "center", children }: HeroProps) {
   return (
     <div className={`relative overflow-hidden ${heightClassName}`}>
-      <PhotoPlaceholder label={photoLabel} className="absolute inset-0" />
+      <PhotoPlaceholder label={photoLabel} src={photoSrc} className="absolute inset-0" />
       <div
         className="absolute inset-0"
         style={{

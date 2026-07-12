@@ -14,8 +14,13 @@ export default function PartnersGrid() {
       />
       <StaggerGrid className="mt-8 grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-6">
         {partners.map((partner) => (
-          <StaggerItem key={partner}>
-            <PhotoPlaceholder label={partner} className="h-[70px] rounded-[3px] text-[11px]" />
+          <StaggerItem key={partner.name}>
+            <PhotoPlaceholder
+              label={partner.name}
+              src={partner.logoSrc}
+              objectFit="contain"
+              className="h-[70px] rounded-[3px] border border-border bg-white p-3 text-[11px]"
+            />
           </StaggerItem>
         ))}
       </StaggerGrid>

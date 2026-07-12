@@ -83,6 +83,7 @@ export default function CompanyOverview() {
       </div>
       <PhotoPlaceholder
         label="PHOTO — corporate HQ / office team collaboration"
+        src="/images/company/office-team.jpg"
         className="h-[260px] rounded sm:h-[340px] lg:h-[440px]"
       />
     </div>

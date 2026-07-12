@@ -33,6 +33,7 @@ export default function Home() {
     >
       <Hero
         photoLabel="PHOTO — mountaintop telecom towers over coastline, full-bleed"
+        photoSrc="/images/hero/mountaintop-towers.jpg"
         heightClassName="h-[520px] min-h-[520px] sm:h-[600px] sm:min-h-[600px] lg:h-screen lg:min-h-[640px]"
       >
         <div className="mx-auto mb-5 h-[3px] w-[60px] bg-red" />

@@ -16,7 +16,11 @@ export default function FeaturedProjects() {
               href={project.href}
               className="group block h-full overflow-hidden rounded border border-border bg-white transition-[box-shadow,transform] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_28px_rgba(20,24,28,0.12)]"
             >
-              <PhotoPlaceholder label={project.photoLabel} className="h-[170px] rounded-none" />
+              <PhotoPlaceholder
+                label={project.photoLabel}
+                src={project.photoSrc}
+                className="h-[170px] rounded-none"
+              />
               <div className="p-[22px]">
                 <div className="font-heading text-base">{project.title}</div>
                 <div className="mt-2 text-sm text-text-muted">{project.description}</div>

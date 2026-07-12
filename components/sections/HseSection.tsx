@@ -27,6 +27,7 @@ export default function HseSection() {
     <div className="section-px section-py grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
       <PhotoPlaceholder
         label="PHOTO — engineers in field, safety gear"
+        src="/images/hse/engineers-field-safety.jpg"
         className="h-[220px] rounded sm:h-[280px] lg:h-[340px]"
       />
       <div>
