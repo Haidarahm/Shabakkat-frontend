@@ -3,20 +3,29 @@ import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Eyebrow from "@/components/ui/Eyebrow";
+import Chip from "@/components/ui/Chip";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
+import Button from "@/components/ui/Button";
 import ContactForm from "@/components/contact/ContactForm";
 import OfficeCard from "@/components/contact/OfficeCard";
 import { headOffice, regionalOffices } from "@/data/offices";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function Contact() {
+const cultureHighlights = [
+  "800+ professionals across the Middle East & Africa",
+  "Multi-vendor technical depth (Nokia, Ericsson, Huawei & more)",
+  "Field, NOC & project teams across 13 countries",
+  "19+ years of sustained delivery on major regional programs",
+];
+
+export default function Careers() {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
     <Layout
-      title="Contact"
-      description="Talk to the Shabakkat team about your network rollout, managed services, or ICT project."
+      title="Careers"
+      description="Careers and contact — talk to the Shabakkat team about opportunities, your network rollout, managed services, or ICT project."
     >
       <Hero
         photoLabel="PHOTO — Shabakkat corporate office, full-bleed"
@@ -26,16 +35,37 @@ export default function Contact() {
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
           as="h1"
-          text="Get in touch"
+          text="Careers & contact"
           className="font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
         <AnimatedParagraph active={heroTitleDone} className="mt-2.5 text-sm text-white/85 lg:text-[15.5px]">
-          Talk to our team about your network rollout, managed services, or ICT project.
+          Talk to our team about opportunities at Shabakkat, or your network rollout, managed services, or ICT
+          project.
         </AnimatedParagraph>
       </Hero>
 
-      <div className="section-px section-py grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className="section-px section-py">
+        <SectionHeading
+          eyebrow="WHY WORK AT SHABAKKAT"
+          title="Build critical networks with a regional leader"
+          description="We're a team of field engineers, NOC specialists, and project professionals delivering telecom & ICT infrastructure across the Middle East and Africa — and we're always glad to hear from people who want to do the same."
+        />
+        <div className="mt-6 flex flex-wrap gap-2.5">
+          {cultureHighlights.map((item) => (
+            <Chip key={item}>{item}</Chip>
+          ))}
+        </div>
+        <Button
+          href="mailto:info@shabakkat.com?subject=Career%20Inquiry"
+          variant="outline"
+          className="mt-6 inline-block"
+        >
+          EMAIL US ABOUT OPPORTUNITIES
+        </Button>
+      </div>
+
+      <div className="section-px section-py grid grid-cols-1 gap-10 bg-bg-muted lg:grid-cols-2 lg:gap-16">
         <div>
           <SectionHeading eyebrow="SEND AN INQUIRY" title="Tell us about your project" />
           <ContactForm />
@@ -54,7 +84,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="section-px section-py bg-bg-muted">
+      <div className="section-px section-py">
         <SectionHeading eyebrow="OUR OFFICES" title="Regional presence" />
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {regionalOffices.map((office) => (

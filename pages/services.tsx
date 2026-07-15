@@ -5,6 +5,9 @@ import FinalCta from "@/components/sections/FinalCta";
 import JumpNav from "@/components/services/JumpNav";
 import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
 import SimpleItemGrid from "@/components/services/SimpleItemGrid";
+import CapabilitiesGrid from "@/components/sections/CapabilitiesGrid";
+import TechnologiesGrid from "@/components/sections/TechnologiesGrid";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 import { servicesDetail, professionalServices, equipmentSupply } from "@/data/servicesDetail";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
@@ -36,6 +39,10 @@ export default function Services() {
           their network.
         </AnimatedParagraph>
       </Hero>
+
+      <CapabilitiesGrid />
+      <TechnologiesGrid />
+      <ProcessSteps />
 
       <JumpNav />
 
