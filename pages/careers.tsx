@@ -77,10 +77,6 @@ export default function Careers() {
             <OfficeCard office={headOffice} />
           </div>
           <PhotoPlaceholder label="MAP — Kuwait head office" className="mt-5 h-[220px] rounded" />
-          <p className="mt-3 text-[12.5px] text-text-muted">
-            ⚠ Office details sourced from the current live site — please confirm addresses, numbers and active
-            locations before publishing.
-          </p>
         </div>
       </div>
 
@@ -91,10 +87,6 @@ export default function Careers() {
             <OfficeCard key={office.name} office={office} />
           ))}
         </div>
-        <p className="mt-5 text-[12.5px] text-text-muted">
-          ⚠ All office locations above are drawn from the current live website (content dated 2013) — recommend
-          client verification before publishing.
-        </p>
       </div>
 
       <div className="section-px bg-bg-tint py-14 text-center sm:py-16 lg:py-20">

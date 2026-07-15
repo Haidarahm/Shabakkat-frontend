@@ -45,10 +45,6 @@ export default function Projects() {
             </StaggerItem>
           ))}
         </StaggerGrid>
-        <p className="mt-8 text-[12.5px] text-text-muted">
-          ⚠ Project scale, dates, and client details above are drawn from existing company materials — please
-          confirm each is approved for public disclosure before publishing.
-        </p>
       </div>
 
       <FinalCta
