@@ -1,5 +1,57 @@
+export interface ServiceCategory {
+  id: string;
+  index: string;
+  title: string;
+  description: string;
+}
+
+export const serviceCategories: ServiceCategory[] = [
+  {
+    id: "network-deployment",
+    index: "01",
+    title: "Network Deployment",
+    description:
+      "Planning, rollout, modernization, integration, fiber, equipment supply, testing, and commissioning — delivered as one accountable program.",
+  },
+  {
+    id: "managed-operations",
+    index: "02",
+    title: "Managed Operations",
+    description:
+      "NOC, back-office, field maintenance, monitoring, incident management, and SLA/KPI reporting for networks already on air.",
+  },
+  {
+    id: "network-optimization",
+    index: "03",
+    title: "Network Optimization",
+    description:
+      "Radio audits, drive testing, benchmarking, and capacity, coverage, and performance optimization, grounded in real customer experience data.",
+  },
+  {
+    id: "ict-cybersecurity",
+    index: "04",
+    title: "ICT & Cybersecurity",
+    description:
+      "Enterprise networks and data infrastructure, systems integration, and security assessment, hardening, and monitoring.",
+  },
+  {
+    id: "infrastructure-power",
+    index: "05",
+    title: "Infrastructure & Power",
+    description:
+      "Turnkey site construction, civil works, towers, shelters, generators, batteries, and backup power for critical sites.",
+  },
+  {
+    id: "professional-services",
+    index: "06",
+    title: "Professional Services",
+    description: "Consultancy, project and vendor management, technical resourcing, governance, and revenue assurance.",
+  },
+];
+
 export interface ServiceDetail {
   id: string;
+  category: string;
   index: string;
   eyebrow: string;
   title: string;
@@ -9,7 +61,6 @@ export interface ServiceDetail {
   relatedProjects?: string;
   photoLabel: string;
   imageSide: "left" | "right";
-  background?: "muted";
   stats?: { value: string; label: string; color: "red" | "cyan" }[];
   notableList?: { text: string; color: "red" | "cyan" }[];
   partners?: string[];
@@ -17,9 +68,11 @@ export interface ServiceDetail {
 }
 
 export const servicesDetail: ServiceDetail[] = [
+  // 01 — Network Deployment
   {
     id: "network-rollout",
-    index: "01",
+    category: "network-deployment",
+    index: "1.1",
     eyebrow: "NETWORK ROLLOUT",
     title: "Telecom & civil rollout, end to end",
     description:
@@ -43,8 +96,30 @@ export const servicesDetail: ServiceDetail[] = [
     imageSide: "right",
   },
   {
+    id: "fiber-digital",
+    category: "network-deployment",
+    index: "1.2",
+    eyebrow: "DIGITAL INFRASTRUCTURE & FIBER NETWORKS",
+    title: "Fiber networks, built & maintained",
+    description:
+      "Outside plant and in-building fiber deployment, splicing and testing, and transmission infrastructure for POP sites and landing stations — connecting networks with reliable, high-capacity data links.",
+    capabilities: [
+      "OSP & ISP fiber networks",
+      "Fiber blowing & splicing",
+      "OTDR testing & fiber migration",
+      "POP sites & landing stations",
+      "Transmission infrastructure",
+      "Data connectivity",
+    ],
+    photoLabel: "PHOTO — fiber splicing & OTDR testing",
+    imageSide: "left",
+  },
+
+  // 02 — Managed Operations
+  {
     id: "managed-services",
-    index: "02",
+    category: "managed-operations",
+    index: "2.1",
     eyebrow: "MANAGED SERVICES",
     title: "24/7 operations, on your behalf",
     description:
@@ -64,28 +139,12 @@ export const servicesDetail: ServiceDetail[] = [
       { value: "6,000+", label: "Sites — STC/Zain/Ooredoo Kuwait", color: "cyan" },
     ],
     photoLabel: "PHOTO — 24/7 NOC operations floor",
-    imageSide: "left",
-    background: "muted",
-  },
-  {
-    id: "consultancy-resourcing",
-    index: "03",
-    eyebrow: "CONSULTANCY & RESOURCING",
-    title: "300+ engineers, deployed where you need them",
-    description:
-      "300+ resources assembled into coherent teams to run significant projects across Kuwait, KSA, Iraq, Oman, Bahrain, UAE, Egypt, Ethiopia, Ghana, Tanzania, Nigeria, and Sudan — sourced from Poland, China, Hungary, the UK, Lebanon, India, Egypt, Sudan, Iraq, the Philippines, Jordan, and more.",
-    capabilities: [
-      "PMO & program management",
-      "Project delivery",
-      "Contract & vendor management",
-      "Skilled engineers",
-    ],
-    photoLabel: "PHOTO — engineering team on site",
     imageSide: "right",
   },
   {
     id: "back-office-noc",
-    index: "04",
+    category: "managed-operations",
+    index: "2.2",
     eyebrow: "BACK OFFICE & NOC MANAGEMENT",
     title: "Full network surveillance, multi-vendor",
     description:
@@ -97,30 +156,14 @@ export const servicesDetail: ServiceDetail[] = [
       "Vodafone Egypt — 16 sites monitored",
     ],
     photoLabel: "PHOTO — control room dashboards",
-    imageSide: "right",
-    background: "muted",
+    imageSide: "left",
   },
-  {
-    id: "fiber-digital",
-    index: "05",
-    eyebrow: "DIGITAL INFRASTRUCTURE & FIBER NETWORKS",
-    title: "Fiber networks, built & maintained",
-    description:
-      "Outside plant and in-building fiber deployment, splicing and testing, and transmission infrastructure for POP sites and landing stations — connecting networks with reliable, high-capacity data links.",
-    capabilities: [
-      "OSP & ISP fiber networks",
-      "Fiber blowing & splicing",
-      "OTDR testing & fiber migration",
-      "POP sites & landing stations",
-      "Transmission infrastructure",
-      "Data connectivity",
-    ],
-    photoLabel: "PHOTO — fiber splicing & OTDR testing",
-    imageSide: "right",
-  },
+
+  // 03 — Network Optimization
   {
     id: "radio-audit",
-    index: "06",
+    category: "network-optimization",
+    index: "3.1",
     eyebrow: "RADIO AUDIT, BENCHMARK & OPTIMIZATION",
     title: "Real customer experience, measured",
     description:
@@ -139,11 +182,29 @@ export const servicesDetail: ServiceDetail[] = [
       { text: "Seoul 2021–22 — Samsung Network Benchmark & Analyses", color: "cyan" },
     ],
     photoLabel: "PHOTO — drive test / benchmark data",
+    imageSide: "right",
+  },
+
+  // 04 — ICT & Cybersecurity
+  {
+    id: "cybersecurity",
+    category: "ict-cybersecurity",
+    index: "4.1",
+    eyebrow: "CYBERSECURITY",
+    title: "Protecting networks & data",
+    description:
+      "IT and cybersecurity specialists safeguard operator and enterprise networks, aligned with our ISO/IEC 27001 information security management practices — from network security architecture to ethical-hacking-informed risk assessment.",
+    partners: ["Fidelis Cybersecurity", "RSA", "SEQRED", "Certified Ethical Hacker (CEH)"],
+    standard: { code: "ISO/IEC 27001", label: "Information Security Management System" },
+    photoLabel: "PHOTO — security operations center",
     imageSide: "left",
   },
+
+  // 05 — Infrastructure & Power
   {
     id: "turnkey",
-    index: "07",
+    category: "infrastructure-power",
+    index: "5.1",
     eyebrow: "FULL TURNKEY SITE BUILD (FTK)",
     title: "Towers, shelters & civil works, delivered",
     description:
@@ -166,11 +227,11 @@ export const servicesDetail: ServiceDetail[] = [
     ],
     photoLabel: "PHOTO — tower & shelter site build",
     imageSide: "right",
-    background: "muted",
   },
   {
     id: "power-supply",
-    index: "08",
+    category: "infrastructure-power",
+    index: "5.2",
     eyebrow: "POWER SUPPLY & MAINTENANCE",
     title: "Reliable power for critical sites",
     description:
@@ -184,11 +245,12 @@ export const servicesDetail: ServiceDetail[] = [
     partners: ["Cummins", "Daikin Air Intelligence", "IPT PowerTech Group", "Meico Energy"],
     relatedProjects: "IHS Kuwait (2020) — Power & Diesel Generators Supply & Maintenance",
     photoLabel: "PHOTO — diesel generator & power systems",
-    imageSide: "right",
+    imageSide: "left",
   },
   {
     id: "battery-supply",
-    index: "09",
+    category: "infrastructure-power",
+    index: "5.3",
     eyebrow: "BATTERY SUPPLY & INSTALLATION",
     title: "Backup power, commissioned & integrated",
     description:
@@ -198,24 +260,31 @@ export const servicesDetail: ServiceDetail[] = [
       { value: "171", label: "Batteries · 54 sites (2025)", color: "cyan" },
     ],
     photoLabel: "PHOTO — battery racks at telecom site",
-    imageSide: "left",
-    background: "muted",
-  },
-  {
-    id: "cybersecurity",
-    index: "10",
-    eyebrow: "CYBERSECURITY",
-    title: "Protecting networks & data",
-    description:
-      "IT and cybersecurity specialists safeguard operator and enterprise networks, aligned with our ISO/IEC 27001 information security management practices — from network security architecture to ethical-hacking-informed risk assessment.",
-    partners: ["Fidelis Cybersecurity", "RSA", "SEQRED", "Certified Ethical Hacker (CEH)"],
-    standard: { code: "ISO/IEC 27001", label: "Information Security Management System" },
-    photoLabel: "PHOTO — security operations center",
     imageSide: "right",
+  },
+
+  // 06 — Professional Services
+  {
+    id: "consultancy-resourcing",
+    category: "professional-services",
+    index: "6.1",
+    eyebrow: "CONSULTANCY & RESOURCING",
+    title: "300+ engineers, deployed where you need them",
+    description:
+      "300+ resources assembled into coherent teams to run significant projects across Kuwait, KSA, Iraq, Oman, Bahrain, UAE, Egypt, Ethiopia, Ghana, Tanzania, Nigeria, and Sudan — sourced from Poland, China, Hungary, the UK, Lebanon, India, Egypt, Sudan, Iraq, the Philippines, Jordan, and more.",
+    capabilities: [
+      "PMO & program management",
+      "Project delivery",
+      "Contract & vendor management",
+      "Skilled engineers",
+    ],
+    photoLabel: "PHOTO — engineering team on site",
+    imageSide: "left",
   },
   {
     id: "revenue-assurance",
-    index: "11",
+    category: "professional-services",
+    index: "6.2",
     eyebrow: "REVENUE ASSURANCE",
     title: "Protecting revenue across BSS & IN",
     description:
@@ -225,12 +294,6 @@ export const servicesDetail: ServiceDetail[] = [
     imageSide: "right",
   },
 ];
-
-export interface ServiceCategory {
-  id: string;
-  title: string;
-  items: string[];
-}
 
 export const professionalServices: string[] = [
   "Networks Audit & Benchmarks",
@@ -252,18 +315,7 @@ export const equipmentSupply: string[] = [
   "Logistics & Supply Chain",
 ];
 
-export const jumpNavLinks: { label: string; href: string }[] = [
-  { label: "Network Rollout", href: "#network-rollout" },
-  { label: "Managed Services", href: "#managed-services" },
-  { label: "Consultancy & Resourcing", href: "#consultancy-resourcing" },
-  { label: "Back Office & NOC Management", href: "#back-office-noc" },
-  { label: "Fiber & Digital Infrastructure", href: "#fiber-digital" },
-  { label: "Radio Audit, Benchmark & Optimization", href: "#radio-audit" },
-  { label: "Full Turnkey Site Build", href: "#turnkey" },
-  { label: "Power Supply & Maintenance", href: "#power-supply" },
-  { label: "Battery Supply & Installation", href: "#battery-supply" },
-  { label: "Cybersecurity", href: "#cybersecurity" },
-  { label: "Revenue Assurance", href: "#revenue-assurance" },
-  { label: "Professional Services", href: "#professional-services" },
-  { label: "Equipment Supply", href: "#equipment-supply" },
-];
+export const jumpNavLinks: { label: string; href: string }[] = serviceCategories.map((c) => ({
+  label: c.title,
+  href: `#${c.id}`,
+}));

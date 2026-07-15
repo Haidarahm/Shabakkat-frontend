@@ -34,7 +34,14 @@ export default function CompanyOverview() {
           className="mt-4 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]"
           onAnimationComplete={() => setTitleDone(true)}
         />
-        <AnimatedParagraph active={titleDone} className="mt-5 text-base leading-[1.75] text-text-body">
+        <AnimatedParagraph
+          active={titleDone}
+          className="mt-5 border-l-[3px] border-cyan pl-4 text-[15.5px] font-medium leading-[1.7] text-navy"
+        >
+          Shabakkat designs, builds, operates, monitors, optimizes, maintains, and secures critical
+          telecommunications and ICT infrastructure across the Middle East and Africa.
+        </AnimatedParagraph>
+        <AnimatedParagraph active={titleDone} delay={0.04} className="mt-5 text-base leading-[1.75] text-text-body">
           Established in 2004, Shabakkat has served Telecom Operators, Network Vendors, Enterprises, and Government
           Sectors across 13 countries in the Middle East and Africa. With headquarters in Kuwait City and regional
           offices in Saudi Arabia, Iraq, and Morocco, our team of 800+ professionals has executed hundreds of

@@ -112,9 +112,7 @@ export default function ServiceDetailBlock({ service }: { service: ServiceDetail
   return (
     <div
       id={service.id}
-      className={`section-px grid scroll-mt-[132px] grid-cols-1 items-start gap-8 py-10 sm:py-12 lg:scroll-mt-[160px] lg:grid-cols-2 lg:gap-14 lg:py-[72px] ${
-        service.background === "muted" ? "bg-bg-muted" : ""
-      }`}
+      className="grid scroll-mt-[168px] grid-cols-1 items-start gap-8 py-8 lg:scroll-mt-[200px] lg:grid-cols-2 lg:gap-14 lg:py-10"
     >
       {service.imageSide === "left" ? (
         <>

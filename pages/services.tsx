@@ -3,12 +3,12 @@ import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
 import JumpNav from "@/components/services/JumpNav";
-import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
+import ServiceCategorySection from "@/components/services/ServiceCategorySection";
 import SimpleItemGrid from "@/components/services/SimpleItemGrid";
 import CapabilitiesGrid from "@/components/sections/CapabilitiesGrid";
 import TechnologiesGrid from "@/components/sections/TechnologiesGrid";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import { servicesDetail, professionalServices, equipmentSupply } from "@/data/servicesDetail";
+import { serviceCategories, servicesDetail, professionalServices, equipmentSupply } from "@/data/servicesDetail";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
@@ -46,28 +46,50 @@ export default function Services() {
 
       <JumpNav />
 
-      {servicesDetail.map((service) => (
-        <ServiceDetailBlock key={service.id} service={service} />
-      ))}
+      {serviceCategories.map((category, i) => {
+        const services = servicesDetail.filter((s) => s.category === category.id);
+        const background = i % 2 === 0 ? undefined : "muted";
 
-      <SimpleItemGrid
-        id="professional-services"
-        index="12"
-        eyebrow="PROFESSIONAL SERVICES"
-        title="Expert consulting for strategic decisions"
-        description="Specialist consulting across network and IT architecture, audits, and business development — bringing outside expertise to the moments that matter most."
-        items={professionalServices}
-        background="muted"
-      />
+        if (category.id === "network-deployment") {
+          return (
+            <ServiceCategorySection key={category.id} category={category} services={services} background={background}>
+              <div className="mt-10 border-t border-border pt-10">
+                <SimpleItemGrid
+                  id="equipment-supply"
+                  index="1.3"
+                  eyebrow="TELECOM EQUIPMENT SUPPLY"
+                  title="Active, passive & power equipment, sourced & delivered"
+                  description="End-to-end procurement and logistics for the equipment operators need to build and maintain their networks — from active radio equipment to spare parts and consumables."
+                  items={equipmentSupply}
+                  bare
+                />
+              </div>
+            </ServiceCategorySection>
+          );
+        }
 
-      <SimpleItemGrid
-        id="equipment-supply"
-        index="13"
-        eyebrow="TELECOM EQUIPMENT SUPPLY"
-        title="Active, passive & power equipment, sourced & delivered"
-        description="End-to-end procurement and logistics for the equipment operators need to build and maintain their networks — from active radio equipment to spare parts and consumables."
-        items={equipmentSupply}
-      />
+        if (category.id === "professional-services") {
+          return (
+            <ServiceCategorySection key={category.id} category={category} services={services} background={background}>
+              <div className="mt-10 border-t border-border pt-10">
+                <SimpleItemGrid
+                  id="professional-services-list"
+                  index="6.3"
+                  eyebrow="PROFESSIONAL SERVICES"
+                  title="Expert consulting for strategic decisions"
+                  description="Specialist consulting across network and IT architecture, audits, and business development — bringing outside expertise to the moments that matter most."
+                  items={professionalServices}
+                  bare
+                />
+              </div>
+            </ServiceCategorySection>
+          );
+        }
+
+        return (
+          <ServiceCategorySection key={category.id} category={category} services={services} background={background} />
+        );
+      })}
 
       <FinalCta
         title="Need a tailored ICT solution?"

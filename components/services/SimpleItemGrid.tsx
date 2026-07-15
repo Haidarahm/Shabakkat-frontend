@@ -8,6 +8,8 @@ interface SimpleItemGridProps {
   description: string;
   items: string[];
   background?: "muted";
+  /** Skip the section-level padding/background — use when nesting inside a parent section. */
+  bare?: boolean;
 }
 
 export default function SimpleItemGrid({
@@ -18,13 +20,16 @@ export default function SimpleItemGrid({
   description,
   items,
   background,
+  bare = false,
 }: SimpleItemGridProps) {
   return (
     <div
       id={id}
-      className={`section-px scroll-mt-[160px] py-10 sm:py-12 lg:py-[72px] ${
-        background === "muted" ? "bg-bg-muted" : ""
-      }`}
+      className={
+        bare
+          ? "scroll-mt-[168px] lg:scroll-mt-[200px]"
+          : `section-px scroll-mt-[160px] py-10 sm:py-12 lg:py-[72px] ${background === "muted" ? "bg-bg-muted" : ""}`
+      }
     >
       <SectionHeading eyebrow={`${index} — ${eyebrow}`} title={title} description={description} />
       <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -33,6 +33,14 @@ export default function FeaturedProjects() {
           </StaggerItem>
         ))}
       </StaggerGrid>
+      <div className="mt-8 text-center">
+        <Link
+          href="/projects"
+          className="inline-flex items-center gap-1.5 font-heading text-[12.5px] tracking-[0.04em] text-navy hover:text-cyan"
+        >
+          VIEW ALL PROJECTS <span>→</span>
+        </Link>
+      </div>
     </div>
   );
 }

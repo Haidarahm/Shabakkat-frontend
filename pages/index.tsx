@@ -34,7 +34,7 @@ export default function About() {
         <div className="mx-auto mb-5 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
           as="h1"
-          text="Shabakkat serves operators & enterprises with a full spectrum of ICT services"
+          text="Building, operating, and optimizing critical networks across the Middle East and Africa"
           className="mx-auto max-w-[960px] font-heading text-[28px] font-semibold uppercase leading-[1.2] text-white sm:text-[36px] lg:text-[50px] lg:leading-[1.16]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
@@ -46,9 +46,9 @@ export default function About() {
           and Africa since 2004.
         </AnimatedParagraph>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
-          <Button href="/services">OUR SERVICES</Button>
+          <Button href="/services">EXPLORE OUR SERVICES</Button>
           <Button href="/careers" variant="outline-light">
-            CONTACT US
+            DISCUSS A PROJECT
           </Button>
         </div>
       </Hero>
