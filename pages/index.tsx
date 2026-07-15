@@ -24,7 +24,7 @@ export default function About() {
   return (
     <Layout
       title="About"
-      description="Shabakkat serves operators & enterprises with a full spectrum of ICT services across the Middle East and Africa since 2005."
+      description="Shabakkat serves operators & enterprises with a full spectrum of ICT services across the Middle East and Africa since 2004."
     >
       <Hero
         photoLabel="PHOTO — mountaintop telecom towers over coastline, full-bleed"
@@ -43,7 +43,7 @@ export default function About() {
           className="mx-auto mt-4 max-w-[640px] text-sm text-white/85 sm:text-base lg:text-[17px]"
         >
           Your partner for network rollout, managed services, and turnkey telecom solutions across the Middle East
-          and Africa since 2005.
+          and Africa since 2004.
         </AnimatedParagraph>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <Button href="/services">OUR SERVICES</Button>

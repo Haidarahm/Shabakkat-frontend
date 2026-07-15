@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="font-heading text-xl font-semibold uppercase text-navy">Shabakkat</div>
           <p className="mt-4 max-w-[280px] text-[13.5px] leading-[1.7]">
-            A comprehensive telecommunications solution provider serving the Middle East and Africa since 2005.
+            A comprehensive telecommunications solution provider serving the Middle East and Africa since 2004.
           </p>
         </div>
         <div>

@@ -90,7 +90,12 @@ export const servicesDetail: ServiceDetail[] = [
     title: "Full network surveillance, multi-vendor",
     description:
       "Surveillance of RAN/Core/Datacom, Transmission/IP Backbone, and Fibre Networks — alarm monitoring, fault management and escalation, performance management, and reporting across Nokia, Huawei, Ericsson, NEC, Cisco, and Harris Stratex networks.",
-    capabilities: ["Zain Iraq — 65", "STC Kuwait — 25", "Etisalat Egypt — 44", "Vodafone Egypt — 16"],
+    capabilities: [
+      "Zain Iraq — 65 sites monitored",
+      "STC Kuwait — 25 sites monitored",
+      "Etisalat Egypt — 44 sites monitored",
+      "Vodafone Egypt — 16 sites monitored",
+    ],
     photoLabel: "PHOTO — control room dashboards",
     imageSide: "right",
     background: "muted",

@@ -12,7 +12,7 @@ export const whyUs: WhyUsItem[] = [
   { number: "04", title: "Ready Platform to Grow", description: "Infrastructure and teams built to scale with client demand.", color: "cyan" },
   { number: "05", title: "Strong CSP Relationships", description: "Trusted, long-term partnerships with regional operators.", color: "red" },
   { number: "06", title: "Reliable Execution", description: "Consistent delivery across hundreds of projects.", color: "cyan" },
-  { number: "07", title: "Profitable Track Record", description: "19+ years of sustained, profitable operations.", color: "red" },
+  { number: "07", title: "Profitable Track Record", description: "22+ years of sustained, profitable operations.", color: "red" },
   { number: "08", title: "Strong Financial Position", description: "Stability that supports long-cycle telecom engagements.", color: "cyan" },
   { number: "09", title: "Unique Service Portfolio", description: "End-to-end coverage from civil works to cybersecurity.", color: "red" },
 ];
