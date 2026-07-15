@@ -44,7 +44,7 @@ export default function MissionDirection() {
             helping them reach market prominence.
           </AnimatedParagraph>
           <div className="mt-6 font-heading text-[15px] tracking-[0.04em] text-red">
-            &quot;Your Partner For Success&quot;
+            &ldquo;Your Partner For Success&rdquo;
           </div>
         </div>
         <div>
@@ -55,7 +55,7 @@ export default function MissionDirection() {
             onAnimationComplete={() => setDirectionTitleDone(true)}
           />
           <AnimatedParagraph active={directionTitleDone} className="mt-4 text-[15.5px] leading-[1.7] text-text-body">
-            Capitalizing on 800+ distinctive people, Shabakkat operates across three models — sourcing the right
+            Capitalizing on 800+ dedicated people, Shabakkat operates across three models — sourcing the right
             expertise from Asia, the US, Europe, and MEA to pair skill with place.
           </AnimatedParagraph>
           <motion.div

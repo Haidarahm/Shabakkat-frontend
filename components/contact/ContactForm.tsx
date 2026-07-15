@@ -6,6 +6,7 @@ const serviceOptions = [
   "Managed Services",
   "Consultancy & Resourcing",
   "Back Office & NOC Management",
+  "Fiber & Digital Infrastructure",
   "Radio Audit, Benchmark & Optimization",
   "Full Turnkey Site Build",
   "Power Supply & Maintenance",
@@ -38,6 +39,7 @@ export default function ContactForm() {
         phone: form.get("phone"),
         service: form.get("service"),
         message: form.get("message"),
+        website: form.get("website"),
       });
       setStatus("success");
       formEl.reset();
@@ -48,18 +50,38 @@ export default function ContactForm() {
 
   return (
     <form className="mt-7 flex flex-col gap-5" onSubmit={handleSubmit}>
+      {/* Honeypot — hidden from real users, bots tend to fill every field they find */}
+      <div className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2">
         <div>
           <label className={labelClasses} htmlFor="name">
             Full Name
           </label>
-          <input className={inputClasses} type="text" id="name" name="name" placeholder="Your name" required />
+          <input
+            className={inputClasses}
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            maxLength={100}
+            required
+          />
         </div>
         <div>
           <label className={labelClasses} htmlFor="company">
             Company
           </label>
-          <input className={inputClasses} type="text" id="company" name="company" placeholder="Company name" />
+          <input
+            className={inputClasses}
+            type="text"
+            id="company"
+            name="company"
+            placeholder="Company name"
+            maxLength={150}
+          />
         </div>
       </div>
       <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2">
@@ -73,6 +95,7 @@ export default function ContactForm() {
             id="email"
             name="email"
             placeholder="you@company.com"
+            maxLength={254}
             required
           />
         </div>
@@ -80,7 +103,14 @@ export default function ContactForm() {
           <label className={labelClasses} htmlFor="phone">
             Phone
           </label>
-          <input className={inputClasses} type="tel" id="phone" name="phone" placeholder="+965 ..." />
+          <input
+            className={inputClasses}
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+965 ..."
+            maxLength={30}
+          />
         </div>
       </div>
       <div>
@@ -103,6 +133,7 @@ export default function ContactForm() {
           name="message"
           rows={5}
           placeholder="Tell us about your project or requirement"
+          maxLength={5000}
           required
         />
       </div>

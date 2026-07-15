@@ -31,6 +31,12 @@ export const servicesOverview: ServiceOverviewItem[] = [
     href: "/services#back-office-noc",
   },
   {
+    title: "Fiber & Digital Infrastructure",
+    photoLabel: "fiber network",
+    photoSrc: "/images/services/fiber-digital.jpg",
+    href: "/services#fiber-digital",
+  },
+  {
     title: "Radio Audit & Optimization",
     photoLabel: "drive test",
     photoSrc: "/images/services/radio-audit.jpg",

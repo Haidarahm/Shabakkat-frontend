@@ -35,7 +35,7 @@ export default function CompanyOverview() {
           onAnimationComplete={() => setTitleDone(true)}
         />
         <AnimatedParagraph active={titleDone} className="mt-5 text-base leading-[1.75] text-text-body">
-          Established in 2004, Shabakkat has serviced Telecom Operators, Vendors, Enterprises, and Governmental
+          Established in 2004, Shabakkat has served Telecom Operators, Network Vendors, Enterprises, and Government
           Sectors across 13 countries in the Middle East and Africa. With headquarters in Kuwait City and regional
           offices in Saudi Arabia, Iraq, and Morocco, our team of 800+ professionals has executed hundreds of
           projects for the region&apos;s most prominent Communications Service Providers.
@@ -47,7 +47,7 @@ export default function CompanyOverview() {
         >
           We continually strive to understand our clients&apos; needs, address their concerns, and empower their
           businesses with premium, tailored services — capitalizing on our knowledge base across Managed Services,
-          Consultation and Resourcing, Professional Services, Full Turnkey Site Build, and more.
+          Consultancy & Resourcing, Professional Services, Full Turnkey Site Build, and more.
         </AnimatedParagraph>
         <div className="mt-7 flex gap-3.5">
           <div className="border-l-[3px] border-red bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">

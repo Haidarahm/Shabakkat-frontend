@@ -54,7 +54,7 @@ export const projects: ProjectCaseStudy[] = [
   },
   {
     slug: "mecca-mosque-benchmark",
-    client: "Ramadan network benchmark",
+    client: "Confidential client",
     country: "Saudi Arabia",
     year: "2022",
     tag: "RADIO AUDIT",
@@ -135,14 +135,14 @@ export const projects: ProjectCaseStudy[] = [
   },
   {
     slug: "uae-etisalat-du-rollout",
-    client: "Etisalat & Du",
+    client: "Etisalat & du",
     country: "UAE",
     year: "2016",
     tag: "ROLLOUT",
     color: "red",
     title: "Mega 3G & 4G rollout for the UAE's leading operators",
     challenge:
-      "Etisalat and Du both needed large-scale coverage and capacity expansion delivered on an accelerated timeline.",
+      "Etisalat and du both needed large-scale coverage and capacity expansion delivered on an accelerated timeline.",
     scope: ["3G/4G coverage rollout", "Capacity expansion"],
     results: "Large-scale coverage and capacity rollout for two of the UAE's leading operators.",
     photoLabel: "PHOTO — UAE rollout crew, 2016",
@@ -174,7 +174,7 @@ export const projects: ProjectCaseStudy[] = [
     challenge:
       "Kuwait's Ministry of Communications needed specialist NOC management resourcing to support its national fiber broadband (GPON) infrastructure.",
     scope: ["GPON NOC management", "Consultancy & resourcing"],
-    results: "20 GPON NOC management engagement supporting national fiber broadband infrastructure.",
+    results: "20-site GPON NOC management engagement supporting national fiber broadband infrastructure.",
     photoLabel: "PHOTO — NOC operations, Kuwait",
     relatedServiceHref: "/services#back-office-noc",
   },

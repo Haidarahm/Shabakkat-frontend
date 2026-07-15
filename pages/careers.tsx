@@ -16,7 +16,7 @@ const cultureHighlights = [
   "800+ professionals across the Middle East & Africa",
   "Multi-vendor technical depth (Nokia, Ericsson, Huawei & more)",
   "Field, NOC & project teams across 13 countries",
-  "19+ years of sustained delivery on major regional programs",
+  "22+ years of sustained delivery on major regional programs",
 ];
 
 export default function Careers() {

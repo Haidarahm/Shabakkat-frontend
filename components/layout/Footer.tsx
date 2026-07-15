@@ -47,7 +47,9 @@ export default function Footer() {
       </div>
       <div className="mt-10 flex flex-col gap-2 border-t border-border pt-[22px] text-[12.5px] sm:flex-row sm:justify-between sm:gap-0">
         <div>© 2026 Shabakkat. All rights reserved.</div>
-        <div>Privacy Policy</div>
+        <Link href="/privacy" className="hover:text-cyan">
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );

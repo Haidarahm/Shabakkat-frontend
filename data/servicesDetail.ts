@@ -38,7 +38,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Program & schedule management",
     ],
     relatedProjects:
-      "Etisalat Du UAE — Mega 3G & 4G Rollout (2010, 2016) · Ericsson Egypt/Oman/Bahrain — Mega 3G & 4G Rollout (2013)",
+      "Etisalat & du UAE — Mega 3G & 4G Rollout (2010, 2016) · Ericsson Egypt/Oman/Bahrain — Mega 3G & 4G Rollout (2013)",
     photoLabel: "PHOTO — network rollout site under construction",
     imageSide: "right",
   },
@@ -73,12 +73,12 @@ export const servicesDetail: ServiceDetail[] = [
     eyebrow: "CONSULTANCY & RESOURCING",
     title: "300+ engineers, deployed where you need them",
     description:
-      "300+ resources assembled into coherent teams to run significant projects across Kuwait, KSA, Iraq, Oman, Bahrain, UAE, Egypt, Ethiopia, Ghana, Tanzania, Nigeria and Sudan — sourced from Poland, China, Hungary, the UK, Lebanon, India, Egypt, Sudan, Iraq, the Philippines, Jordan and more.",
+      "300+ resources assembled into coherent teams to run significant projects across Kuwait, KSA, Iraq, Oman, Bahrain, UAE, Egypt, Ethiopia, Ghana, Tanzania, Nigeria, and Sudan — sourced from Poland, China, Hungary, the UK, Lebanon, India, Egypt, Sudan, Iraq, the Philippines, Jordan, and more.",
     capabilities: [
-      "PMO & Program Management",
-      "Project Delivery",
-      "Contract & Vendor Management",
-      "Skilled Engineers",
+      "PMO & program management",
+      "Project delivery",
+      "Contract & vendor management",
+      "Skilled engineers",
     ],
     photoLabel: "PHOTO — engineering team on site",
     imageSide: "right",
@@ -89,7 +89,7 @@ export const servicesDetail: ServiceDetail[] = [
     eyebrow: "BACK OFFICE & NOC MANAGEMENT",
     title: "Full network surveillance, multi-vendor",
     description:
-      "Surveillance of RAN/Core/Datacom, Transmission/IP Backbone, and Fibre Networks — alarm monitoring, fault management and escalation, performance management, and reporting across Nokia, Huawei, Ericsson, NEC, Cisco, and Harris Stratex networks.",
+      "Surveillance of RAN/Core/Datacom, Transmission/IP Backbone, and Fiber Networks — alarm monitoring, fault management and escalation, performance management, and reporting across Nokia, Huawei, Ericsson, NEC, Cisco, and Harris Stratex networks.",
     capabilities: [
       "Zain Iraq — 65 sites monitored",
       "STC Kuwait — 25 sites monitored",
@@ -147,7 +147,7 @@ export const servicesDetail: ServiceDetail[] = [
     eyebrow: "FULL TURNKEY SITE BUILD (FTK)",
     title: "Towers, shelters & civil works, delivered",
     description:
-      "Green field and roof-top tower supply and erection, monopole installation (25m–80m), special solution towers and poles, all types of civil works — excavation, sand removal, road cutting, fence repair, concrete foundations — and fully equipped shelter supply.",
+      "Greenfield and roof-top tower supply and erection, monopole installation (25m–80m), special solution towers and poles, all types of civil works — excavation, sand removal, road cutting, fence repair, concrete foundations — and fully equipped shelter supply.",
     capabilities: [
       "Monopoles 25–80m",
       "Special solution towers 7–9m",
@@ -256,12 +256,12 @@ export const jumpNavLinks: { label: string; href: string }[] = [
   { label: "Network Rollout", href: "#network-rollout" },
   { label: "Managed Services", href: "#managed-services" },
   { label: "Consultancy & Resourcing", href: "#consultancy-resourcing" },
-  { label: "Back Office & NOC", href: "#back-office-noc" },
+  { label: "Back Office & NOC Management", href: "#back-office-noc" },
   { label: "Fiber & Digital Infrastructure", href: "#fiber-digital" },
-  { label: "Radio Audit & Optimization", href: "#radio-audit" },
-  { label: "Turnkey Site Build", href: "#turnkey" },
-  { label: "Power Supply", href: "#power-supply" },
-  { label: "Battery Supply", href: "#battery-supply" },
+  { label: "Radio Audit, Benchmark & Optimization", href: "#radio-audit" },
+  { label: "Full Turnkey Site Build", href: "#turnkey" },
+  { label: "Power Supply & Maintenance", href: "#power-supply" },
+  { label: "Battery Supply & Installation", href: "#battery-supply" },
   { label: "Cybersecurity", href: "#cybersecurity" },
   { label: "Revenue Assurance", href: "#revenue-assurance" },
   { label: "Professional Services", href: "#professional-services" },

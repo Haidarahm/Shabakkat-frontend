@@ -38,7 +38,7 @@ export const regionalOffices: OfficeLocation[] = [
   {
     name: "Saudi Arabia",
     color: "red",
-    address: "Riyadh; King Fahad Road; Abalkhail Building; 1st Floor, Office 15, PO Box 301815, Riyadh 11372",
+    address: "King Fahad Road, Abalkhail Building, 1st Floor, Office 15, PO Box 301815, Riyadh 11372",
     phone: "+966 1 462 4209",
   },
   {
