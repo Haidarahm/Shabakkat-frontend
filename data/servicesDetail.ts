@@ -194,10 +194,70 @@ export const servicesDetail: ServiceDetail[] = [
     title: "Protecting networks & data",
     description:
       "IT and cybersecurity specialists safeguard operator and enterprise networks, aligned with our ISO/IEC 27001 information security management practices — from network security architecture to ethical-hacking-informed risk assessment.",
+    capabilities: [
+      "24/7 managed security monitoring",
+      "Firewall, intrusion prevention & content filtering",
+      "Network operations center for security incidents",
+      "Privacy, integrity & authenticity controls",
+    ],
     partners: ["Fidelis Cybersecurity", "RSA", "SEQRED", "Certified Ethical Hacker (CEH)"],
     standard: { code: "ISO/IEC 27001", label: "Information Security Management System" },
     photoLabel: "PHOTO — security operations center",
     imageSide: "left",
+  },
+  {
+    id: "enterprise-networks",
+    category: "ict-cybersecurity",
+    index: "4.2",
+    eyebrow: "ENTERPRISE NETWORKS & DATA INFRASTRUCTURE",
+    title: "LAN/WAN, structured cabling & data centers for the enterprise",
+    description:
+      "Shabakkat designs, builds, and commissions enterprise data network infrastructure — from structured cabling and wireless access across LAN/WAN environments to scalable, highly-available data centers and SAN storage architectures.",
+    businessValue:
+      "A single accountable partner for enterprise network and data-center infrastructure, engineered for redundancy, availability, and reduced total cost of ownership.",
+    capabilities: [
+      "LAN & WAN design, deployment & commissioning",
+      "Structured cabling (copper & fiber)",
+      "Outside plant (OSP) infrastructure",
+      "Data center & SAN design and build",
+      "Business continuity & disaster recovery planning",
+    ],
+    photoLabel: "PHOTO — enterprise data center / structured cabling",
+    imageSide: "right",
+  },
+  {
+    id: "unified-communications",
+    category: "ict-cybersecurity",
+    index: "4.3",
+    eyebrow: "UNIFIED COMMUNICATIONS & CONTACT CENTRES",
+    title: "IP telephony & contact center systems, integrated",
+    description:
+      "Shabakkat designs, builds, and maintains IP-centric communications platforms for enterprises — from VoIP and unified messaging to full contact center deployments with call management and multi-channel integration.",
+    capabilities: [
+      "IP-based switching & VoIP",
+      "Unified messaging & IVR",
+      "Contact center deployment & call management",
+      "Multi-channel integration (email, IM, fax, SMS)",
+      "Integration with business support systems",
+    ],
+    photoLabel: "PHOTO — contact center / IP telephony operations",
+    imageSide: "left",
+  },
+  {
+    id: "cloud-infrastructure",
+    category: "ict-cybersecurity",
+    index: "4.4",
+    eyebrow: "CLOUD & HOSTED INFRASTRUCTURE",
+    title: "IaaS, PaaS & SaaS, delivered through Advaltis",
+    description:
+      "Through Shabakkat's subsidiary Advaltis, enterprises get access to virtualized, highly-available cloud infrastructure — helping clients avoid heavy capital expenditure while scaling IT resources on demand.",
+    capabilities: [
+      "Infrastructure as a Service (IaaS)",
+      "Platform as a Service (PaaS)",
+      "Software as a Service (SaaS)",
+    ],
+    photoLabel: "PHOTO — cloud & virtualized infrastructure",
+    imageSide: "right",
   },
 
   // 05 — Infrastructure & Power

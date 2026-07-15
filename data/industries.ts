@@ -46,14 +46,21 @@ export const industries: Industry[] = [
     slug: "enterprises",
     title: "Enterprises",
     color: "red",
-    summary: "ICT infrastructure for enterprise clients — from LAN/WAN and data center builds to cybersecurity hardening.",
+    summary:
+      "ICT infrastructure for enterprise clients — from LAN/WAN, structured cabling, and data centers to unified communications, cloud, and cybersecurity hardening.",
     notableNames: "LAN/WAN, data center & cloud clients",
     focusAreas: [
       "LAN/WAN & structured cabling",
       "Data center & cloud infrastructure",
+      "Unified communications & contact centres",
       "Cybersecurity assessment & hardening",
     ],
-    relevantServices: [{ label: "Cybersecurity", href: "/services#cybersecurity" }],
+    relevantServices: [
+      { label: "Enterprise Networks & Data Infrastructure", href: "/services#enterprise-networks" },
+      { label: "Unified Communications & Contact Centres", href: "/services#unified-communications" },
+      { label: "Cloud & Hosted Infrastructure", href: "/services#cloud-infrastructure" },
+      { label: "Cybersecurity", href: "/services#cybersecurity" },
+    ],
   },
   {
     slug: "government-sector",
