@@ -27,7 +27,7 @@ export default function MissionDirection() {
   return (
     <div className="section-px section-py bg-bg-muted">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="rounded border border-border-tint bg-bg-tint p-6 sm:p-8 lg:p-12">
+        <div className="rounded-xl border border-border-tint bg-bg-tint p-6 sm:p-8 lg:p-12">
           <Eyebrow>OUR MISSION</Eyebrow>
           <AnimatedTitle
             text="Enabling a smarter connected world"
@@ -69,7 +69,7 @@ export default function MissionDirection() {
               <motion.div
                 key={point.text}
                 variants={pointItem}
-                className="origin-left flex items-center gap-3.5 rounded border border-border bg-white px-5 py-4"
+                className="origin-left flex items-center gap-3.5 rounded-lg border border-border bg-white px-5 py-4"
               >
                 <div className={`h-2 w-2 flex-shrink-0 rounded-full ${point.color}`} />
                 <div className="font-heading text-[14.5px]">{point.text}</div>

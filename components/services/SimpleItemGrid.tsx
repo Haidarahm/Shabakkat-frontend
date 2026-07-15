@@ -34,7 +34,7 @@ export default function SimpleItemGrid({
       <SectionHeading eyebrow={`${index} — ${eyebrow}`} title={title} description={description} />
       <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
-          <div key={item} className="rounded border border-border bg-white p-[22px]">
+          <div key={item} className="rounded-lg border border-border bg-white p-[22px]">
             <div className="font-heading text-[14.5px]">{item}</div>
           </div>
         ))}

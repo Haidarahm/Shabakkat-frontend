@@ -76,7 +76,7 @@ export default function Careers() {
           <div className="mt-3.5">
             <OfficeCard office={headOffice} />
           </div>
-          <PhotoPlaceholder label="MAP — Kuwait head office" className="mt-5 h-[220px] rounded" />
+          <PhotoPlaceholder label="MAP — Kuwait head office" className="mt-5 h-[220px] rounded-xl" />
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export default function Careers() {
           />
           <a
             href="mailto:info@shabakkat.com"
-            className="mt-3.5 inline-block rounded-[2px] bg-navy px-8 py-[15px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-navy-dark"
+            className="mt-3.5 inline-block rounded-md bg-cyan px-8 py-[15px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-red"
           >
             EMAIL INFO@SHABAKKAT.COM
           </a>

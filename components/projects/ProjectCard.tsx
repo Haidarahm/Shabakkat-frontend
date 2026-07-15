@@ -8,7 +8,7 @@ export default function ProjectCard({ project }: { project: ProjectCaseStudy }) 
   return (
     <div
       id={project.slug}
-      className="scroll-mt-[132px] overflow-hidden rounded border border-border bg-white lg:scroll-mt-[160px]"
+      className="scroll-mt-[132px] overflow-hidden rounded-xl border border-border bg-white lg:scroll-mt-[160px]"
     >
       <PhotoPlaceholder label={project.photoLabel} src={project.photoSrc} className="h-[180px] rounded-none" />
       <div className="p-6 lg:p-7">

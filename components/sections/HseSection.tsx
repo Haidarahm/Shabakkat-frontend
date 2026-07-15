@@ -28,7 +28,7 @@ export default function HseSection() {
       <PhotoPlaceholder
         label="PHOTO — engineers in field, safety gear"
         src="/images/hse/engineers-field-safety.jpg"
-        className="h-[220px] rounded sm:h-[280px] lg:h-[340px]"
+        className="h-[220px] rounded-xl sm:h-[280px] lg:h-[340px]"
       />
       <div>
         <SectionHeading

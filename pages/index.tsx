@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import Hero from "@/components/sections/Hero";
+import HomeHero from "@/components/sections/HomeHero";
 import StatBar from "@/components/sections/StatBar";
 import CompanyOverview from "@/components/sections/CompanyOverview";
 import MissionDirection from "@/components/sections/MissionDirection";
@@ -15,6 +15,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FinalCta from "@/components/sections/FinalCta";
 import { useState } from "react";
 import Button from "@/components/ui/Button";
+import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
@@ -26,32 +27,28 @@ export default function About() {
       title="About"
       description="Shabakkat serves operators & enterprises with a full spectrum of ICT services across the Middle East and Africa since 2004."
     >
-      <Hero
-        photoLabel="PHOTO — mountaintop telecom towers over coastline, full-bleed"
-        photoSrc="/images/hero/mountaintop-towers.jpg"
-        heightClassName="h-[520px] min-h-[520px] sm:h-[600px] sm:min-h-[600px] lg:h-screen lg:min-h-[640px]"
-      >
-        <div className="mx-auto mb-5 h-[3px] w-[60px] bg-red" />
+      <HomeHero>
+        <Eyebrow>TELECOM AND ICT INFRASTRUCTURE</Eyebrow>
         <AnimatedTitle
           as="h1"
           text="Building, operating, and optimizing critical networks across the Middle East and Africa"
-          className="mx-auto max-w-[960px] font-heading text-[28px] font-semibold uppercase leading-[1.2] text-white sm:text-[36px] lg:text-[50px] lg:leading-[1.16]"
+          className="mt-4 max-w-[620px] font-heading text-[30px] font-semibold uppercase leading-[1.2] text-white sm:text-[38px] lg:text-[46px] lg:leading-[1.14]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
         <AnimatedParagraph
           active={heroTitleDone}
-          className="mx-auto mt-4 max-w-[640px] text-sm text-white/85 sm:text-base lg:text-[17px]"
+          className="mt-4 max-w-[560px] text-sm text-white/80 sm:text-base lg:text-[16.5px]"
         >
           Your partner for network rollout, managed services, and turnkey telecom solutions across the Middle East
           and Africa since 2004.
         </AnimatedParagraph>
-        <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
-          <Button href="/services">EXPLORE OUR SERVICES</Button>
-          <Button href="/careers" variant="outline-light">
-            DISCUSS A PROJECT
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <Button href="/careers">DISCUSS A PROJECT</Button>
+          <Button href="/services" variant="outline-light">
+            EXPLORE OUR SERVICES
           </Button>
         </div>
-      </Hero>
+      </HomeHero>
 
       <StatBar />
       <CompanyOverview />

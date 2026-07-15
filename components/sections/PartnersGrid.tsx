@@ -19,7 +19,7 @@ export default function PartnersGrid() {
               label={partner.name}
               src={partner.logoSrc}
               objectFit="contain"
-              className="h-[70px] rounded-[3px] border border-border bg-white p-3 text-[11px]"
+              className="h-[70px] rounded-lg border border-border bg-white p-3 text-[11px]"
             />
           </StaggerItem>
         ))}

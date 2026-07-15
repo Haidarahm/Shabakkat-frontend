@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
-  primary: "bg-navy text-white hover:bg-navy-dark",
+  primary: "bg-cyan text-white hover:bg-red",
   outline: "border-[1.5px] border-navy text-navy hover:border-cyan hover:text-cyan",
   "outline-light": "border-[1.5px] border-white text-white hover:border-cyan hover:text-cyan",
 };
@@ -33,7 +33,7 @@ export default function Button({
     <Link
       href={href}
       onClick={onClick}
-      className={`inline-block rounded-[2px] font-heading text-sm tracking-[0.05em] transition-colors ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
+      className={`inline-block rounded-md font-heading text-sm tracking-[0.05em] transition-colors ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
     >
       {children}
     </Link>

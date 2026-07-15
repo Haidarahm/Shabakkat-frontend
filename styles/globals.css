@@ -1,19 +1,31 @@
 @import "tailwindcss";
 
+/*
+ * Shabakkat brand identity palette (see Shabakkat_Brand_Identity.md).
+ * Existing Tailwind token names are kept (navy/cyan/red) to avoid renaming
+ * hundreds of class references — their underlying hex values now map to the
+ * brand system instead:
+ *   navy       -> Primary navy  #102A43
+ *   navy-dark  -> Deep navy     #081E2F  (also used for dark hero/panel backgrounds)
+ *   cyan       -> Shabakkat teal #009A9A (the brand's core action color)
+ *   red        -> Dark teal     #007878  (hover/active states + secondary accent)
+ *   bg-muted   -> Off-white     #F7F9FB
+ *   bg-tint    -> Light teal    #E5F5F4
+ */
 :root {
-  --raw-navy: #0b3d66;
-  --raw-navy-dark: #082c4d;
-  --raw-cyan: #009fce;
-  --raw-red: #e63946;
+  --raw-navy: #102a43;
+  --raw-navy-dark: #081e2f;
+  --raw-cyan: #009a9a;
+  --raw-red: #007878;
   --raw-bg: #ffffff;
-  --raw-bg-muted: #f6f7f8;
-  --raw-bg-tint: #eaf4fb;
-  --raw-border: #e7e8e9;
-  --raw-border-tint: #dcebf5;
-  --raw-text-body: #4a4f54;
-  --raw-text-body-alt: #3d4a56;
-  --raw-text-muted: #8a8f94;
-  --raw-text-subtle: #5a6672;
+  --raw-bg-muted: #f7f9fb;
+  --raw-bg-tint: #e5f5f4;
+  --raw-border: #e2e8f0;
+  --raw-border-tint: #cdeae9;
+  --raw-text-body: #334155;
+  --raw-text-body-alt: #1e293b;
+  --raw-text-muted: #64748b;
+  --raw-text-subtle: #475569;
 }
 
 @theme inline {

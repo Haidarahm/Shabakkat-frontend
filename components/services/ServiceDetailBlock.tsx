@@ -65,7 +65,7 @@ export default function ServiceDetailBlock({ service }: { service: ServiceDetail
       {service.stats && (
         <div className="mt-5 grid grid-cols-2 gap-3.5">
           {service.stats.map((stat) => (
-            <div key={stat.label} className="rounded bg-white p-[18px]">
+            <div key={stat.label} className="rounded-lg bg-white p-[18px]">
               <div className={`font-heading text-[22px] ${accentText[stat.color]}`}>{stat.value}</div>
               <div className="text-[12.5px] text-text-muted">{stat.label}</div>
             </div>
@@ -87,7 +87,7 @@ export default function ServiceDetailBlock({ service }: { service: ServiceDetail
       )}
 
       {service.standard && (
-        <div className="mt-5 max-w-xs rounded border border-border bg-white p-6">
+        <div className="mt-5 max-w-xs rounded-xl border border-border bg-white p-6">
           <div className="font-heading text-xs uppercase tracking-[0.08em] text-text-muted">Standards Alignment</div>
           <div className="mt-2 font-heading text-xl text-red">{service.standard.code}</div>
           <div className="mt-1.5 text-[13.5px] text-text-body">{service.standard.label}</div>
@@ -106,7 +106,7 @@ export default function ServiceDetailBlock({ service }: { service: ServiceDetail
   );
 
   const photoColumn = (
-    <PhotoPlaceholder label={service.photoLabel} className="h-[220px] rounded sm:h-[300px] lg:h-[420px]" />
+    <PhotoPlaceholder label={service.photoLabel} className="h-[220px] rounded-xl sm:h-[300px] lg:h-[420px]" />
   );
 
   return (

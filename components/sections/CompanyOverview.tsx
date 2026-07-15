@@ -69,7 +69,7 @@ export default function CompanyOverview() {
             Our 800+ Workforce
           </div>
           <motion.div
-            className="flex h-3.5 overflow-hidden rounded-[3px]"
+            className="flex h-3.5 overflow-hidden rounded-full"
             variants={barContainer}
             initial="hidden"
             whileInView="visible"
@@ -91,7 +91,7 @@ export default function CompanyOverview() {
       <PhotoPlaceholder
         label="PHOTO — corporate HQ / office team collaboration"
         src="/images/company/office-team.jpg"
-        className="h-[260px] rounded sm:h-[340px] lg:h-[440px]"
+        className="h-[260px] rounded-xl sm:h-[340px] lg:h-[440px]"
       />
     </div>
   );

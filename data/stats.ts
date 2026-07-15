@@ -2,13 +2,12 @@ export interface Stat {
   value: number;
   suffix?: string;
   label: string;
-  color: "navy" | "cyan" | "red";
 }
 
 export const stats: Stat[] = [
-  { value: 22, suffix: "+", label: "Years Experience", color: "navy" },
-  { value: 20, suffix: "+", label: "Mobile Operators", color: "cyan" },
-  { value: 50, suffix: "M+", label: "Subscribers Managed", color: "red" },
-  { value: 800, suffix: "+", label: "Employees", color: "navy" },
-  { value: 13, label: "Countries", color: "cyan" },
+  { value: 22, suffix: "+", label: "Years Experience" },
+  { value: 20, suffix: "+", label: "Mobile Operators" },
+  { value: 50, suffix: "M+", label: "Subscribers Managed" },
+  { value: 800, suffix: "+", label: "Employees" },
+  { value: 13, label: "Countries" },
 ];

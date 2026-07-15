@@ -1,22 +1,24 @@
 import { stats } from "@/data/stats";
-import { accentText } from "@/lib/colorMap";
 import CountUp from "@/components/ui/CountUp";
 
 export default function StatBar() {
   return (
-    <div className="grid grid-cols-2 border-b border-border-tint bg-bg-tint sm:grid-cols-3 lg:grid-cols-5">
-      {stats.map((stat, i) => (
-        <div
-          key={stat.label}
-          className={`px-5 py-5 text-center sm:py-7 ${i < stats.length - 1 ? "lg:border-r lg:border-navy/[0.14]" : ""}`}
-        >
-          <div className={`font-heading text-[22px] sm:text-[26px] lg:text-[30px] ${accentText[stat.color]}`}>
-            <CountUp to={stat.value} duration={2} />
-            {stat.suffix}
+    <div className="section-px relative z-10 -mt-8 sm:-mt-10 lg:-mt-12">
+      <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-5 lg:gap-5">
+        {stats.map((stat) => (
+          <div
+            key={stat.label}
+            className="rounded-lg border border-border bg-white px-4 py-5 shadow-[0_8px_24px_rgba(16,42,67,0.08)] sm:py-6"
+          >
+            <div className="font-heading text-[22px] text-navy sm:text-[26px] lg:text-[28px]">
+              <CountUp to={stat.value} duration={2} />
+              {stat.suffix}
+            </div>
+            <div className="mt-1.5 text-[12px] text-text-muted">{stat.label}</div>
+            <div className="mt-2.5 h-[3px] w-6 rounded-full bg-cyan" />
           </div>
-          <div className="text-[11.5px] uppercase tracking-[0.05em] text-text-subtle">{stat.label}</div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

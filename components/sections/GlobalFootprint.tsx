@@ -27,7 +27,7 @@ export default function GlobalFootprint() {
           <PhotoPlaceholder
             label="MAP — Middle East & Africa footprint"
             src="/images/footprint/mea-map.jpg"
-            className="aspect-[1480/1400] w-full rounded border border-border"
+            className="aspect-[1480/1400] w-full rounded-xl border border-border"
           />
           <div className="mt-3.5 flex gap-4 text-[11.5px] text-text-muted">
             {legend.map((item) => (
@@ -42,7 +42,7 @@ export default function GlobalFootprint() {
           {footprintLocations.map((loc) => (
             <div
               key={loc.name}
-              className={`flex items-baseline justify-between gap-3 rounded border border-l-[3px] border-border bg-white px-4 py-2.5 ${roleAccent[loc.role]}`}
+              className={`flex items-baseline justify-between gap-3 rounded-lg border border-l-[3px] border-border bg-white px-4 py-2.5 ${roleAccent[loc.role]}`}
             >
               <div className="font-heading text-sm text-navy">{loc.name}</div>
               <div className="whitespace-nowrap text-[11.5px] text-text-muted">{loc.role}</div>

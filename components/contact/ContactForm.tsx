@@ -18,7 +18,7 @@ const serviceOptions = [
 ];
 
 const inputClasses =
-  "w-full rounded-[3px] border border-[#DADCDE] bg-white px-3.5 py-[13px] font-body text-[14.5px] text-navy focus:border-cyan focus:outline-none";
+  "w-full rounded-lg border border-[#DADCDE] bg-white px-3.5 py-[13px] font-body text-[14.5px] text-navy focus:border-cyan focus:outline-none";
 const labelClasses = "mb-2 block font-heading text-xs uppercase tracking-[0.05em] text-text-body";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -140,7 +140,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="self-start rounded-[2px] bg-navy px-[34px] py-[15px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-navy-dark disabled:opacity-60"
+        className="self-start rounded-md bg-cyan px-[34px] py-[15px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-red disabled:opacity-60"
       >
         {status === "submitting" ? "SENDING..." : "SEND INQUIRY"}
       </button>

@@ -24,7 +24,7 @@ export default function Header() {
                 href={link.href}
                 className={`font-heading text-sm tracking-[0.05em] transition-colors ${
                   active
-                    ? "rounded-[2px] bg-cyan px-[18px] py-[9px] text-white hover:text-white"
+                    ? "rounded-md bg-cyan px-[18px] py-[9px] text-white hover:text-white"
                     : "text-navy hover:text-cyan"
                 }`}
               >
@@ -60,7 +60,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`rounded-[2px] px-3 py-3 font-heading text-sm tracking-[0.05em] ${
+                className={`rounded-md px-3 py-3 font-heading text-sm tracking-[0.05em] ${
                   active ? "bg-cyan text-white" : "text-navy hover:text-cyan"
                 }`}
               >

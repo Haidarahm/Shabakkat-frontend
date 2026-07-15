@@ -14,7 +14,7 @@ export default function FeaturedProjects() {
           <StaggerItem key={project.title}>
             <Link
               href={project.href}
-              className="group block h-full overflow-hidden rounded border border-border bg-white transition-[box-shadow,transform] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_28px_rgba(20,24,28,0.12)]"
+              className="group block h-full overflow-hidden rounded-xl border border-border bg-white transition-[box-shadow,transform] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_28px_rgba(20,24,28,0.12)]"
             >
               <PhotoPlaceholder
                 label={project.photoLabel}

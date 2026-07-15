@@ -18,7 +18,7 @@ export default function Testimonials() {
       <StaggerGrid className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
         {testimonials.map((t) => (
           <StaggerItem key={t.author}>
-            <div className="h-full rounded border border-border bg-white p-7">
+            <div className="h-full rounded-xl border border-border bg-white p-7">
               <div className="text-[14.5px] leading-[1.7] text-text-body-alt">&ldquo;{t.quote}&rdquo;</div>
               <div className={`mt-[18px] font-heading text-[13.5px] ${accentText[t.color]}`}>
                 — {t.author}, {t.role}
