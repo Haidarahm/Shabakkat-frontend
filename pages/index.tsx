@@ -4,16 +4,11 @@ import StatBar from "@/components/sections/StatBar";
 import CompanyOverview from "@/components/sections/CompanyOverview";
 import MissionDirection from "@/components/sections/MissionDirection";
 import WhyUsGrid from "@/components/sections/WhyUsGrid";
-import IndustriesGrid from "@/components/sections/IndustriesGrid";
 import GlobalFootprint from "@/components/sections/GlobalFootprint";
-import CapabilitiesGrid from "@/components/sections/CapabilitiesGrid";
 import ServicesOverviewGrid from "@/components/sections/ServicesOverviewGrid";
 import Timeline from "@/components/sections/Timeline";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import PartnersGrid from "@/components/sections/PartnersGrid";
-import CompetitiveLandscape from "@/components/sections/CompetitiveLandscape";
-import TechnologiesGrid from "@/components/sections/TechnologiesGrid";
-import ProcessSteps from "@/components/sections/ProcessSteps";
 import Certifications from "@/components/sections/Certifications";
 import HseSection from "@/components/sections/HseSection";
 import Testimonials from "@/components/sections/Testimonials";
@@ -23,12 +18,12 @@ import Button from "@/components/ui/Button";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function Home() {
+export default function About() {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
     <Layout
-      title="Home"
+      title="About"
       description="Shabakkat serves operators & enterprises with a full spectrum of ICT services across the Middle East and Africa since 2005."
     >
       <Hero
@@ -52,7 +47,7 @@ export default function Home() {
         </AnimatedParagraph>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <Button href="/services">OUR SERVICES</Button>
-          <Button href="/contact" variant="outline-light">
+          <Button href="/careers" variant="outline-light">
             CONTACT US
           </Button>
         </div>
@@ -62,16 +57,11 @@ export default function Home() {
       <CompanyOverview />
       <MissionDirection />
       <WhyUsGrid />
-      <IndustriesGrid />
       <GlobalFootprint />
-      <CapabilitiesGrid />
-      <ServicesOverviewGrid />
       <Timeline />
+      <ServicesOverviewGrid />
       <FeaturedProjects />
       <PartnersGrid />
-      <CompetitiveLandscape />
-      <TechnologiesGrid />
-      <ProcessSteps />
       <Certifications />
       <HseSection />
       <Testimonials />
