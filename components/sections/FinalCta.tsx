@@ -14,7 +14,7 @@ export default function FinalCta({
   title,
   description,
   ctaLabel = "CONTACT SHABAKKAT",
-  ctaHref = "/contact",
+  ctaHref = "/careers",
 }: FinalCtaProps) {
   const [titleDone, setTitleDone] = useState(false);
 
