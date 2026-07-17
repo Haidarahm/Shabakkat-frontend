@@ -1,18 +1,11 @@
 import Layout from "@/components/layout/Layout";
 import HomeHero from "@/components/sections/HomeHero";
 import StatBar from "@/components/sections/StatBar";
-import CompanyOverview from "@/components/sections/CompanyOverview";
 import IntegratedDeliveryModel from "@/components/sections/IntegratedDeliveryModel";
-import WhyUsGrid from "@/components/sections/WhyUsGrid";
-import VisionMission from "@/components/sections/VisionMission";
-import CoreValues from "@/components/sections/CoreValues";
-import GlobalFootprint from "@/components/sections/GlobalFootprint";
 import ServicesOverviewGrid from "@/components/sections/ServicesOverviewGrid";
-import Timeline from "@/components/sections/Timeline";
+import WhyUsGrid from "@/components/sections/WhyUsGrid";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import PartnersGrid from "@/components/sections/PartnersGrid";
-import Certifications from "@/components/sections/Certifications";
-import HseSection from "@/components/sections/HseSection";
 import Testimonials from "@/components/sections/Testimonials";
 import FaqTeaser from "@/components/sections/FaqTeaser";
 import FinalCta from "@/components/sections/FinalCta";
@@ -22,12 +15,12 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function About() {
+export default function Home() {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
     <Layout
-      title="About"
+      title="Home"
       description="Shabakkat is a regional Engineering & Advisory company delivering critical digital infrastructure across the Middle East and Africa since 2005."
     >
       <HomeHero>
@@ -55,18 +48,11 @@ export default function About() {
       </HomeHero>
 
       <StatBar />
-      <CompanyOverview />
       <IntegratedDeliveryModel />
-      <WhyUsGrid />
-      <VisionMission />
-      <CoreValues />
-      <GlobalFootprint />
-      <Timeline />
       <ServicesOverviewGrid />
+      <WhyUsGrid />
       <FeaturedProjects />
       <PartnersGrid />
-      <Certifications />
-      <HseSection />
       <Testimonials />
       <FaqTeaser />
       <FinalCta
