@@ -6,6 +6,14 @@ interface StaggerGridProps {
   className?: string;
   stagger?: number;
   amount?: number;
+  /**
+   * When true, animates in on mount instead of waiting for a scroll-triggered
+   * viewport check. Use this for grids that render directly below a hero and
+   * are therefore already on-screen at load — `whileInView`'s IntersectionObserver
+   * can miss that initial in-view state (it only recovers on the next scroll/layout
+   * change), leaving the content invisible until the user scrolls.
+   */
+  animateOnMount?: boolean;
 }
 
 export default function StaggerGrid({
@@ -13,11 +21,20 @@ export default function StaggerGrid({
   className = "",
   stagger = 0.09,
   amount = 0.2,
+  animateOnMount = false,
 }: StaggerGridProps) {
   const container: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: stagger } },
   };
+
+  if (animateOnMount) {
+    return (
+      <motion.div className={className} variants={container} initial="hidden" animate="visible">
+        {children}
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div

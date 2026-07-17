@@ -4,6 +4,14 @@ import { useRouter } from "next/router";
 import { navLinks } from "@/data/navLinks";
 import Button from "@/components/ui/Button";
 
+function isLinkActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  // Covers dynamic routes (e.g. router.pathname === "/services/[category]" for
+  // /services/engineering-services#managed-services) so a nav item stays active
+  // across its whole section, not just its exact index URL.
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export default function Header() {
   const { pathname } = useRouter();
   const [open, setOpen] = useState(false);
@@ -17,7 +25,7 @@ export default function Header() {
 
         <nav className="hidden items-center gap-10 lg:flex">
           {navLinks.map((link) => {
-            const active = pathname === link.href;
+            const active = isLinkActive(pathname, link.href);
             return (
               <Link
                 key={link.href}
@@ -54,7 +62,7 @@ export default function Header() {
       {open && (
         <nav className="flex flex-col gap-1 border-t border-border pb-5 pt-2 lg:hidden">
           {navLinks.map((link) => {
-            const active = pathname === link.href;
+            const active = isLinkActive(pathname, link.href);
             return (
               <Link
                 key={link.href}

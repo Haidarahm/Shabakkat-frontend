@@ -40,7 +40,7 @@ export default function Industries() {
       </Hero>
 
       <div className="section-px section-py">
-        <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2" animateOnMount>
           {industries.map((industry) => (
             <StaggerItem key={industry.slug}>
               <IndustryCard industry={industry} />
