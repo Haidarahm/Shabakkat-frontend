@@ -17,3 +17,9 @@ export const accentBorder: Record<AccentColor, string> = {
   cyan: "border-cyan",
   navy: "border-navy",
 };
+
+export const accentFill: Record<AccentColor, string> = {
+  red: "fill-red",
+  cyan: "fill-cyan",
+  navy: "fill-navy",
+};
