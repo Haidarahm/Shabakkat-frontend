@@ -10,7 +10,8 @@ export default function WhyUsGrid() {
     <div className="section-px section-py">
       <SectionHeading
         eyebrow="WHY SHABAKKAT"
-        title="We love to see our clients shine. When they do well, so do we."
+        title="Engineering confidence into every project"
+        description="Critical infrastructure requires more than technical capability. It requires a partner capable of aligning strategy, governance, and execution within a single delivery model."
       />
       <StaggerGrid className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {whyUs.map((item) => (

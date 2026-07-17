@@ -60,25 +60,25 @@ export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageP
         ))}
       </div>
 
-      {categoryId === "network-deployment" && (
+      {categoryId === "engineering-services" && (
         <div className="border-t border-border">
           <SimpleItemGrid
             id="equipment-supply"
-            index="1.3"
-            eyebrow="TELECOM EQUIPMENT SUPPLY"
+            index="1.15"
+            eyebrow="TELECOM PRODUCTS & INFRASTRUCTURE SOLUTIONS"
             title="Active, passive & power equipment, sourced & delivered"
-            description="End-to-end procurement and logistics for the equipment operators need to build and maintain their networks — from active radio equipment to spare parts and consumables."
+            description="End-to-end procurement and logistics for the equipment operators need to build and maintain their networks — from tower & energy solutions to network equipment and telecom accessories."
             items={equipmentSupply}
             background={services.length % 2 === 1 ? "muted" : undefined}
           />
         </div>
       )}
 
-      {categoryId === "professional-services" && (
+      {categoryId === "technical-advisory" && (
         <div className="border-t border-border">
           <SimpleItemGrid
             id="professional-services-list"
-            index="6.3"
+            index="3.3"
             eyebrow="PROFESSIONAL SERVICES"
             title="Expert consulting for strategic decisions"
             description="Specialist consulting across network and IT architecture, audits, and business development — bringing outside expertise to the moments that matter most."

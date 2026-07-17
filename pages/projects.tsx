@@ -32,8 +32,8 @@ export default function Projects() {
           active={heroTitleDone}
           className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
         >
-          Mega projects delivered for operators, vendors, and government clients across the Middle East and Africa
-          since 2004.
+          Mega projects delivered for operators, enterprises, and government clients across the Middle East and
+          Africa since 2005.
         </AnimatedParagraph>
       </Hero>
 

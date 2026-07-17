@@ -15,7 +15,7 @@ export default function Services() {
   return (
     <Layout
       title="Services"
-      description="Full-spectrum telecom & ICT services — from civil works to cybersecurity — for operators and enterprises."
+      description="Engineering Services, PMO & Project Delivery, and Technical Advisory — Shabakkat's integrated delivery model for critical digital infrastructure."
     >
       <Hero
         photoLabel="PHOTO — engineers & ICT infrastructure, full-bleed"
@@ -24,7 +24,7 @@ export default function Services() {
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
           as="h1"
-          text="Full-spectrum telecom & ICT services"
+          text="Engineering excellence through end-to-end delivery"
           className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
@@ -32,8 +32,8 @@ export default function Services() {
           active={heroTitleDone}
           className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
         >
-          From civil works to cybersecurity — everything an operator or enterprise needs to build, run, and protect
-          their network.
+          Our engineering teams combine technical expertise, disciplined execution, and operational excellence to
+          build resilient, scalable, and future-ready digital infrastructure.
         </AnimatedParagraph>
       </Hero>
 
@@ -43,8 +43,9 @@ export default function Services() {
       <ServiceCategoryGrid />
 
       <FinalCta
-        title="Need a tailored ICT solution?"
-        description="Let's talk about the right combination of services for your network."
+        title="Let's deliver what's next"
+        description="Whether you're expanding telecommunications infrastructure, establishing enterprise project governance, or defining your next technology strategy, Shabakkat delivers with confidence."
+        ctaLabel="CONTACT OUR TEAM"
       />
     </Layout>
   );

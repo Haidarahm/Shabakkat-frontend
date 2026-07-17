@@ -30,7 +30,7 @@ export default function CompanyOverview() {
       <div>
         <Eyebrow>WHO WE ARE</Eyebrow>
         <AnimatedTitle
-          text="A comprehensive telecommunications solution provider"
+          text="Engineering infrastructure that enables progress"
           className="mt-4 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]"
           onAnimationComplete={() => setTitleDone(true)}
         />
@@ -38,35 +38,36 @@ export default function CompanyOverview() {
           active={titleDone}
           className="mt-5 border-l-[3px] border-cyan pl-4 text-[15.5px] font-medium leading-[1.7] text-navy"
         >
-          Shabakkat designs, builds, operates, monitors, optimizes, maintains, and secures critical
-          telecommunications and ICT infrastructure across the Middle East and Africa.
+          Digital infrastructure has become the foundation of economic growth, business resilience, and national
+          development. Delivering it successfully demands engineering excellence, disciplined execution, and
+          strategic leadership.
         </AnimatedParagraph>
         <AnimatedParagraph active={titleDone} delay={0.04} className="mt-5 text-base leading-[1.75] text-text-body">
-          Established in 2004, Shabakkat has served Telecom Operators, Network Vendors, Enterprises, and Government
-          Sectors across 13 countries in the Middle East and Africa. With headquarters in Kuwait City and regional
-          offices in Saudi Arabia, Iraq, and Morocco, our team of 800+ professionals has executed hundreds of
-          projects for the region&apos;s most prominent Communications Service Providers.
+          Established in 2005, Shabakkat has spent more than 21 years delivering complex infrastructure programs
+          across the Middle East and Africa. Today, we operate across 15 countries with a multidisciplinary team of
+          900+ professionals, supporting operators, enterprises, and government organizations through every stage of
+          the infrastructure lifecycle.
         </AnimatedParagraph>
         <AnimatedParagraph
           active={titleDone}
           delay={0.06}
           className="mt-4 text-base leading-[1.75] text-text-body"
         >
-          We continually strive to understand our clients&apos; needs, address their concerns, and empower their
-          businesses with premium, tailored services — capitalizing on our knowledge base across Managed Services,
-          Consultancy & Resourcing, Professional Services, Full Turnkey Site Build, and more.
+          By integrating Engineering Services, PMO &amp; Project Delivery, and Technical Advisory within a single
+          organization, we provide our clients with one strategic partner capable of transforming vision into
+          successful execution.
         </AnimatedParagraph>
         <div className="mt-7 flex gap-3.5">
           <div className="border-l-[3px] border-red bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
-            HQ: Kuwait City
+            21+ Years
           </div>
           <div className="border-l-[3px] border-cyan bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
-            3 Regional Offices
+            15 Countries
           </div>
         </div>
         <div className="mt-7">
           <div className="mb-3 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
-            Our 800+ Workforce
+            Our 900+ Workforce
           </div>
           <motion.div
             className="flex h-3.5 overflow-hidden rounded-full"

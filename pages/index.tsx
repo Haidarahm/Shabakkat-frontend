@@ -2,8 +2,10 @@ import Layout from "@/components/layout/Layout";
 import HomeHero from "@/components/sections/HomeHero";
 import StatBar from "@/components/sections/StatBar";
 import CompanyOverview from "@/components/sections/CompanyOverview";
-import MissionDirection from "@/components/sections/MissionDirection";
+import IntegratedDeliveryModel from "@/components/sections/IntegratedDeliveryModel";
 import WhyUsGrid from "@/components/sections/WhyUsGrid";
+import VisionMission from "@/components/sections/VisionMission";
+import CoreValues from "@/components/sections/CoreValues";
 import GlobalFootprint from "@/components/sections/GlobalFootprint";
 import ServicesOverviewGrid from "@/components/sections/ServicesOverviewGrid";
 import Timeline from "@/components/sections/Timeline";
@@ -26,13 +28,13 @@ export default function About() {
   return (
     <Layout
       title="About"
-      description="Shabakkat serves operators & enterprises with a full spectrum of ICT services across the Middle East and Africa since 2004."
+      description="Shabakkat is a regional Engineering & Advisory company delivering critical digital infrastructure across the Middle East and Africa since 2005."
     >
       <HomeHero>
-        <Eyebrow>TELECOM AND ICT INFRASTRUCTURE</Eyebrow>
+        <Eyebrow>ENGINEERING &amp; ADVISORY</Eyebrow>
         <AnimatedTitle
           as="h1"
-          text="Building, operating, and optimizing critical networks across the Middle East and Africa"
+          text="Engineering the digital backbone of nations"
           className="mt-4 max-w-[620px] font-heading text-[30px] font-semibold uppercase leading-[1.2] text-white sm:text-[38px] lg:text-[46px] lg:leading-[1.14]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
@@ -40,21 +42,24 @@ export default function About() {
           active={heroTitleDone}
           className="mt-4 max-w-[560px] text-sm text-white/80 sm:text-base lg:text-[16.5px]"
         >
-          Your partner for network rollout, managed services, and turnkey telecom solutions across the Middle East
-          and Africa since 2004.
+          Through Engineering Services, PMO &amp; Project Delivery, and Technical Advisory, we enable operators,
+          enterprises, and governments to deliver resilient infrastructure, accelerate digital transformation, and
+          build sustainable networks for the future.
         </AnimatedParagraph>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <Button href="/careers">DISCUSS A PROJECT</Button>
-          <Button href="/services" variant="outline-light">
-            EXPLORE OUR SERVICES
+          <Button href="/services">EXPLORE OUR SERVICES</Button>
+          <Button href="/careers" variant="outline-light">
+            CONTACT US
           </Button>
         </div>
       </HomeHero>
 
       <StatBar />
       <CompanyOverview />
-      <MissionDirection />
+      <IntegratedDeliveryModel />
       <WhyUsGrid />
+      <VisionMission />
+      <CoreValues />
       <GlobalFootprint />
       <Timeline />
       <ServicesOverviewGrid />
@@ -65,8 +70,8 @@ export default function About() {
       <Testimonials />
       <FaqTeaser />
       <FinalCta
-        title="Ready to build a smarter connected network?"
-        description="Talk to our team about network rollout, managed services, or a tailored ICT solution for your business."
+        title="Let's build what's next"
+        description="Whether you're expanding national infrastructure, delivering complex transformation programs, or shaping the next generation of digital connectivity, Shabakkat brings together the engineering expertise, project leadership, and strategic advisory needed to deliver with confidence."
       />
     </Layout>
   );

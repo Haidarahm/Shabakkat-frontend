@@ -10,7 +10,8 @@ export default function Footer() {
         <div>
           <div className="font-heading text-xl font-semibold uppercase text-navy">Shabakkat</div>
           <p className="mt-4 max-w-[280px] text-[13.5px] leading-[1.7]">
-            A comprehensive telecommunications solution provider serving the Middle East and Africa since 2004.
+            A regional Engineering &amp; Advisory company delivering critical digital infrastructure across the
+            Middle East and Africa since 2005.
           </p>
         </div>
         <div>
@@ -26,9 +27,9 @@ export default function Footer() {
         <div>
           <div className="mb-4 font-heading text-[13px] tracking-[0.06em] text-navy">HEAD OFFICE</div>
           <div className="text-[13.5px] leading-[1.7]">
-            Qibla Area, Block 13, Al Nour Investment Building, Kuwait
+            Kuwait
             <br />
-            +965 2249 4589
+            info@shabakkat.com
           </div>
         </div>
         <div>

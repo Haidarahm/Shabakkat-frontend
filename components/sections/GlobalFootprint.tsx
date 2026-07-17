@@ -18,9 +18,9 @@ export default function GlobalFootprint() {
   return (
     <div className="section-px section-py bg-bg-muted">
       <SectionHeading
-        eyebrow="WHERE WE OPERATE"
-        title="Global footprint"
-        description="Headquartered in Kuwait City with regional offices in Saudi Arabia, Iraq, and Morocco, Shabakkat has delivered projects across 13 countries throughout the Middle East and Africa."
+        eyebrow="REGIONAL PRESENCE"
+        title="Regional reach. Local expertise."
+        description="Operating across 15 countries, Shabakkat combines regional scale with local knowledge to deliver consistent engineering excellence while understanding the operational, regulatory, and commercial realities of every market we serve."
       />
       <div className="mt-7 grid grid-cols-1 items-start gap-9 lg:grid-cols-[1.5fr_1fr]">
         <div>

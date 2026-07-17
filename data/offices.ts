@@ -3,20 +3,14 @@ export interface FootprintLocation {
   role: "Headquarters" | "Regional office" | "Project delivery";
 }
 
+// TODO: Source doc lists only 4 confirmed office locations (Kuwait, Iraq, Qatar, Syria) while
+// stating Shabakkat operates across 15 countries — the full country list was not provided and
+// needs to be confirmed before this is expanded back out to a broader footprint map.
 export const footprintLocations: FootprintLocation[] = [
   { name: "Kuwait", role: "Headquarters" },
-  { name: "Saudi Arabia", role: "Regional office" },
   { name: "Iraq", role: "Regional office" },
-  { name: "Morocco", role: "Regional office" },
-  { name: "Oman", role: "Project delivery" },
-  { name: "Bahrain", role: "Project delivery" },
-  { name: "UAE", role: "Project delivery" },
-  { name: "Egypt", role: "Project delivery" },
-  { name: "Sudan", role: "Project delivery" },
-  { name: "Ethiopia", role: "Project delivery" },
-  { name: "Ghana", role: "Project delivery" },
-  { name: "Tanzania", role: "Project delivery" },
-  { name: "Nigeria", role: "Project delivery" },
+  { name: "Qatar", role: "Regional office" },
+  { name: "Syria", role: "Regional office" },
 ];
 
 export interface OfficeLocation {
@@ -26,48 +20,29 @@ export interface OfficeLocation {
   phone?: string;
 }
 
+// TODO: Full HQ address and phone number are placeholders in the source document
+// ("(Full address)" / "+965 XXX XXXX") — replace with the real values before launch.
 export const headOffice: OfficeLocation = {
-  name: "Shabakkat — Kuwait",
+  name: "Shabakkat — Kuwait (Headquarters)",
   color: "red",
-  address:
-    "Qibla Area, Block 13, Mohammad Thunayan Al-Ghanim Street, Al Nour Investment Building, 1st Floor, PO Box 3976, Safat, 13040 Kuwait",
-  phone: "+965 2249 4589",
+  address: "Kuwait — full address to be confirmed.",
+  phone: "+965 XXX XXXX",
 };
 
 export const regionalOffices: OfficeLocation[] = [
   {
-    name: "Saudi Arabia",
-    color: "red",
-    address: "King Fahad Road, Abalkhail Building, 1st Floor, Office 15, PO Box 301815, Riyadh 11372",
-    phone: "+966 1 462 4209",
-  },
-  {
-    name: "Morocco",
-    color: "cyan",
-    address: "Lotissement Al OTOR, Rue Arrafif Lot n°27, Hay Riad, Rabat (Serving Algeria & Tunisia)",
-    phone: "+212 537 565 067",
-  },
-  {
     name: "Iraq",
-    color: "red",
-    address: "Regional office supporting Zain Iraq managed services & FTK operations.",
-  },
-  {
-    name: "Shabakkat (SIM) — Kuwait",
     color: "cyan",
-    address: "Same address as Head Office, Al Nour Investment Building.",
-    phone: "+965 2249 4589",
+    address: "Iraq Office — address to be confirmed.",
   },
   {
-    name: "Advaltis — UK",
+    name: "Qatar",
     color: "red",
-    address: "51 Crabtree Road, Oxford OX9 2DU",
-    phone: "+44 1865 728 023",
+    address: "Qatar Office — address to be confirmed.",
   },
   {
-    name: "Advaltis — Morocco (Casablanca)",
+    name: "Syria",
     color: "cyan",
-    address: "14, Rue Mohamed Abdou, Palmiers, Casablanca, 20000",
-    phone: "+212 520 429 033",
+    address: "Syria Office — address to be confirmed.",
   },
 ];

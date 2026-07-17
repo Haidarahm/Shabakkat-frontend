@@ -7,45 +7,25 @@ export interface ServiceCategory {
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    id: "network-deployment",
+    id: "engineering-services",
     index: "01",
-    title: "Network Deployment",
+    title: "Engineering Services",
     description:
-      "Planning, rollout, modernization, integration, fiber, equipment supply, testing, and commissioning — delivered as one accountable program.",
+      "Delivering engineering excellence across the complete infrastructure lifecycle — network deployment, wireless & fixed networks, data centers, managed operations, and telecom products.",
   },
   {
-    id: "managed-operations",
+    id: "pmo-project-delivery",
     index: "02",
-    title: "Managed Operations",
+    title: "PMO & Project Delivery",
     description:
-      "NOC, back-office, field maintenance, monitoring, incident management, and SLA/KPI reporting for networks already on air.",
+      "Governance, leadership, and execution discipline required to successfully deliver complex programs with certainty, accountability, and measurable results.",
   },
   {
-    id: "network-optimization",
+    id: "technical-advisory",
     index: "03",
-    title: "Network Optimization",
+    title: "Technical Advisory",
     description:
-      "Radio audits, drive testing, benchmarking, and capacity, coverage, and performance optimization, grounded in real customer experience data.",
-  },
-  {
-    id: "ict-cybersecurity",
-    index: "04",
-    title: "ICT & Cybersecurity",
-    description:
-      "Enterprise networks and data infrastructure, systems integration, and security assessment, hardening, and monitoring.",
-  },
-  {
-    id: "infrastructure-power",
-    index: "05",
-    title: "Infrastructure & Power",
-    description:
-      "Turnkey site construction, civil works, towers, shelters, generators, batteries, and backup power for critical sites.",
-  },
-  {
-    id: "professional-services",
-    index: "06",
-    title: "Professional Services",
-    description: "Consultancy, project and vendor management, technical resourcing, governance, and revenue assurance.",
+      "Independent engineering expertise, technology consulting, infrastructure planning, and digital transformation advisory that support strategic decision-making.",
   },
 ];
 
@@ -68,27 +48,35 @@ export interface ServiceDetail {
 }
 
 export const servicesDetail: ServiceDetail[] = [
-  // 01 — Network Deployment
+  // 01 — Engineering Services
   {
     id: "network-rollout",
-    category: "network-deployment",
+    category: "engineering-services",
     index: "1.1",
-    eyebrow: "NETWORK ROLLOUT",
-    title: "Telecom & civil rollout, end to end",
+    eyebrow: "NETWORK INFRASTRUCTURE & DEPLOYMENT",
+    title: "Planning, building, and expanding telecom infrastructure",
     description:
-      "Shabakkat plans, builds, and delivers 3G/4G/5G rollout programs for operators across the Middle East and Africa — combining civil works, radio planning, and program management to bring new coverage on air, on schedule.",
+      "Shabakkat plans, designs, builds, and expands telecommunications infrastructure from concept to commissioning — combining civil works, radio planning, and program management to bring new coverage on air, on schedule.",
     businessValue:
       "Faster time-to-market for new coverage and capacity, with a single accountable partner for civil, radio, and transmission scopes.",
     capabilities: [
-      "Site survey & permitting",
-      "RF & transmission engineering",
-      "Civil & structural works",
-      "BTS/RAN installation (2G–5G)",
-      "Fiber deployment",
-      "Swap & modernization",
-      "Multi-vendor integration",
-      "Testing & commissioning",
-      "Program & schedule management",
+      "Full Turnkey (FTK)",
+      "Network Rollout",
+      "Site Acquisition",
+      "Civil Works",
+      "Tower Construction",
+      "Steel Structures",
+      "Shelters & Passive Infrastructure",
+      "Installation & Commissioning",
+      "Testing & Acceptance",
+      "Network Modernization",
+      "Network Expansion",
+    ],
+    stats: [
+      { value: "1,000+", label: "Iraq deployments", color: "red" },
+      { value: "239", label: "Ghana deployments", color: "cyan" },
+      { value: "230", label: "Sudan deployments", color: "red" },
+      { value: "150", label: "Kuwait deployments", color: "cyan" },
     ],
     relatedProjects:
       "Etisalat & du UAE — Mega 3G & 4G Rollout (2010, 2016) · Ericsson Egypt/Oman/Bahrain — Mega 3G & 4G Rollout (2013)",
@@ -96,9 +84,32 @@ export const servicesDetail: ServiceDetail[] = [
     imageSide: "right",
   },
   {
-    id: "fiber-digital",
-    category: "network-deployment",
+    id: "wireless-fixed-networks",
+    category: "engineering-services",
     index: "1.2",
+    eyebrow: "WIRELESS & FIXED NETWORKS",
+    title: "High-performance connectivity, built for growth",
+    description:
+      "Delivering high-performance wireless and fixed network solutions that support connectivity, capacity, and future growth for operators and enterprises alike.",
+    capabilities: [
+      "Radio Access Networks (RAN)",
+      "Microwave Transmission",
+      "Fiber Optic Networks",
+      "FTTH",
+      "Backbone & Metro Networks",
+      "Indoor Coverage Solutions",
+      "Small Cells",
+      "Private Networks",
+      "Core Network Integration",
+      "IP & MPLS Networks",
+    ],
+    photoLabel: "PHOTO — wireless & fixed network infrastructure",
+    imageSide: "left",
+  },
+  {
+    id: "fiber-digital",
+    category: "engineering-services",
+    index: "1.3",
     eyebrow: "DIGITAL INFRASTRUCTURE & FIBER NETWORKS",
     title: "Fiber networks, built & maintained",
     description:
@@ -112,39 +123,81 @@ export const servicesDetail: ServiceDetail[] = [
       "Data connectivity",
     ],
     photoLabel: "PHOTO — fiber splicing & OTDR testing",
+    imageSide: "right",
+  },
+  {
+    id: "data-centers-digital-infrastructure",
+    category: "engineering-services",
+    index: "1.4",
+    eyebrow: "DATA CENTERS & DIGITAL INFRASTRUCTURE",
+    title: "Resilient digital infrastructure, designed & built",
+    description:
+      "Designing, building, and supporting resilient digital infrastructure that powers modern enterprise and telecommunications environments.",
+    capabilities: [
+      "Data Center Infrastructure",
+      "Data Center Fit-Out",
+      "Server Rooms",
+      "Structured Cabling",
+      "Critical Power Systems",
+      "Cooling Infrastructure",
+      "Edge Data Centers",
+      "Disaster Recovery Infrastructure",
+    ],
+    photoLabel: "PHOTO — data center infrastructure",
     imageSide: "left",
   },
-
-  // 02 — Managed Operations
+  {
+    id: "enterprise-networks",
+    category: "engineering-services",
+    index: "1.5",
+    eyebrow: "ENTERPRISE NETWORKS & DATA INFRASTRUCTURE",
+    title: "LAN/WAN, structured cabling & data centers for the enterprise",
+    description:
+      "Shabakkat designs, builds, and commissions enterprise data network infrastructure — from structured cabling and wireless access across LAN/WAN environments to scalable, highly-available data centers and SAN storage architectures.",
+    businessValue:
+      "A single accountable partner for enterprise network and data-center infrastructure, engineered for redundancy, availability, and reduced total cost of ownership.",
+    capabilities: [
+      "LAN & WAN design, deployment & commissioning",
+      "Structured cabling (copper & fiber)",
+      "Outside plant (OSP) infrastructure",
+      "Data center & SAN design and build",
+      "Business continuity & disaster recovery planning",
+    ],
+    photoLabel: "PHOTO — enterprise data center / structured cabling",
+    imageSide: "right",
+  },
   {
     id: "managed-services",
-    category: "managed-operations",
-    index: "2.1",
-    eyebrow: "MANAGED SERVICES",
+    category: "engineering-services",
+    index: "1.6",
+    eyebrow: "MANAGED OPERATIONS",
     title: "24/7 operations, on your behalf",
     description:
-      "Delivering managed services since 2009, Shabakkat runs NOC, field maintenance, IN charging, and second-level core/IP back-office support for major operators — currently supporting 11,000+ combined sites across Iraq and Kuwait.",
+      "Delivering long-term operational excellence through proactive support, maintenance, optimization, and managed services — running NOC, field maintenance, and second-level core/IP back-office support for major operators, currently supporting 11,000+ combined sites across Iraq and Kuwait.",
     capabilities: [
-      "24/7 NOC service",
-      "24/7 field maintenance",
-      "IN charging operation",
-      "Core network ops (CS/PS, EPC, IMS, VoLTE, 5G Core)",
-      "IP & transport ops (MPLS, Metro Ethernet, backbone)",
-      "Fault diagnosis & root cause analysis",
-      "OSS/BSS support & KPI reporting",
-      "Site acquisition & access mgmt.",
+      "Managed Services",
+      "Network Operations Center (NOC)",
+      "Field Operations",
+      "Preventive Maintenance",
+      "Corrective Maintenance",
+      "Operations & Maintenance (O&M)",
+      "Network Optimization",
+      "Performance Management",
+      "Core Network Support",
+      "Level 2 Technical Support",
+      "SLA Management",
     ],
     stats: [
       { value: "5,000+", label: "Sites — Zain Iraq", color: "red" },
       { value: "6,000+", label: "Sites — STC/Zain/Ooredoo Kuwait", color: "cyan" },
     ],
     photoLabel: "PHOTO — 24/7 NOC operations floor",
-    imageSide: "right",
+    imageSide: "left",
   },
   {
     id: "back-office-noc",
-    category: "managed-operations",
-    index: "2.2",
+    category: "engineering-services",
+    index: "1.7",
     eyebrow: "BACK OFFICE & NOC MANAGEMENT",
     title: "Full network surveillance, multi-vendor",
     description:
@@ -156,14 +209,12 @@ export const servicesDetail: ServiceDetail[] = [
       "Vodafone Egypt — 16 sites monitored",
     ],
     photoLabel: "PHOTO — control room dashboards",
-    imageSide: "left",
+    imageSide: "right",
   },
-
-  // 03 — Network Optimization
   {
     id: "radio-audit",
-    category: "network-optimization",
-    index: "3.1",
+    category: "engineering-services",
+    index: "1.8",
     eyebrow: "RADIO AUDIT, BENCHMARK & OPTIMIZATION",
     title: "Real customer experience, measured",
     description:
@@ -182,14 +233,70 @@ export const servicesDetail: ServiceDetail[] = [
       { text: "Seoul 2021–22 — Samsung Network Benchmark & Analyses", color: "cyan" },
     ],
     photoLabel: "PHOTO — drive test / benchmark data",
+    imageSide: "left",
+  },
+  {
+    id: "engineering-technical-services",
+    category: "engineering-services",
+    index: "1.9",
+    eyebrow: "ENGINEERING & TECHNICAL SERVICES",
+    title: "Specialized expertise, at every stage",
+    description:
+      "Providing specialized engineering expertise throughout planning, implementation, integration, and operational readiness.",
+    capabilities: [
+      "Network Design",
+      "Site Surveys & Technical Audits",
+      "Capacity Planning",
+      "Infrastructure Assessments",
+      "Integration Services",
+      "Testing & Commissioning",
+      "Technical Documentation",
+      "Quality Assurance",
+      "Technical Training",
+    ],
+    photoLabel: "PHOTO — engineering & technical services",
     imageSide: "right",
   },
-
-  // 04 — ICT & Cybersecurity
+  {
+    id: "power-supply",
+    category: "engineering-services",
+    index: "1.10",
+    eyebrow: "POWER SUPPLY & MAINTENANCE",
+    title: "Reliable power for critical sites",
+    description:
+      "Supply and maintenance of diesel generators and power systems for telecom infrastructure, keeping critical sites running in demanding environments across the region.",
+    capabilities: [
+      "Diesel Generators",
+      "Hybrid Power Systems",
+      "Rectifiers & Inverters",
+      "Cooling Solutions",
+      "Preventive & corrective maintenance",
+    ],
+    partners: ["Cummins", "Daikin Air Intelligence", "IPT PowerTech Group", "Meico Energy"],
+    relatedProjects: "IHS Kuwait (2020) — Power & Diesel Generators Supply & Maintenance",
+    photoLabel: "PHOTO — diesel generator & power systems",
+    imageSide: "left",
+  },
+  {
+    id: "battery-supply",
+    category: "engineering-services",
+    index: "1.11",
+    eyebrow: "BATTERY SUPPLY & INSTALLATION",
+    title: "Backup power, commissioned & integrated",
+    description:
+      "Supply of Lithium and traditional batteries, with warehousing for dismantled and new products, installation across hundreds of sites, commissioning and integration with vendor monitoring systems, and safe relocation of old acid batteries.",
+    capabilities: ["Lithium Batteries", "Battery racking & installation", "Monitoring system integration"],
+    stats: [
+      { value: "750", label: "Batteries · 246 sites (2024)", color: "red" },
+      { value: "171", label: "Batteries · 54 sites (2025)", color: "cyan" },
+    ],
+    photoLabel: "PHOTO — battery racks at telecom site",
+    imageSide: "right",
+  },
   {
     id: "cybersecurity",
-    category: "ict-cybersecurity",
-    index: "4.1",
+    category: "engineering-services",
+    index: "1.12",
     eyebrow: "CYBERSECURITY",
     title: "Protecting networks & data",
     description:
@@ -206,29 +313,9 @@ export const servicesDetail: ServiceDetail[] = [
     imageSide: "left",
   },
   {
-    id: "enterprise-networks",
-    category: "ict-cybersecurity",
-    index: "4.2",
-    eyebrow: "ENTERPRISE NETWORKS & DATA INFRASTRUCTURE",
-    title: "LAN/WAN, structured cabling & data centers for the enterprise",
-    description:
-      "Shabakkat designs, builds, and commissions enterprise data network infrastructure — from structured cabling and wireless access across LAN/WAN environments to scalable, highly-available data centers and SAN storage architectures.",
-    businessValue:
-      "A single accountable partner for enterprise network and data-center infrastructure, engineered for redundancy, availability, and reduced total cost of ownership.",
-    capabilities: [
-      "LAN & WAN design, deployment & commissioning",
-      "Structured cabling (copper & fiber)",
-      "Outside plant (OSP) infrastructure",
-      "Data center & SAN design and build",
-      "Business continuity & disaster recovery planning",
-    ],
-    photoLabel: "PHOTO — enterprise data center / structured cabling",
-    imageSide: "right",
-  },
-  {
     id: "unified-communications",
-    category: "ict-cybersecurity",
-    index: "4.3",
+    category: "engineering-services",
+    index: "1.13",
     eyebrow: "UNIFIED COMMUNICATIONS & CONTACT CENTRES",
     title: "IP telephony & contact center systems, integrated",
     description:
@@ -241,12 +328,12 @@ export const servicesDetail: ServiceDetail[] = [
       "Integration with business support systems",
     ],
     photoLabel: "PHOTO — contact center / IP telephony operations",
-    imageSide: "left",
+    imageSide: "right",
   },
   {
     id: "cloud-infrastructure",
-    category: "ict-cybersecurity",
-    index: "4.4",
+    category: "engineering-services",
+    index: "1.14",
     eyebrow: "CLOUD & HOSTED INFRASTRUCTURE",
     title: "IaaS, PaaS & SaaS, delivered through Advaltis",
     description:
@@ -257,77 +344,42 @@ export const servicesDetail: ServiceDetail[] = [
       "Software as a Service (SaaS)",
     ],
     photoLabel: "PHOTO — cloud & virtualized infrastructure",
-    imageSide: "right",
-  },
-
-  // 05 — Infrastructure & Power
-  {
-    id: "turnkey",
-    category: "infrastructure-power",
-    index: "5.1",
-    eyebrow: "FULL TURNKEY SITE BUILD (FTK)",
-    title: "Towers, shelters & civil works, delivered",
-    description:
-      "Greenfield and roof-top tower supply and erection, monopole installation (25m–80m), special solution towers and poles, all types of civil works — excavation, sand removal, road cutting, fence repair, concrete foundations — and fully equipped shelter supply.",
-    capabilities: [
-      "Monopoles 25–80m",
-      "Special solution towers 7–9m",
-      "Civil & foundation works",
-      "Equipped shelters",
-      "Earthing & lightning protection",
-      "AC systems & rectifiers",
-      "Fuel systems",
-      "Site acceptance & handover",
-    ],
-    stats: [
-      { value: "1,000+", label: "Iraq deployments", color: "red" },
-      { value: "239", label: "Ghana deployments", color: "cyan" },
-      { value: "230", label: "Sudan deployments", color: "red" },
-      { value: "150", label: "Kuwait deployments", color: "cyan" },
-    ],
-    photoLabel: "PHOTO — tower & shelter site build",
-    imageSide: "right",
-  },
-  {
-    id: "power-supply",
-    category: "infrastructure-power",
-    index: "5.2",
-    eyebrow: "POWER SUPPLY & MAINTENANCE",
-    title: "Reliable power for critical sites",
-    description:
-      "Supply and maintenance of diesel generators and power systems for telecom infrastructure, keeping critical sites running in demanding environments across the region.",
-    capabilities: [
-      "Diesel generator solutions",
-      "Hybrid power & solar integration",
-      "Rectifiers & UPS",
-      "Preventive & corrective maintenance",
-    ],
-    partners: ["Cummins", "Daikin Air Intelligence", "IPT PowerTech Group", "Meico Energy"],
-    relatedProjects: "IHS Kuwait (2020) — Power & Diesel Generators Supply & Maintenance",
-    photoLabel: "PHOTO — diesel generator & power systems",
     imageSide: "left",
   },
+
+  // 02 — PMO & Project Delivery
   {
-    id: "battery-supply",
-    category: "infrastructure-power",
-    index: "5.3",
-    eyebrow: "BATTERY SUPPLY & INSTALLATION",
-    title: "Backup power, commissioned & integrated",
+    id: "pmo-project-delivery",
+    category: "pmo-project-delivery",
+    index: "2.1",
+    eyebrow: "GOVERNANCE THAT DRIVES SUCCESSFUL DELIVERY",
+    title: "Governance, structure, and leadership for complex programs",
     description:
-      "Supply of batteries for STC Kuwait, with warehousing for dismantled and new products, installation across hundreds of sites, commissioning and integration with the Huawei monitoring system, and safe relocation of old acid batteries.",
-    stats: [
-      { value: "750", label: "Batteries · 246 sites (2024)", color: "red" },
-      { value: "171", label: "Batteries · 54 sites (2025)", color: "cyan" },
+      "Our PMO services establish the governance, structure, and leadership required to successfully deliver complex infrastructure programs, ensuring alignment with business objectives while maintaining control over cost, schedule, quality, risk, and performance.",
+    capabilities: [
+      "Enterprise PMO",
+      "Program Management",
+      "Project Management",
+      "Portfolio Management",
+      "Planning & Scheduling",
+      "Project Controls",
+      "Cost Management",
+      "Risk Management",
+      "Change Management",
+      "Quality Management",
+      "Resource Management",
+      "Governance Frameworks",
+      "KPI & Performance Reporting",
+      "Executive Dashboards",
+      "Transformation Programs",
     ],
-    photoLabel: "PHOTO — battery racks at telecom site",
+    photoLabel: "PHOTO — program governance & executive reporting",
     imageSide: "right",
   },
-
-  // 06 — Professional Services
   {
     id: "consultancy-resourcing",
-    category: "professional-services",
-    index: "6.1",
+    category: "pmo-project-delivery",
+    index: "2.2",
     eyebrow: "CONSULTANCY & RESOURCING",
     title: "300+ engineers, deployed where you need them",
     description:
@@ -341,17 +393,45 @@ export const servicesDetail: ServiceDetail[] = [
     photoLabel: "PHOTO — engineering team on site",
     imageSide: "left",
   },
+
+  // 03 — Technical Advisory
+  {
+    id: "technical-advisory",
+    category: "technical-advisory",
+    index: "3.1",
+    eyebrow: "STRATEGIC INSIGHT. INDEPENDENT EXPERTISE.",
+    title: "Informed decisions, backed by engineering knowledge",
+    description:
+      "Our advisory services help organizations make informed investment, technology, and infrastructure decisions by combining engineering knowledge with practical industry experience and independent technical assessment.",
+    capabilities: [
+      "Technology Strategy",
+      "Digital Transformation Advisory",
+      "Infrastructure Planning",
+      "Network Strategy",
+      "Technical Due Diligence",
+      "Vendor Evaluation & Selection",
+      "Feasibility Studies",
+      "Solution Architecture",
+      "Infrastructure Assessments",
+      "Technical Audits",
+      "Engineering Consulting",
+      "RFP Development & Technical Evaluation",
+      "Independent Verification & Validation (IV&V)",
+    ],
+    photoLabel: "PHOTO — advisory workshop / strategy session",
+    imageSide: "right",
+  },
   {
     id: "revenue-assurance",
-    category: "professional-services",
-    index: "6.2",
+    category: "technical-advisory",
+    index: "3.2",
     eyebrow: "REVENUE ASSURANCE",
     title: "Protecting revenue across BSS & IN",
     description:
       "Revenue assurance specialists work across BSS, IN, and VAS layers to identify leakage, validate billing accuracy, and safeguard operator revenue streams as part of Shabakkat's wider back-office and network performance capability.",
     capabilities: ["Revenue leakage detection", "Billing & IN charging validation", "BSS/VAS assurance"],
     photoLabel: "PHOTO — billing & revenue dashboards",
-    imageSide: "right",
+    imageSide: "left",
   },
 ];
 
@@ -367,10 +447,21 @@ export const professionalServices: string[] = [
 ];
 
 export const equipmentSupply: string[] = [
-  "Active & Passive Equipment",
-  "Antennas & RF Accessories",
-  "Fiber & Microwave Equipment",
-  "Diesel Generators & Batteries",
-  "Cabinets & Spare Parts",
+  "Diesel Generators",
+  "Hybrid Power Systems",
+  "Lithium Batteries",
+  "Rectifiers & Inverters",
+  "Cooling Solutions",
+  "Towers & Monopoles",
+  "Telecom Shelters",
+  "Outdoor Cabinets",
+  "Civil Infrastructure",
+  "Customer Premises Equipment (CPE)",
+  "Fixed Wireless Access",
+  "Enterprise Connectivity Solutions",
+  "Antennas & RF Solutions",
+  "Telecom Site Accessories",
+  "Power & Connectivity Accessories",
+  "Installation Materials",
   "Logistics & Supply Chain",
 ];

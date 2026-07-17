@@ -18,9 +18,9 @@ export default function ProcessSteps() {
   return (
     <div className="section-px section-py">
       <SectionHeading
-        eyebrow="OUR PHILOSOPHY"
-        title="Empowering our clients through a continuous cycle"
-        description="Every engagement moves through the same disciplined cycle — each stage feeding the next, so lessons learned in one project sharpen delivery on the next."
+        eyebrow="OUR DELIVERY APPROACH"
+        title="From strategy to sustainable operations"
+        description="Every engagement follows a structured delivery methodology that integrates advisory, governance, engineering, and operational excellence."
       />
       <div className="relative mt-11">
         <div
