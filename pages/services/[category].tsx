@@ -8,7 +8,8 @@ import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
 import SimpleItemGrid from "@/components/services/SimpleItemGrid";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
-import { serviceCategories, servicesDetail, professionalServices, equipmentSupply } from "@/data/servicesDetail";
+import { serviceCategories, servicesDetail, professionalServices, telecomProductGroups } from "@/data/servicesDetail";
+import ProductGroupsGrid from "@/components/services/ProductGroupsGrid";
 
 interface ServiceCategoryPageProps {
   categoryId: string;
@@ -62,13 +63,13 @@ export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageP
 
       {categoryId === "engineering-services" && (
         <div className="border-t border-border">
-          <SimpleItemGrid
+          <ProductGroupsGrid
             id="equipment-supply"
             index="1.15"
             eyebrow="TELECOM PRODUCTS & INFRASTRUCTURE SOLUTIONS"
-            title="Active, passive & power equipment, sourced & delivered"
-            description="End-to-end procurement and logistics for the equipment operators need to build and maintain their networks — from tower & energy solutions to network equipment and telecom accessories."
-            items={equipmentSupply}
+            title="Telecom products & infrastructure solutions"
+            description="Tower and energy solutions, passive infrastructure, network equipment, and telecom accessories — sourced and delivered to support resilient network build and operations."
+            groups={telecomProductGroups}
             background={services.length % 2 === 1 ? "muted" : undefined}
           />
         </div>

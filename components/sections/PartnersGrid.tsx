@@ -8,9 +8,9 @@ export default function PartnersGrid() {
   return (
     <div className="section-px section-py">
       <SectionHeading
-        eyebrow="TRUSTED BY"
-        title="Customers & partners"
-        description="Shabakkat is proud to be associated with leading Communications Service Providers and Enterprises across the Middle East and Africa, including Zain Group, Wataniya, Airtel, MTN, Maroc Telecom, and INWI, alongside government institutions such as Autoroutes du Maroc."
+        eyebrow="STRATEGIC PARTNERS"
+        title="Strong partnerships. Greater outcomes."
+        description="We collaborate with leading technology providers, equipment manufacturers, and strategic partners to deliver integrated solutions that accelerate execution, reduce complexity, and maximize long-term value for our clients."
       />
       <StaggerGrid className="mt-8 grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-6">
         {partners.map((partner) => (

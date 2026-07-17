@@ -11,7 +11,18 @@ export default function WhyUsGrid() {
       <SectionHeading
         eyebrow="WHY SHABAKKAT"
         title="Engineering confidence into every project"
-        description="Critical infrastructure requires more than technical capability. It requires a partner capable of aligning strategy, governance, and execution within a single delivery model."
+        description={
+          <>
+            <span className="block">
+              Critical infrastructure requires more than technical capability. It requires a partner capable of
+              aligning strategy, governance, and execution within a single delivery model.
+            </span>
+            <span className="mt-3.5 block">
+              Shabakkat brings together engineering expertise, project leadership, and strategic advisory to help
+              clients deliver complex infrastructure with confidence, efficiency, and long-term value.
+            </span>
+          </>
+        }
       />
       <StaggerGrid className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {whyUs.map((item) => (

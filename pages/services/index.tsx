@@ -32,8 +32,9 @@ export default function Services() {
           active={heroTitleDone}
           className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
         >
-          Our engineering teams combine technical expertise, disciplined execution, and operational excellence to
-          build resilient, scalable, and future-ready digital infrastructure.
+          Our engineering teams deliver comprehensive infrastructure solutions, combining technical expertise,
+          disciplined execution, and operational excellence to build resilient, scalable, and future-ready digital
+          infrastructure.
         </AnimatedParagraph>
       </Hero>
 
@@ -44,7 +45,7 @@ export default function Services() {
 
       <FinalCta
         title="Let's deliver what's next"
-        description="Whether you're expanding telecommunications infrastructure, establishing enterprise project governance, or defining your next technology strategy, Shabakkat delivers with confidence."
+        description="Whether you're expanding telecommunications infrastructure, establishing enterprise project governance, modernizing digital infrastructure, or defining your next technology strategy, Shabakkat provides the engineering expertise, project leadership, and strategic advisory to deliver with confidence."
         ctaLabel="CONTACT OUR TEAM"
       />
     </Layout>

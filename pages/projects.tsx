@@ -24,7 +24,7 @@ export default function Projects() {
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
           as="h1"
-          text="Proof at scale, across the region"
+          text="Our delivery journey"
           className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
@@ -32,8 +32,8 @@ export default function Projects() {
           active={heroTitleDone}
           className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
         >
-          Mega projects delivered for operators, enterprises, and government clients across the Middle East and
-          Africa since 2005.
+          Two decades of delivering critical infrastructure, long-term operations, and strategic transformation across
+          the Middle East and Africa.
         </AnimatedParagraph>
       </Hero>
 

@@ -34,6 +34,7 @@ export default function SectionHeading({
       />
       {description && (
         <AnimatedParagraph
+          as="div"
           active={titleDone}
           className="mt-3.5 max-w-[720px] text-[15.5px] leading-[1.7] text-text-body"
         >

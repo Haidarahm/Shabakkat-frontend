@@ -27,7 +27,7 @@ export default function AboutUs() {
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
           as="h1"
-          text="Who we are"
+          text="Engineering infrastructure that enables progress"
           className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
@@ -35,8 +35,9 @@ export default function AboutUs() {
           active={heroTitleDone}
           className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
         >
-          Established in 2005, Shabakkat is a regional Engineering &amp; Advisory company delivering critical digital
-          infrastructure across the Middle East and Africa.
+          Digital infrastructure has become the foundation of economic growth, business resilience, and national
+          development. Delivering it successfully demands engineering excellence, disciplined execution, and strategic
+          leadership.
         </AnimatedParagraph>
       </Hero>
 

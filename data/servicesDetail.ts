@@ -11,21 +11,21 @@ export const serviceCategories: ServiceCategory[] = [
     index: "01",
     title: "Engineering Services",
     description:
-      "Delivering engineering excellence across the complete infrastructure lifecycle — network deployment, wireless & fixed networks, data centers, managed operations, and telecom products.",
+      "Our engineering teams deliver comprehensive infrastructure solutions, combining technical expertise, disciplined execution, and operational excellence to build resilient, scalable, and future-ready digital infrastructure.",
   },
   {
     id: "pmo-project-delivery",
     index: "02",
     title: "PMO & Project Delivery",
     description:
-      "Governance, leadership, and execution discipline required to successfully deliver complex programs with certainty, accountability, and measurable results.",
+      "Our PMO services establish the governance, structure, and leadership required to successfully deliver complex infrastructure programs, ensuring alignment with business objectives while maintaining control over cost, schedule, quality, risk, and performance.",
   },
   {
     id: "technical-advisory",
     index: "03",
     title: "Technical Advisory",
     description:
-      "Independent engineering expertise, technology consulting, infrastructure planning, and digital transformation advisory that support strategic decision-making.",
+      "Our advisory services help organizations make informed investment, technology, and infrastructure decisions by combining engineering knowledge with practical industry experience and independent technical assessment.",
   },
 ];
 
@@ -446,22 +446,44 @@ export const professionalServices: string[] = [
   "Modernization Strategy",
 ];
 
-export const equipmentSupply: string[] = [
-  "Diesel Generators",
-  "Hybrid Power Systems",
-  "Lithium Batteries",
-  "Rectifiers & Inverters",
-  "Cooling Solutions",
-  "Towers & Monopoles",
-  "Telecom Shelters",
-  "Outdoor Cabinets",
-  "Civil Infrastructure",
-  "Customer Premises Equipment (CPE)",
-  "Fixed Wireless Access",
-  "Enterprise Connectivity Solutions",
-  "Antennas & RF Solutions",
-  "Telecom Site Accessories",
-  "Power & Connectivity Accessories",
-  "Installation Materials",
-  "Logistics & Supply Chain",
+export interface ProductGroup {
+  title: string;
+  items: string[];
+}
+
+export const telecomProductGroups: ProductGroup[] = [
+  {
+    title: "Tower & Energy Solutions",
+    items: [
+      "Diesel Generators",
+      "Hybrid Power Systems",
+      "Lithium Batteries",
+      "Rectifiers & Inverters",
+      "Cooling Solutions",
+    ],
+  },
+  {
+    title: "Towers & Passive Infrastructure",
+    items: ["Towers & Monopoles", "Telecom Shelters", "Outdoor Cabinets", "Civil Infrastructure"],
+  },
+  {
+    title: "Network Equipment",
+    items: [
+      "Customer Premises Equipment (CPE)",
+      "Fixed Wireless Access",
+      "Enterprise Connectivity Solutions",
+    ],
+  },
+  {
+    title: "Telecom Accessories",
+    items: [
+      "Antennas & RF Solutions",
+      "Telecom Site Accessories",
+      "Power & Connectivity Accessories",
+      "Installation Materials",
+    ],
+  },
 ];
+
+/** Flat list kept for any consumers that still expect a string array. */
+export const equipmentSupply: string[] = telecomProductGroups.flatMap((group) => group.items);

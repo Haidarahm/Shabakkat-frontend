@@ -49,8 +49,8 @@ export default function Careers() {
 
       <div className="section-px section-py">
         <SectionHeading
-          eyebrow="BUILD YOUR FUTURE WITH SHABAKKAT"
-          title="Build critical infrastructure with a regional leader"
+          eyebrow="CAREERS"
+          title="Build your future with Shabakkat"
           description="At Shabakkat, we believe our people are our greatest strength. We are always looking for passionate professionals who are committed to engineering excellence, innovation, and delivering meaningful impact across the region. Whether you're an experienced professional or an emerging talent, you'll find opportunities to work on challenging projects, collaborate with industry experts, and contribute to shaping the future of digital infrastructure."
         />
         <div className="mt-6 flex flex-wrap gap-2.5">

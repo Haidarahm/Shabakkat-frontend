@@ -33,6 +33,14 @@ export default function Industries() {
           active={heroTitleDone}
           className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
         >
+          Every market presents unique operational, regulatory, and business challenges. Understanding those
+          challenges is essential to delivering infrastructure that creates lasting value.
+        </AnimatedParagraph>
+        <AnimatedParagraph
+          active={heroTitleDone}
+          delay={0.04}
+          className="mx-auto mt-3 max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
+        >
           Shabakkat partners with organizations across multiple sectors, combining engineering expertise, project
           leadership, and technical advisory to deliver solutions aligned with each client&apos;s objectives and
           long-term vision.
@@ -53,7 +61,18 @@ export default function Industries() {
         <SectionHeading
           eyebrow="OUR APPROACH"
           title="Understanding every market before engineering every solution"
-          description="Our approach combines technical expertise with a deep understanding of each market's operational priorities, regulatory landscape, investment objectives, and long-term strategy. This enables us to deliver solutions that are practical, sustainable, and aligned with our clients' business goals."
+          description={
+            <>
+              <span className="block">
+                Successful infrastructure programs begin with understanding the environment in which they operate.
+              </span>
+              <span className="mt-3.5 block">
+                Our approach combines technical expertise with a deep understanding of each market&apos;s operational
+                priorities, regulatory landscape, investment objectives, and long-term strategy. This enables us to
+                deliver solutions that are practical, sustainable, and aligned with our clients&apos; business goals.
+              </span>
+            </>
+          }
         />
       </div>
 

@@ -8,6 +8,8 @@ interface FinalCtaProps {
   description: string;
   ctaLabel?: string;
   ctaHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
 }
 
 export default function FinalCta({
@@ -15,6 +17,8 @@ export default function FinalCta({
   description,
   ctaLabel = "CONTACT SHABAKKAT",
   ctaHref = "/careers",
+  secondaryCtaLabel,
+  secondaryCtaHref,
 }: FinalCtaProps) {
   const [titleDone, setTitleDone] = useState(false);
 
@@ -29,9 +33,16 @@ export default function FinalCta({
         <AnimatedParagraph active={titleDone} className="mt-4 mb-7 text-base text-text-body-alt">
           {description}
         </AnimatedParagraph>
-        <Button href={ctaHref} size="lg">
-          {ctaLabel}
-        </Button>
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+          <Button href={ctaHref} size="lg">
+            {ctaLabel}
+          </Button>
+          {secondaryCtaLabel && secondaryCtaHref && (
+            <Button href={secondaryCtaHref} variant="outline" size="lg">
+              {secondaryCtaLabel}
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );
