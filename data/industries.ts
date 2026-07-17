@@ -24,9 +24,9 @@ export const industries: Industry[] = [
       "Revenue assurance",
     ],
     relevantServices: [
-      { label: "Network Rollout", href: "/services#network-rollout" },
-      { label: "Managed Services", href: "/services#managed-services" },
-      { label: "Radio Audit & Optimization", href: "/services#radio-audit" },
+      { label: "Network Rollout", href: "/services/network-deployment#network-rollout" },
+      { label: "Managed Services", href: "/services/managed-operations#managed-services" },
+      { label: "Radio Audit & Optimization", href: "/services/network-optimization#radio-audit" },
     ],
   },
   {
@@ -38,8 +38,8 @@ export const industries: Industry[] = [
     notableNames: "Nokia, Ericsson, Huawei, ZTE, Alcatel-Lucent",
     focusAreas: ["Multi-vendor rollout execution", "Integration & commissioning", "Consultancy & resourcing"],
     relevantServices: [
-      { label: "Consultancy & Resourcing", href: "/services#consultancy-resourcing" },
-      { label: "Network Rollout", href: "/services#network-rollout" },
+      { label: "Consultancy & Resourcing", href: "/services/professional-services#consultancy-resourcing" },
+      { label: "Network Rollout", href: "/services/network-deployment#network-rollout" },
     ],
   },
   {
@@ -56,10 +56,10 @@ export const industries: Industry[] = [
       "Cybersecurity assessment & hardening",
     ],
     relevantServices: [
-      { label: "Enterprise Networks & Data Infrastructure", href: "/services#enterprise-networks" },
-      { label: "Unified Communications & Contact Centres", href: "/services#unified-communications" },
-      { label: "Cloud & Hosted Infrastructure", href: "/services#cloud-infrastructure" },
-      { label: "Cybersecurity", href: "/services#cybersecurity" },
+      { label: "Enterprise Networks & Data Infrastructure", href: "/services/ict-cybersecurity#enterprise-networks" },
+      { label: "Unified Communications & Contact Centres", href: "/services/ict-cybersecurity#unified-communications" },
+      { label: "Cloud & Hosted Infrastructure", href: "/services/ict-cybersecurity#cloud-infrastructure" },
+      { label: "Cybersecurity", href: "/services/ict-cybersecurity#cybersecurity" },
     ],
   },
   {
@@ -70,8 +70,8 @@ export const industries: Industry[] = [
     notableNames: "Ministries and public institutions",
     focusAreas: ["Consultancy & resourcing", "National infrastructure programs", "NOC management for public networks"],
     relevantServices: [
-      { label: "Consultancy & Resourcing", href: "/services#consultancy-resourcing" },
-      { label: "Back Office & NOC", href: "/services#back-office-noc" },
+      { label: "Consultancy & Resourcing", href: "/services/professional-services#consultancy-resourcing" },
+      { label: "Back Office & NOC", href: "/services/managed-operations#back-office-noc" },
     ],
     relatedProjectHref: "/projects#kuwait-ministry-communications-consultancy",
   },

@@ -7,7 +7,12 @@ import { accentText } from "@/lib/colorMap";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function ServiceDetailBlock({ service }: { service: ServiceDetail }) {
+interface ServiceDetailBlockProps {
+  service: ServiceDetail;
+  background?: "muted";
+}
+
+export default function ServiceDetailBlock({ service, background }: ServiceDetailBlockProps) {
   const [titleDone, setTitleDone] = useState(false);
 
   const textColumn = (
@@ -112,7 +117,9 @@ export default function ServiceDetailBlock({ service }: { service: ServiceDetail
   return (
     <div
       id={service.id}
-      className="grid scroll-mt-[168px] grid-cols-1 items-start gap-8 py-8 lg:scroll-mt-[200px] lg:grid-cols-2 lg:gap-14 lg:py-10"
+      className={`section-px grid scroll-mt-[168px] grid-cols-1 items-start gap-8 py-10 sm:py-12 lg:scroll-mt-[200px] lg:grid-cols-2 lg:gap-14 lg:py-[72px] ${
+        background === "muted" ? "bg-bg-muted" : ""
+      }`}
     >
       {service.imageSide === "left" ? (
         <>

@@ -1,7 +1,8 @@
 import { useRef, type MouseEvent } from "react";
-import { jumpNavLinks } from "@/data/servicesDetail";
+import Link from "next/link";
+import { serviceCategories } from "@/data/servicesDetail";
 
-export default function JumpNav() {
+export default function CategorySwitcher({ activeId }: { activeId: string }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const drag = useRef({ isDown: false, moved: false, startX: 0, scrollLeft: 0 });
 
@@ -49,16 +50,21 @@ export default function JumpNav() {
       onClickCapture={onClickCapture}
       className="section-px sticky top-[72px] z-[90] flex cursor-grab select-none gap-2.5 overflow-x-auto border-b border-border bg-bg-muted py-4 [-ms-overflow-style:none] [scrollbar-width:none] lg:top-[84px] [&::-webkit-scrollbar]:hidden"
     >
-      {jumpNavLinks.map((link) => (
-        <a
-          key={link.href}
-          href={link.href}
-          draggable={false}
-          className="whitespace-nowrap rounded-full border border-border bg-white px-4 py-2 font-heading text-[12.5px] tracking-[0.03em] text-navy hover:border-red hover:text-red"
-        >
-          {link.label}
-        </a>
-      ))}
+      {serviceCategories.map((category) => {
+        const active = category.id === activeId;
+        return (
+          <Link
+            key={category.id}
+            href={`/services/${category.id}`}
+            draggable={false}
+            className={`whitespace-nowrap rounded-full border px-4 py-2 font-heading text-[12.5px] tracking-[0.03em] ${
+              active ? "border-cyan bg-cyan text-white" : "border-border bg-white text-navy hover:border-cyan hover:text-cyan"
+            }`}
+          >
+            {category.title}
+          </Link>
+        );
+      })}
     </div>
   );
 }

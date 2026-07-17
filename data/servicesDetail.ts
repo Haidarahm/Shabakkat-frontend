@@ -374,8 +374,3 @@ export const equipmentSupply: string[] = [
   "Cabinets & Spare Parts",
   "Logistics & Supply Chain",
 ];
-
-export const jumpNavLinks: { label: string; href: string }[] = serviceCategories.map((c) => ({
-  label: c.title,
-  href: `#${c.id}`,
-}));

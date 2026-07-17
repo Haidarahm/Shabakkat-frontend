@@ -32,7 +32,7 @@ export const projects: ProjectCaseStudy[] = [
       "Grew from core & radio managed services in 2009 into one of the largest end-to-end managed services contracts in the region by 2012.",
     photoLabel: "PHOTO — Iraq network site",
     photoSrc: "/images/projects/iraq-network-site.jpg",
-    relatedServiceHref: "/services#managed-services",
+    relatedServiceHref: "/services/managed-operations#managed-services",
   },
   {
     slug: "kuwait-consultancy-resourcing",
@@ -50,7 +50,7 @@ export const projects: ProjectCaseStudy[] = [
       "Delivered drive-test benchmarking and optimization alongside managed services for all three national operators simultaneously.",
     photoLabel: "PHOTO — Kuwait rollout crew",
     photoSrc: "/images/projects/kuwait-rollout-crew.jpg",
-    relatedServiceHref: "/services#radio-audit",
+    relatedServiceHref: "/services/network-optimization#radio-audit",
   },
   {
     slug: "mecca-mosque-benchmark",
@@ -71,7 +71,7 @@ export const projects: ProjectCaseStudy[] = [
     results: "Radio network benchmark completed during Ramadan season, serving 1.4 million visitors.",
     photoLabel: "PHOTO — stadium benchmark",
     photoSrc: "/images/projects/stadium-benchmark.jpg",
-    relatedServiceHref: "/services#radio-audit",
+    relatedServiceHref: "/services/network-optimization#radio-audit",
   },
   {
     slug: "iraq-ftk-core-network-2004",
@@ -86,7 +86,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Core network buildout", "Full turnkey (FTK) site construction"],
     results: "Core network buildout paired with full turnkey site construction — Shabakkat's first mega engagement in Iraq.",
     photoLabel: "PHOTO — Iraq turnkey site build, 2004",
-    relatedServiceHref: "/services#turnkey",
+    relatedServiceHref: "/services/infrastructure-power#turnkey",
   },
   {
     slug: "ksa-stc-mobily-rollout",
@@ -101,7 +101,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Multi-vendor rollout", "Managed services", "Vendor management"],
     results: "Multi-vendor rollout and managed services program supporting two of the Kingdom's largest operators.",
     photoLabel: "PHOTO — Saudi Arabia rollout, 2005",
-    relatedServiceHref: "/services#network-rollout",
+    relatedServiceHref: "/services/network-deployment#network-rollout",
   },
   {
     slug: "sudan-ftk-managed-services",
@@ -116,7 +116,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Full turnkey (FTK) site build", "Managed services"],
     results: "Full turnkey site build paired with ongoing managed services across Sudan's expanding network.",
     photoLabel: "PHOTO — Sudan network site, 2007",
-    relatedServiceHref: "/services#turnkey",
+    relatedServiceHref: "/services/infrastructure-power#turnkey",
   },
   {
     slug: "ericsson-egypt-oman-bahrain-rollout",
@@ -131,7 +131,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["3G/4G rollout execution", "Multi-country program coordination"],
     results: "Multi-country rollout program executed on behalf of Ericsson across three markets simultaneously.",
     photoLabel: "PHOTO — multi-country rollout, 2013",
-    relatedServiceHref: "/services#network-rollout",
+    relatedServiceHref: "/services/network-deployment#network-rollout",
   },
   {
     slug: "uae-etisalat-du-rollout",
@@ -146,7 +146,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["3G/4G coverage rollout", "Capacity expansion"],
     results: "Large-scale coverage and capacity rollout for two of the UAE's leading operators.",
     photoLabel: "PHOTO — UAE rollout crew, 2016",
-    relatedServiceHref: "/services#network-rollout",
+    relatedServiceHref: "/services/network-deployment#network-rollout",
   },
   {
     slug: "ihs-towers-power-kuwait",
@@ -161,7 +161,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Diesel generator supply & maintenance", "Power systems maintenance"],
     results: "Ongoing supply and maintenance of power systems keeping IHS's tower portfolio running.",
     photoLabel: "PHOTO — power & diesel generator site, Kuwait",
-    relatedServiceHref: "/services#power-supply",
+    relatedServiceHref: "/services/infrastructure-power#power-supply",
   },
   {
     slug: "kuwait-ministry-communications-consultancy",
@@ -176,6 +176,6 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["GPON NOC management", "Consultancy & resourcing"],
     results: "20-site GPON NOC management engagement supporting national fiber broadband infrastructure.",
     photoLabel: "PHOTO — NOC operations, Kuwait",
-    relatedServiceHref: "/services#back-office-noc",
+    relatedServiceHref: "/services/managed-operations#back-office-noc",
   },
 ];

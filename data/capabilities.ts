@@ -8,41 +8,41 @@ export const capabilities: Capability[] = [
   {
     title: "Project & Vendor Management",
     description: "Multi-vendor rollout coordination, program governance, and turnkey project delivery.",
-    href: "/services#consultancy-resourcing",
+    href: "/services/professional-services#consultancy-resourcing",
   },
   {
     title: "OSS (CS/PS Core)",
     description: "Circuit- and packet-switched core network operations, provisioning, and assurance.",
-    href: "/services#managed-services",
+    href: "/services/managed-operations#managed-services",
   },
   {
     title: "BSS (IN, VAS, Rev. Assurance)",
     description: "Billing, value-added services, and revenue assurance across subscriber lifecycles.",
-    href: "/services#revenue-assurance",
+    href: "/services/professional-services#revenue-assurance",
   },
   {
     title: "RAN & Transmission",
     description: "Site build, microwave links, and radio access network deployment & optimization.",
-    href: "/services#network-rollout",
+    href: "/services/network-deployment#network-rollout",
   },
   {
     title: "Network Performance & Monitoring",
     description: "24/7 NOC operations, KPI tracking, and proactive fault management.",
-    href: "/services#radio-audit",
+    href: "/services/network-optimization#radio-audit",
   },
   {
     title: "Radio/Core Planning & Optimization",
     description: "RF and core network design, capacity planning, and performance tuning.",
-    href: "/services#radio-audit",
+    href: "/services/network-optimization#radio-audit",
   },
   {
     title: "Software Development & Cyber Security",
     description: "Custom OSS/BSS tooling, systems integration, and network security hardening.",
-    href: "/services#cybersecurity",
+    href: "/services/ict-cybersecurity#cybersecurity",
   },
   {
     title: "Power & Civil Works",
     description: "Site power systems, backup solutions, and civil infrastructure for network sites.",
-    href: "/services#power-supply",
+    href: "/services/infrastructure-power#power-supply",
   },
 ];

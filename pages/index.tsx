@@ -12,6 +12,7 @@ import PartnersGrid from "@/components/sections/PartnersGrid";
 import Certifications from "@/components/sections/Certifications";
 import HseSection from "@/components/sections/HseSection";
 import Testimonials from "@/components/sections/Testimonials";
+import FaqTeaser from "@/components/sections/FaqTeaser";
 import FinalCta from "@/components/sections/FinalCta";
 import { useState } from "react";
 import Button from "@/components/ui/Button";
@@ -62,6 +63,7 @@ export default function About() {
       <Certifications />
       <HseSection />
       <Testimonials />
+      <FaqTeaser />
       <FinalCta
         title="Ready to build a smarter connected network?"
         description="Talk to our team about network rollout, managed services, or a tailored ICT solution for your business."
