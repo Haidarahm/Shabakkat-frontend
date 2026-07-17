@@ -1,6 +1,7 @@
 export interface Industry {
   slug: string;
   title: string;
+  tagline: string;
   color: "red" | "cyan";
   summary: string;
   notableNames: string;
@@ -13,6 +14,7 @@ export const industries: Industry[] = [
   {
     slug: "telecom-operators",
     title: "Telecommunications Operators",
+    tagline: "Enabling the Future of Connectivity",
     color: "red",
     summary:
       "Telecommunications networks continue to evolve in response to growing demand, emerging technologies, and increasing customer expectations. Shabakkat supports mobile and fixed network operators in expanding capacity, modernizing infrastructure, enhancing operational resilience, and preparing for the next generation of digital connectivity.",
@@ -33,6 +35,7 @@ export const industries: Industry[] = [
   {
     slug: "government",
     title: "Government & Public Sector",
+    tagline: "Supporting National Digital Transformation",
     color: "cyan",
     summary:
       "Governments play a vital role in shaping the future of digital infrastructure through policy, regulation, and strategic investment. Shabakkat partners with ministries, public sector organizations, and telecommunications regulatory authorities to support national digital transformation, strengthen regulatory initiatives, enhance critical infrastructure, and enable secure, scalable, and future-ready public services.",
@@ -47,6 +50,7 @@ export const industries: Industry[] = [
   {
     slug: "data-centers",
     title: "Data Centers",
+    tagline: "Building the Foundation of the Digital Economy",
     color: "red",
     summary:
       "As digital demand continues to accelerate, data centers have become the backbone of modern business and cloud services. Shabakkat supports the development, modernization, and expansion of resilient digital infrastructure that delivers high availability, operational efficiency, scalability, and long-term business continuity.",
@@ -61,6 +65,7 @@ export const industries: Industry[] = [
   {
     slug: "enterprise",
     title: "Enterprise",
+    tagline: "Empowering Business Through Digital Infrastructure",
     color: "cyan",
     summary:
       "Modern enterprises require resilient, secure, and scalable infrastructure to support growth, operational continuity, and digital transformation. Shabakkat partners with organizations across diverse industries to strengthen their technology foundations and enable sustainable business performance.",
@@ -81,6 +86,7 @@ export const industries: Industry[] = [
   {
     slug: "energy-utilities",
     title: "Energy & Utilities",
+    tagline: "Strengthening Critical Infrastructure",
     color: "red",
     summary:
       "Reliable communications and resilient infrastructure are essential to the continuity of energy and utility operations. Shabakkat supports organizations in modernizing critical infrastructure, improving operational resilience, and enabling secure, reliable communications that support essential services.",

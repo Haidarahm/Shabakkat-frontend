@@ -43,7 +43,11 @@ export default function Timeline() {
 
   return (
     <div className="section-px section-py">
-      <SectionHeading eyebrow="OUR JOURNEY" title="Mega projects timeline" />
+      <SectionHeading
+        eyebrow="OUR JOURNEY"
+        title="Our delivery journey"
+        description="Two decades of delivering critical infrastructure, long-term operations, and strategic transformation across the Middle East and Africa."
+      />
       <div ref={containerRef} className="relative mx-auto mt-5 max-w-[1080px]">
         <div className="absolute bottom-1 left-5 top-1 w-0.5 -translate-x-1/2 bg-[#ECECEC] lg:left-1/2" />
         {timeline.map((entry, i) => (

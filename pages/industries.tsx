@@ -58,7 +58,7 @@ export default function Industries() {
       </div>
 
       <FinalCta
-        title="Every market has different challenges"
+        title="Every market has different challenges. Every solution begins with understanding them."
         description="Whether supporting telecommunications operators, government organizations, data center developers, enterprises, or utility providers, Shabakkat delivers the engineering expertise, project leadership, and technical advisory required to create lasting value."
         ctaLabel="CONTACT OUR TEAM"
       />
