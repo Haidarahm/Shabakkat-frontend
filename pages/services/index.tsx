@@ -5,7 +5,6 @@ import FinalCta from "@/components/sections/FinalCta";
 import CapabilitiesGrid from "@/components/sections/CapabilitiesGrid";
 import TechnologiesGrid from "@/components/sections/TechnologiesGrid";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import ServiceCategoryGrid from "@/components/services/ServiceCategoryGrid";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
@@ -41,7 +40,6 @@ export default function Services() {
       <CapabilitiesGrid />
       <TechnologiesGrid />
       <ProcessSteps />
-      <ServiceCategoryGrid />
 
       <FinalCta
         title="Let's deliver what's next"
