@@ -9,7 +9,7 @@ export const servicesOverview: ServiceOverviewItem[] = [
   {
     title: "Network Rollout",
     photoLabel: "towers",
-    photoSrc: "/images/services/network-rollout.jpg",
+    photoSrc: "/images/services/communication-tower-and-information-technology.jpg",
     href: "/services/engineering-services#network-rollout",
   },
   {
@@ -33,7 +33,7 @@ export const servicesOverview: ServiceOverviewItem[] = [
   {
     title: "Fiber & Digital Infrastructure",
     photoLabel: "fiber network",
-    photoSrc: "/images/services/fiber-digital.jpg",
+    photoSrc: "/images/services/close-glowing-fiber-optics-dark.jpg",
     href: "/services/engineering-services#fiber-digital",
   },
   {
