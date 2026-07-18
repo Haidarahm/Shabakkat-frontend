@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { FaLinkedinIn, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { navLinks } from "@/data/navLinks";
 
-const socials = ["in", "f", "x"];
+const socials = [
+  { label: "LinkedIn", Icon: FaLinkedinIn, href: "#" },
+  { label: "Facebook", Icon: FaFacebookF, href: "#" },
+  { label: "X", Icon: FaXTwitter, href: "#" },
+];
 
 export default function Footer() {
   return (
@@ -35,13 +40,15 @@ export default function Footer() {
         <div>
           <div className="mb-4 font-heading text-[13px] tracking-[0.06em] text-navy">FOLLOW</div>
           <div className="flex gap-3">
-            {socials.map((s) => (
-              <div
-                key={s}
-                className="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-border-tint bg-bg-tint text-xs text-navy"
+            {socials.map(({ label, Icon, href }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                className="flex h-[34px] w-[34px] items-center justify-center rounded-full border border-border-tint bg-bg-tint text-cyan transition-colors hover:border-cyan"
               >
-                {s}
-              </div>
+                <Icon className="h-3.5 w-3.5" aria-hidden />
+              </a>
             ))}
           </div>
         </div>

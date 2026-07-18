@@ -1,4 +1,5 @@
 import { useId, useState } from "react";
+import { HiPlus } from "react-icons/hi2";
 import type { FaqItem as FaqItemData } from "@/data/faq";
 
 export default function FaqItem({ item }: { item: FaqItemData }) {
@@ -25,7 +26,7 @@ export default function FaqItem({ item }: { item: FaqItemData }) {
               open ? "rotate-45" : ""
             }`}
           >
-            +
+            <HiPlus className="h-3.5 w-3.5" />
           </span>
         </button>
       </h3>
