@@ -44,6 +44,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Managed Services", "NOC", "Field Operations"],
     results: "A running engagement supporting STC, Ooredoo, and Zain since 2009 with managed services, NOC, and field operations.",
     photoLabel: "PHOTO — Kuwait NOC operations",
+    photoSrc: "/images/projects/kuwait-rollout-crew.jpg",
     relatedServiceHref: "/services/engineering-services#managed-services",
   },
   {
@@ -75,6 +76,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Full Turnkey (FTK)", "Civil Works", "Towers", "Site Build"],
     results: "Completed or ongoing by country — a multi-market turnkey deployment program spanning FTK, civil works, towers, and site build.",
     photoLabel: "PHOTO — turnkey site build, multi-country",
+    photoSrc: "/images/projects/turnkey-network-deployment.jpg",
     relatedServiceHref: "/services/engineering-services#network-rollout",
   },
   {

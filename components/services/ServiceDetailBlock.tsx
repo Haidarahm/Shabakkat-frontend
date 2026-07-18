@@ -111,7 +111,12 @@ export default function ServiceDetailBlock({ service, background }: ServiceDetai
   );
 
   const photoColumn = (
-    <PhotoPlaceholder label={service.photoLabel} className="h-[220px] rounded-xl sm:h-[300px] lg:h-[420px]" />
+    <PhotoPlaceholder
+      label={service.photoLabel}
+      src={service.photoSrc}
+      className="h-[220px] rounded-xl sm:h-[300px] lg:h-[420px]"
+      sizes="(max-width: 1024px) 100vw, 50vw"
+    />
   );
 
   return (

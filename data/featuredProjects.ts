@@ -23,7 +23,7 @@ export const featuredProjects: FeaturedProject[] = [
   },
   {
     photoLabel: "PHOTO — turnkey site build, multi-country",
-    photoSrc: "/images/projects/stadium-benchmark.jpg",
+    photoSrc: "/images/projects/turnkey-network-deployment.jpg",
     title: "Full Turnkey Network Deployment Program",
     description: "FTK, civil works, towers, and site build delivered across multiple countries since 2012.",
     href: "/projects#full-turnkey-network-deployment-program",

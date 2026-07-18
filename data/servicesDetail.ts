@@ -40,6 +40,7 @@ export interface ServiceDetail {
   capabilities?: string[];
   relatedProjects?: string;
   photoLabel: string;
+  photoSrc?: string;
   imageSide: "left" | "right";
   stats?: { value: string; label: string; color: "red" | "cyan" }[];
   notableList?: { text: string; color: "red" | "cyan" }[];
@@ -81,6 +82,7 @@ export const servicesDetail: ServiceDetail[] = [
     relatedProjects:
       "Etisalat & du UAE — Mega 3G & 4G Rollout (2010, 2016) · Ericsson Egypt/Oman/Bahrain — Mega 3G & 4G Rollout (2013)",
     photoLabel: "PHOTO — network rollout site under construction",
+    photoSrc: "/images/services/communication-tower-and-information-technology.jpg",
     imageSide: "right",
   },
   {
@@ -104,6 +106,7 @@ export const servicesDetail: ServiceDetail[] = [
       "IP & MPLS Networks",
     ],
     photoLabel: "PHOTO — wireless & fixed network infrastructure",
+    photoSrc: "/images/services/wireless-fixed-networks.jpg",
     imageSide: "left",
   },
   {
@@ -123,6 +126,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Data connectivity",
     ],
     photoLabel: "PHOTO — fiber splicing & OTDR testing",
+    photoSrc: "/images/services/close-glowing-fiber-optics-dark.jpg",
     imageSide: "right",
   },
   {
@@ -144,6 +148,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Disaster Recovery Infrastructure",
     ],
     photoLabel: "PHOTO — data center infrastructure",
+    photoSrc: "/images/services/data-center-infrastructure.jpg",
     imageSide: "left",
   },
   {
@@ -164,6 +169,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Business continuity & disaster recovery planning",
     ],
     photoLabel: "PHOTO — enterprise data center / structured cabling",
+    photoSrc: "/images/services/enterprise-structured-cabling.jpg",
     imageSide: "right",
   },
   {
@@ -192,6 +198,7 @@ export const servicesDetail: ServiceDetail[] = [
       { value: "6,000+", label: "Sites — STC/Zain/Ooredoo Kuwait", color: "cyan" },
     ],
     photoLabel: "PHOTO — 24/7 NOC operations floor",
+    photoSrc: "/images/services/managed-services-noc.jpg",
     imageSide: "left",
   },
   {
@@ -209,6 +216,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Vodafone Egypt — 16 sites monitored",
     ],
     photoLabel: "PHOTO — control room dashboards",
+    photoSrc: "/images/services/back-office-noc.jpg",
     imageSide: "right",
   },
   {
@@ -233,6 +241,7 @@ export const servicesDetail: ServiceDetail[] = [
       { text: "Seoul 2021–22 — Samsung Network Benchmark & Analyses", color: "cyan" },
     ],
     photoLabel: "PHOTO — drive test / benchmark data",
+    photoSrc: "/images/services/radio-audit.jpg",
     imageSide: "left",
   },
   {
@@ -255,6 +264,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Technical Training",
     ],
     photoLabel: "PHOTO — engineering & technical services",
+    photoSrc: "/images/services/engineering-technical-services.jpg",
     imageSide: "right",
   },
   {
@@ -275,6 +285,7 @@ export const servicesDetail: ServiceDetail[] = [
     partners: ["Cummins", "Daikin Air Intelligence", "IPT PowerTech Group", "Meico Energy"],
     relatedProjects: "IHS Kuwait (2020) — Power & Diesel Generators Supply & Maintenance",
     photoLabel: "PHOTO — diesel generator & power systems",
+    photoSrc: "/images/services/power-supply.jpg",
     imageSide: "left",
   },
   {
@@ -291,6 +302,7 @@ export const servicesDetail: ServiceDetail[] = [
       { value: "171", label: "Batteries · 54 sites (2025)", color: "cyan" },
     ],
     photoLabel: "PHOTO — battery racks at telecom site",
+    photoSrc: "/images/services/battery-supply.jpg",
     imageSide: "right",
   },
   {
@@ -310,6 +322,7 @@ export const servicesDetail: ServiceDetail[] = [
     partners: ["Fidelis Cybersecurity", "RSA", "SEQRED", "Certified Ethical Hacker (CEH)"],
     standard: { code: "ISO/IEC 27001", label: "Information Security Management System" },
     photoLabel: "PHOTO — security operations center",
+    photoSrc: "/images/services/cybersecurity.jpg",
     imageSide: "left",
   },
   {
@@ -328,6 +341,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Integration with business support systems",
     ],
     photoLabel: "PHOTO — contact center / IP telephony operations",
+    photoSrc: "/images/services/unified-communications.jpg",
     imageSide: "right",
   },
   {
@@ -344,6 +358,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Software as a Service (SaaS)",
     ],
     photoLabel: "PHOTO — cloud & virtualized infrastructure",
+    photoSrc: "/images/services/cloud-infrastructure.jpg",
     imageSide: "left",
   },
 
@@ -374,6 +389,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Transformation Programs",
     ],
     photoLabel: "PHOTO — program governance & executive reporting",
+    photoSrc: "/images/services/pmo-project-delivery.jpg",
     imageSide: "right",
   },
   {
@@ -391,6 +407,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Skilled engineers",
     ],
     photoLabel: "PHOTO — engineering team on site",
+    photoSrc: "/images/services/consultancy-team.jpg",
     imageSide: "left",
   },
 
@@ -419,6 +436,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Independent Verification & Validation (IV&V)",
     ],
     photoLabel: "PHOTO — advisory workshop / strategy session",
+    photoSrc: "/images/services/technical-advisory.jpg",
     imageSide: "right",
   },
   {
@@ -431,6 +449,7 @@ export const servicesDetail: ServiceDetail[] = [
       "Revenue assurance specialists work across BSS, IN, and VAS layers to identify leakage, validate billing accuracy, and safeguard operator revenue streams as part of Shabakkat's wider back-office and network performance capability.",
     capabilities: ["Revenue leakage detection", "Billing & IN charging validation", "BSS/VAS assurance"],
     photoLabel: "PHOTO — billing & revenue dashboards",
+    photoSrc: "/images/services/revenue-assurance.jpg",
     imageSide: "left",
   },
 ];
