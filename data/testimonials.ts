@@ -43,10 +43,16 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-export const awards: string[] = [
-  "🏆 Best BSS Partner — Huawei Core Partner Convention",
-  "🏆 Best Network Quality Assurance — 2022",
-  "🏆 Huawei ME Core Partner Convention Award — 2019",
-  "🏆 DU–KV Datacenter Relocation Award — Nokia Siemens Networks",
-  "🏆 Talent Development Award — 2021",
+export interface Award {
+  label: string;
+  /** Omit when the award year is unknown — those sort after dated awards. */
+  year?: number;
+}
+
+export const awards: Award[] = [
+  { year: 2019, label: "Huawei ME Core Partner Convention Award" },
+  { year: 2021, label: "Talent Development Award" },
+  { year: 2022, label: "Best Network Quality Assurance" },
+  { label: "Best BSS Partner — Huawei Core Partner Convention" },
+  { label: "DU–KV Datacenter Relocation Award — Nokia Siemens Networks" },
 ];

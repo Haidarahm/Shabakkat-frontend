@@ -1,3 +1,4 @@
+import { FaTrophy } from "react-icons/fa";
 import { testimonials, awards } from "@/data/testimonials";
 import { accentText } from "@/lib/colorMap";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
@@ -27,13 +28,16 @@ export default function Testimonials() {
           </StaggerItem>
         ))}
       </StaggerGrid>
-      <div className="mt-6 flex flex-wrap gap-3.5">
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {awards.map((award) => (
           <div
-            key={award}
-            className="rounded-full border border-border bg-white px-4 py-2 text-[12.5px] text-text-body-alt"
+            key={`${award.year ?? "na"}-${award.label}`}
+            className="flex items-start gap-2.5 rounded-full border border-border bg-white px-4 py-2.5"
           >
-            {award}
+            <FaTrophy className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan" aria-hidden />
+            <span className="font-body text-[12.5px] leading-[1.4] text-text-body-alt">
+              {award.year ? `${award.label} — ${award.year}` : award.label}
+            </span>
           </div>
         ))}
       </div>
