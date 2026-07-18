@@ -29,6 +29,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Engineering & Advisory", "Regional expansion foundations"],
     results: "Shabakkat is founded, laying the foundation for two decades of critical digital infrastructure delivery.",
     photoLabel: "PHOTO — Shabakkat founding milestone, 2005",
+    photoSrc: "/images/projects/founding-milestone.jpg",
     relatedServiceHref: "/services/pmo-project-delivery#pmo-project-delivery",
   },
   {
@@ -92,6 +93,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Multi-Vendor NOC Operations"],
     results: "Network Operations Center capacity expanded to support a growing base of managed multi-vendor networks.",
     photoLabel: "PHOTO — multi-vendor NOC expansion",
+    photoSrc: "/images/projects/multi-vendor-noc.jpg",
     relatedServiceHref: "/services/engineering-services#back-office-noc",
   },
   {
@@ -107,6 +109,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Benchmarking", "Optimization", "QoS Analysis"],
     results: "Completed benchmarking, optimization, and QoS analysis engagements across multiple regional markets.",
     photoLabel: "PHOTO — radio benchmark & drive test data",
+    photoSrc: "/images/projects/radio-benchmark.jpg",
     relatedServiceHref: "/services/engineering-services#radio-audit",
   },
   {
@@ -122,6 +125,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["PMO", "Program Management", "Engineering Resources"],
     results: "An ongoing resourcing program deploying PMO, program management, and engineering resources across active client engagements.",
     photoLabel: "PHOTO — engineering team on site",
+    photoSrc: "/images/projects/engineering-team-onsite.jpg",
     relatedServiceHref: "/services/pmo-project-delivery#consultancy-resourcing",
   },
   {
@@ -137,6 +141,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Field Maintenance", "Site Management", "E&M"],
     results: "Field maintenance, site management, and E&M support expanded to national scale across Iraq.",
     photoLabel: "PHOTO — field operations, Iraq",
+    photoSrc: "/images/projects/iraq-field-operations.jpg",
     relatedServiceHref: "/services/engineering-services#managed-services",
   },
   {
@@ -152,6 +157,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Project Governance", "Executive Reporting", "PMO"],
     results: "An ongoing PMO and governance transformation engagement delivering project governance and executive reporting for regional clients.",
     photoLabel: "PHOTO — program governance & executive reporting",
+    photoSrc: "/images/projects/pmo-governance.jpg",
     relatedServiceHref: "/services/pmo-project-delivery#pmo-project-delivery",
   },
   {
@@ -167,6 +173,7 @@ export const projects: ProjectCaseStudy[] = [
     scope: ["Engineering", "Advisory", "Data Centers", "Infrastructure"],
     results: "Engineering, advisory, data center, and infrastructure capabilities expanded to meet growing regional demand.",
     photoLabel: "PHOTO — data center & digital infrastructure expansion",
+    photoSrc: "/images/projects/data-center-expansion.jpg",
     relatedServiceHref: "/services/engineering-services#data-centers-digital-infrastructure",
   },
 ];

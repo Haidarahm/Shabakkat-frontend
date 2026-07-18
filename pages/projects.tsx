@@ -19,6 +19,7 @@ export default function Projects() {
     >
       <Hero
         photoLabel="PHOTO — engineers reviewing a rollout site, full-bleed"
+        photoSrc="/images/projects/engineers-rollout-site.jpg"
         heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
