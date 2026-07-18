@@ -3,7 +3,6 @@ import Card from "@/components/ui/Card";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import { coreValues } from "@/data/coreValues";
-import { accentText } from "@/lib/colorMap";
 
 export default function CoreValues() {
   return (
@@ -13,7 +12,7 @@ export default function CoreValues() {
         {coreValues.map((value) => (
           <StaggerItem key={value.title}>
             <Card className="h-full bg-white p-6">
-              <div className={`font-heading text-[16px] ${accentText[value.color]}`}>{value.title}</div>
+              <div className="font-heading text-[16px] text-navy">{value.title}</div>
               <p className="mt-2 text-[13px] leading-[1.6] text-text-muted">{value.description}</p>
             </Card>
           </StaggerItem>

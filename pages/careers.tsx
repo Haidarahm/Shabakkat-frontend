@@ -14,12 +14,7 @@ import { openings } from "@/data/openings";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-const cultureHighlights = [
-  "900+ professionals across the Middle East & Africa",
-  "Multi-vendor technical depth (Nokia, Ericsson, Huawei & more)",
-  "Field, NOC & project teams across 15 countries",
-  "21+ years of sustained delivery on major regional programs",
-];
+
 
 export default function Careers() {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
@@ -53,11 +48,7 @@ export default function Careers() {
           title="Build your future with Shabakkat"
           description="At Shabakkat, we believe our people are our greatest strength. We are always looking for passionate professionals who are committed to engineering excellence, innovation, and delivering meaningful impact across the region. Whether you're an experienced professional or an emerging talent, you'll find opportunities to work on challenging projects, collaborate with industry experts, and contribute to shaping the future of digital infrastructure."
         />
-        <div className="mt-6 flex flex-wrap gap-2.5">
-          {cultureHighlights.map((item) => (
-            <Chip key={item}>{item}</Chip>
-          ))}
-        </div>
+        
         <Button
           href="mailto:info@shabakkat.com?subject=CV%20Submission"
           variant="outline"
@@ -95,10 +86,6 @@ export default function Careers() {
             <div className="rounded-lg border border-border bg-bg-muted px-4 py-3">
               <div className="font-heading text-xs uppercase tracking-[0.06em] text-text-muted">Email</div>
               <div className="mt-1">info@shabakkat.com</div>
-            </div>
-            <div className="rounded-lg border border-border bg-bg-muted px-4 py-3">
-              <div className="font-heading text-xs uppercase tracking-[0.06em] text-text-muted">Business Hours</div>
-              <div className="mt-1">Sunday to Thursday, 8:00 AM – 5:00 PM (GMT+3)</div>
             </div>
           </div>
           <PhotoPlaceholder label="MAP — Kuwait head office" className="mt-5 h-[220px] rounded-xl" />
