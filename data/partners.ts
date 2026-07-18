@@ -4,16 +4,16 @@ export interface Partner {
 }
 
 export const partners: Partner[] = [
-  { name: "Zain", logoSrc: "/images/partners/zain.svg" },
-  { name: "Ooredoo", logoSrc: "/images/partners/ooredoo.svg" },
-  { name: "STC", logoSrc: "/images/partners/stc.svg" },
-  { name: "du", logoSrc: "/images/partners/du.svg" },
-  { name: "Nokia", logoSrc: "/images/partners/nokia.svg" },
-  { name: "Ericsson", logoSrc: "/images/partners/ericsson.svg" },
-  { name: "Huawei", logoSrc: "/images/partners/huawei.svg" },
-  { name: "Wataniya", logoSrc: "/images/partners/wataniya.svg" },
-  { name: "Airtel", logoSrc: "/images/partners/airtel.svg" },
-  { name: "MTN", logoSrc: "/images/partners/mtn.svg" },
-  { name: "Maroc Telecom", logoSrc: "/images/partners/maroc-telecom.svg" },
-  { name: "INWI", logoSrc: "/images/partners/inwi.svg" },
+  { name: "Airtel", logoSrc: "/images/logo/airtel.webp" },
+  { name: "Alcatel-Lucent", logoSrc: "/images/logo/alcatel-lucent.webp" },
+  { name: "Celtel", logoSrc: "/images/logo/celtel-seeklogo.webp" },
+  { name: "EEMC", logoSrc: "/images/logo/eemc.webp" },
+  { name: "GTE", logoSrc: "/images/logo/GTE_logo.webp" },
+  { name: "Huawei", logoSrc: "/images/logo/huawei-logo.webp" },
+  { name: "IHS", logoSrc: "/images/logo/ihs-logo.webp" },
+  { name: "Nokia", logoSrc: "/images/logo/nokia-seeklogo.webp" },
+  { name: "Ooredoo", logoSrc: "/images/logo/Ooredoo.webp" },
+  { name: "Oracle", logoSrc: "/images/logo/oracle.webp" },
+  { name: "STC", logoSrc: "/images/logo/STC.webp" },
+  { name: "ZTE", logoSrc: "/images/logo/ZTE.webp" },
 ];
