@@ -1,15 +1,15 @@
+import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import HomeHero from "@/components/sections/HomeHero";
-import StatBar from "@/components/sections/StatBar";
+import CompanyOverview from "@/components/sections/CompanyOverview";
 import IntegratedDeliveryModel from "@/components/sections/IntegratedDeliveryModel";
-import ServicesOverviewGrid from "@/components/sections/ServicesOverviewGrid";
 import WhyUsGrid from "@/components/sections/WhyUsGrid";
-import FeaturedProjects from "@/components/sections/FeaturedProjects";
+import VisionMission from "@/components/sections/VisionMission";
+import CoreValues from "@/components/sections/CoreValues";
+import GlobalFootprint from "@/components/sections/GlobalFootprint";
+import Certifications from "@/components/sections/Certifications";
 import PartnersGrid from "@/components/sections/PartnersGrid";
-import Testimonials from "@/components/sections/Testimonials";
-import FaqTeaser from "@/components/sections/FaqTeaser";
 import FinalCta from "@/components/sections/FinalCta";
-import { useState } from "react";
 import Button from "@/components/ui/Button";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
@@ -53,14 +53,14 @@ export default function Home() {
         </div>
       </HomeHero>
 
-      <StatBar />
+      <CompanyOverview />
       <IntegratedDeliveryModel />
-      <ServicesOverviewGrid />
       <WhyUsGrid />
-      <FeaturedProjects />
+      <VisionMission />
+      <CoreValues />
+      <GlobalFootprint />
+      <Certifications />
       <PartnersGrid />
-      <Testimonials />
-      <FaqTeaser />
       <FinalCta
         title="Let's build what's next"
         description="Whether you're expanding national infrastructure, delivering complex transformation programs, or shaping the next generation of digital connectivity, Shabakkat brings together the engineering expertise, project leadership, and strategic advisory needed to deliver with confidence."
