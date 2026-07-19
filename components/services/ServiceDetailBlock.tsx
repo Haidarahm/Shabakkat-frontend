@@ -3,7 +3,6 @@ import type { ServiceDetail } from "@/data/servicesDetail";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Chip from "@/components/ui/Chip";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
-import { accentText } from "@/lib/colorMap";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
@@ -27,84 +26,16 @@ export default function ServiceDetailBlock({ service, background }: ServiceDetai
         {service.description}
       </AnimatedParagraph>
 
-      {service.businessValue && (
-        <div className="mt-6">
-          <div className="mb-2.5 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
-            Business Value
-          </div>
-          <p className="text-[14.5px] leading-[1.7] text-text-body">{service.businessValue}</p>
-        </div>
-      )}
-
       {service.capabilities && (
         <div className="mt-5">
           <div className="mb-2.5 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
-            Key Capabilities
+            Capabilities
           </div>
           <div className="flex flex-wrap gap-2.5">
             {service.capabilities.map((c) => (
               <Chip key={c}>{c}</Chip>
             ))}
           </div>
-        </div>
-      )}
-
-      {service.notableList && (
-        <div className="mt-5">
-          <div className="mb-2.5 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
-            Notable Benchmarks
-          </div>
-          <div className="flex flex-col gap-2.5">
-            {service.notableList.map((item) => (
-              <div
-                key={item.text}
-                className={`border-l-[3px] pl-3.5 text-sm ${item.color === "red" ? "border-red" : "border-cyan"}`}
-              >
-                {item.text}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {service.stats && (
-        <div className="mt-5 grid grid-cols-2 gap-3.5">
-          {service.stats.map((stat) => (
-            <div key={stat.label} className="rounded-lg bg-white p-[18px]">
-              <div className={`font-heading text-[22px] ${accentText[stat.color]}`}>{stat.value}</div>
-              <div className="text-[12.5px] text-text-muted">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {service.partners && (
-        <div className="mt-5">
-          <div className="mb-2.5 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
-            Technology Partners
-          </div>
-          <div className="flex flex-wrap gap-2.5">
-            {service.partners.map((p) => (
-              <Chip key={p}>{p}</Chip>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {service.standard && (
-        <div className="mt-5 max-w-xs rounded-xl border border-border bg-white p-6">
-          <div className="font-heading text-xs uppercase tracking-[0.08em] text-text-muted">Standards Alignment</div>
-          <div className="mt-2 font-heading text-xl text-red">{service.standard.code}</div>
-          <div className="mt-1.5 text-[13.5px] text-text-body">{service.standard.label}</div>
-        </div>
-      )}
-
-      {service.relatedProjects && (
-        <div className="mt-5">
-          <div className="mb-2.5 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
-            Related Projects
-          </div>
-          <p className="text-sm text-text-muted">{service.relatedProjects}</p>
         </div>
       )}
     </div>

@@ -36,19 +36,13 @@ export interface ServiceDetail {
   eyebrow: string;
   title: string;
   description: string;
-  businessValue?: string;
   capabilities?: string[];
-  relatedProjects?: string;
   photoLabel: string;
   photoSrc?: string;
   imageSide: "left" | "right";
-  stats?: { value: string; label: string; color: "red" | "cyan" }[];
-  notableList?: { text: string; color: "red" | "cyan" }[];
-  partners?: string[];
-  standard?: { code: string; label: string };
 }
 
-/** Service detail blocks — only sections listed in the content doc. */
+/** Service detail blocks — exact subsections from the content doc. */
 export const servicesDetail: ServiceDetail[] = [
   // 01 — Engineering Services
   {
@@ -56,7 +50,7 @@ export const servicesDetail: ServiceDetail[] = [
     category: "engineering-services",
     index: "1.1",
     eyebrow: "NETWORK INFRASTRUCTURE & DEPLOYMENT",
-    title: "Planning, designing, building, and expanding telecom infrastructure",
+    title: "Network Infrastructure & Deployment",
     description:
       "Planning, designing, building, and expanding telecommunications infrastructure from concept to commissioning.",
     capabilities: [
@@ -81,7 +75,7 @@ export const servicesDetail: ServiceDetail[] = [
     category: "engineering-services",
     index: "1.2",
     eyebrow: "WIRELESS & FIXED NETWORKS",
-    title: "High-performance connectivity, built for growth",
+    title: "Wireless & Fixed Networks",
     description:
       "Delivering high-performance wireless and fixed network solutions that support connectivity, capacity, and future growth.",
     capabilities: [
@@ -105,7 +99,7 @@ export const servicesDetail: ServiceDetail[] = [
     category: "engineering-services",
     index: "1.3",
     eyebrow: "DATA CENTERS & DIGITAL INFRASTRUCTURE",
-    title: "Resilient digital infrastructure, designed & built",
+    title: "Data Centers & Digital Infrastructure",
     description:
       "Designing, building, and supporting resilient digital infrastructure that powers modern enterprise and telecommunications environments.",
     capabilities: [
@@ -127,7 +121,7 @@ export const servicesDetail: ServiceDetail[] = [
     category: "engineering-services",
     index: "1.4",
     eyebrow: "MANAGED OPERATIONS",
-    title: "Long-term operational excellence",
+    title: "Managed Operations",
     description:
       "Delivering long-term operational excellence through proactive support, maintenance, optimization, and managed services.",
     capabilities: [
@@ -152,7 +146,7 @@ export const servicesDetail: ServiceDetail[] = [
     category: "engineering-services",
     index: "1.5",
     eyebrow: "ENGINEERING & TECHNICAL SERVICES",
-    title: "Specialized expertise, at every stage",
+    title: "Engineering & Technical Services",
     description:
       "Providing specialized engineering expertise throughout planning, implementation, integration, and operational readiness.",
     capabilities: [
@@ -176,8 +170,8 @@ export const servicesDetail: ServiceDetail[] = [
     id: "pmo-project-delivery",
     category: "pmo-project-delivery",
     index: "2.1",
-    eyebrow: "GOVERNANCE THAT DRIVES SUCCESSFUL DELIVERY",
-    title: "Governance, structure, and leadership for complex programs",
+    eyebrow: "PMO & PROJECT DELIVERY",
+    title: "Governance That Drives Successful Delivery",
     description:
       "Our PMO services establish the governance, structure, and leadership required to successfully deliver complex infrastructure programs, ensuring alignment with business objectives while maintaining control over cost, schedule, quality, risk, and performance.",
     capabilities: [
@@ -207,8 +201,8 @@ export const servicesDetail: ServiceDetail[] = [
     id: "technical-advisory",
     category: "technical-advisory",
     index: "3.1",
-    eyebrow: "STRATEGIC INSIGHT. INDEPENDENT EXPERTISE.",
-    title: "Informed decisions, backed by engineering knowledge",
+    eyebrow: "TECHNICAL ADVISORY",
+    title: "Strategic Insight. Independent Expertise.",
     description:
       "Our advisory services help organizations make informed investment, technology, and infrastructure decisions by combining engineering knowledge with practical industry experience and independent technical assessment.",
     capabilities: [
@@ -270,6 +264,3 @@ export const telecomProductGroups: ProductGroup[] = [
     ],
   },
 ];
-
-/** Flat list kept for any consumers that still expect a string array. */
-export const equipmentSupply: string[] = telecomProductGroups.flatMap((group) => group.items);

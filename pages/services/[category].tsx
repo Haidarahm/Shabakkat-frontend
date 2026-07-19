@@ -3,12 +3,10 @@ import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
-import CategorySwitcher from "@/components/services/CategorySwitcher";
-import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
+import ServicesPageSection, { SERVICES_CTA } from "@/components/services/ServicesPageSection";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
-import { serviceCategories, servicesDetail, telecomProductGroups } from "@/data/servicesDetail";
-import ProductGroupsGrid from "@/components/services/ProductGroupsGrid";
+import { serviceCategories } from "@/data/servicesDetail";
 
 interface ServiceCategoryPageProps {
   categoryId: string;
@@ -26,7 +24,6 @@ export const getStaticProps: GetStaticProps<ServiceCategoryPageProps> = async ({
 export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
   const category = serviceCategories.find((c) => c.id === categoryId)!;
-  const services = servicesDetail.filter((s) => s.category === categoryId);
 
   return (
     <Layout
@@ -52,32 +49,12 @@ export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageP
         </AnimatedParagraph>
       </Hero>
 
-      <CategorySwitcher activeId={category.id} />
-
-      <div className="flex flex-col divide-y divide-border">
-        {services.map((service, i) => (
-          <ServiceDetailBlock key={service.id} service={service} background={i % 2 === 1 ? "muted" : undefined} />
-        ))}
-      </div>
-
-      {categoryId === "engineering-services" && (
-        <div className="border-t border-border">
-          <ProductGroupsGrid
-            id="equipment-supply"
-            index="1.6"
-            eyebrow="TELECOM PRODUCTS & INFRASTRUCTURE SOLUTIONS"
-            title="Telecom products & infrastructure solutions"
-            description="Tower and energy solutions, passive infrastructure, network equipment, and telecom accessories — sourced and delivered to support resilient network build and operations."
-            groups={telecomProductGroups}
-            background={services.length % 2 === 1 ? "muted" : undefined}
-          />
-        </div>
-      )}
+      <ServicesPageSection categoryId={categoryId} switcherMode="route" />
 
       <FinalCta
-        title="Let's deliver what's next"
-        description="Whether you're expanding telecommunications infrastructure, establishing enterprise project governance, modernizing digital infrastructure, or defining your next technology strategy, Shabakkat provides the engineering expertise, project leadership, and strategic advisory to deliver with confidence."
-        ctaLabel="CONTACT OUR TEAM"
+        title={SERVICES_CTA.title}
+        description={SERVICES_CTA.description}
+        ctaLabel={SERVICES_CTA.ctaLabel}
       />
     </Layout>
   );

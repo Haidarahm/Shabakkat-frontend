@@ -2,8 +2,8 @@ import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
-import CapabilitiesGrid from "@/components/sections/CapabilitiesGrid";
 import ProcessSteps from "@/components/sections/ProcessSteps";
+import ServicesPageSection, { SERVICES_CTA } from "@/components/services/ServicesPageSection";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
@@ -36,13 +36,13 @@ export default function Services() {
         </AnimatedParagraph>
       </Hero>
 
-      <CapabilitiesGrid />
+      <ServicesPageSection switcherMode="hash" />
       <ProcessSteps />
 
       <FinalCta
-        title="Let's deliver what's next"
-        description="Whether you're expanding telecommunications infrastructure, establishing enterprise project governance, modernizing digital infrastructure, or defining your next technology strategy, Shabakkat provides the engineering expertise, project leadership, and strategic advisory to deliver with confidence."
-        ctaLabel="CONTACT OUR TEAM"
+        title={SERVICES_CTA.title}
+        description={SERVICES_CTA.description}
+        ctaLabel={SERVICES_CTA.ctaLabel}
       />
     </Layout>
   );

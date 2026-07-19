@@ -1,10 +1,34 @@
-import { useRef, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import Link from "next/link";
 import { serviceCategories } from "@/data/servicesDetail";
 
-export default function CategorySwitcher({ activeId }: { activeId: string }) {
+interface CategorySwitcherProps {
+  activeId: string;
+  /** `route` → /services/[id] · `hash` → /services#[id] (same-page scroll) */
+  mode?: "route" | "hash";
+}
+
+export default function CategorySwitcher({ activeId, mode = "route" }: CategorySwitcherProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const drag = useRef({ isDown: false, moved: false, startX: 0, scrollLeft: 0 });
+  const [hashActiveId, setHashActiveId] = useState(activeId);
+
+  useEffect(() => {
+    if (mode !== "hash") return;
+
+    function syncFromHash() {
+      const id = window.location.hash.replace(/^#/, "");
+      if (id && serviceCategories.some((c) => c.id === id)) {
+        setHashActiveId(id);
+      }
+    }
+
+    syncFromHash();
+    window.addEventListener("hashchange", syncFromHash);
+    return () => window.removeEventListener("hashchange", syncFromHash);
+  }, [mode]);
+
+  const currentActive = mode === "hash" ? hashActiveId : activeId;
 
   function onMouseDown(e: MouseEvent<HTMLDivElement>) {
     const track = trackRef.current;
@@ -51,12 +75,16 @@ export default function CategorySwitcher({ activeId }: { activeId: string }) {
       className="section-px sticky top-[72px] z-[90] flex cursor-grab select-none gap-2.5 overflow-x-auto border-b border-border bg-bg-muted py-4 [-ms-overflow-style:none] [scrollbar-width:none] lg:top-[84px] [&::-webkit-scrollbar]:hidden"
     >
       {serviceCategories.map((category) => {
-        const active = category.id === activeId;
+        const active = category.id === currentActive;
+        const href = mode === "hash" ? `/services#${category.id}` : `/services/${category.id}`;
         return (
           <Link
             key={category.id}
-            href={`/services/${category.id}`}
+            href={href}
             draggable={false}
+            onClick={() => {
+              if (mode === "hash") setHashActiveId(category.id);
+            }}
             className={`whitespace-nowrap rounded-full border px-4 py-2 font-heading text-[12.5px] tracking-[0.03em] ${
               active ? "border-cyan bg-cyan text-white" : "border-border bg-white text-navy hover:border-cyan hover:text-cyan"
             }`}

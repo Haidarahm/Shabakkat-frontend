@@ -6,7 +6,7 @@ interface ProductGroupsGridProps {
   index: string;
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   groups: ProductGroup[];
   background?: "muted";
 }
