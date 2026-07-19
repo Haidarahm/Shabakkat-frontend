@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/components/LogoLoop.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Oswald, Inter } from "next/font/google";
