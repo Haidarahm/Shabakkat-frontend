@@ -22,13 +22,13 @@ export const industries: Industry[] = [
     focusAreas: [
       "Network rollout & modernization",
       "24/7 managed services & NOC",
-      "Radio audit & optimization",
-      "Revenue assurance",
+      "Wireless & fixed networks",
+      "Engineering & technical services",
     ],
     relevantServices: [
-      { label: "Network Rollout", href: "/services/engineering-services#network-rollout" },
-      { label: "Managed Services", href: "/services/engineering-services#managed-services" },
-      { label: "Radio Audit & Optimization", href: "/services/engineering-services#radio-audit" },
+      { label: "Network Infrastructure & Deployment", href: "/services/engineering-services#network-rollout" },
+      { label: "Managed Operations", href: "/services/engineering-services#managed-services" },
+      { label: "Wireless & Fixed Networks", href: "/services/engineering-services#wireless-fixed-networks" },
     ],
     relatedProjectHref: "/projects#kuwait-managed-services-program",
   },
@@ -40,10 +40,10 @@ export const industries: Industry[] = [
     summary:
       "Governments play a vital role in shaping the future of digital infrastructure through policy, regulation, and strategic investment. Shabakkat partners with ministries, public sector organizations, and telecommunications regulatory authorities to support national digital transformation, strengthen regulatory initiatives, enhance critical infrastructure, and enable secure, scalable, and future-ready public services.",
     notableNames: "Ministries and public institutions",
-    focusAreas: ["National digital transformation", "PMO & governance", "Consultancy & resourcing", "Critical infrastructure"],
+    focusAreas: ["National digital transformation", "PMO & governance", "Technical advisory", "Critical infrastructure"],
     relevantServices: [
       { label: "Technical Advisory", href: "/services/technical-advisory#technical-advisory" },
-      { label: "Consultancy & Resourcing", href: "/services/pmo-project-delivery#consultancy-resourcing" },
+      { label: "PMO & Project Delivery", href: "/services/pmo-project-delivery#pmo-project-delivery" },
     ],
     relatedProjectHref: "/projects#pmo-governance-transformation",
   },
@@ -58,7 +58,7 @@ export const industries: Industry[] = [
     focusAreas: ["Data center infrastructure & fit-out", "Critical power & cooling", "Structured cabling", "Disaster recovery infrastructure"],
     relevantServices: [
       { label: "Data Centers & Digital Infrastructure", href: "/services/engineering-services#data-centers-digital-infrastructure" },
-      { label: "Cloud & Hosted Infrastructure", href: "/services/engineering-services#cloud-infrastructure" },
+      { label: "Engineering & Technical Services", href: "/services/engineering-services#engineering-technical-services" },
     ],
     relatedProjectHref: "/projects#engineering-digital-infrastructure-expansion",
   },
@@ -71,16 +71,16 @@ export const industries: Industry[] = [
       "Modern enterprises require resilient, secure, and scalable infrastructure to support growth, operational continuity, and digital transformation. Shabakkat partners with organizations across diverse industries to strengthen their technology foundations and enable sustainable business performance.",
     notableNames: "LAN/WAN, data center & cloud clients",
     focusAreas: [
-      "LAN/WAN & structured cabling",
-      "Unified communications & contact centres",
-      "Cybersecurity assessment & hardening",
-      "Cloud & hosted infrastructure",
+      "Data centers & digital infrastructure",
+      "Wireless & fixed networks",
+      "Technical advisory",
+      "Managed operations",
     ],
     relevantServices: [
-      { label: "Enterprise Networks & Data Infrastructure", href: "/services/engineering-services#enterprise-networks" },
-      { label: "Unified Communications & Contact Centres", href: "/services/engineering-services#unified-communications" },
-      { label: "Cloud & Hosted Infrastructure", href: "/services/engineering-services#cloud-infrastructure" },
-      { label: "Cybersecurity", href: "/services/engineering-services#cybersecurity" },
+      { label: "Data Centers & Digital Infrastructure", href: "/services/engineering-services#data-centers-digital-infrastructure" },
+      { label: "Wireless & Fixed Networks", href: "/services/engineering-services#wireless-fixed-networks" },
+      { label: "Technical Advisory", href: "/services/technical-advisory#technical-advisory" },
+      { label: "Managed Operations", href: "/services/engineering-services#managed-services" },
     ],
   },
   {
@@ -91,9 +91,9 @@ export const industries: Industry[] = [
     summary:
       "Reliable communications and resilient infrastructure are essential to the continuity of energy and utility operations. Shabakkat supports organizations in modernizing critical infrastructure, improving operational resilience, and enabling secure, reliable communications that support essential services.",
     notableNames: "Energy & utility operators",
-    focusAreas: ["Critical infrastructure modernization", "Power supply & maintenance", "Operational resilience", "Reliable communications"],
+    focusAreas: ["Critical infrastructure modernization", "Network infrastructure", "Operational resilience", "Reliable communications"],
     relevantServices: [
-      { label: "Power Supply & Maintenance", href: "/services/engineering-services#power-supply" },
+      { label: "Network Infrastructure & Deployment", href: "/services/engineering-services#network-rollout" },
       { label: "Engineering & Technical Services", href: "/services/engineering-services#engineering-technical-services" },
     ],
     relatedProjectHref: "/projects#full-turnkey-network-deployment-program",

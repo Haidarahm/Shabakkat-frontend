@@ -3,7 +3,6 @@ import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
 import CapabilitiesGrid from "@/components/sections/CapabilitiesGrid";
-import TechnologiesGrid from "@/components/sections/TechnologiesGrid";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
@@ -38,7 +37,6 @@ export default function Services() {
       </Hero>
 
       <CapabilitiesGrid />
-      <TechnologiesGrid />
       <ProcessSteps />
 
       <FinalCta

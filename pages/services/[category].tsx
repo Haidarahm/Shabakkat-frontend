@@ -5,10 +5,9 @@ import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
 import CategorySwitcher from "@/components/services/CategorySwitcher";
 import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
-import SimpleItemGrid from "@/components/services/SimpleItemGrid";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
-import { serviceCategories, servicesDetail, professionalServices, telecomProductGroups } from "@/data/servicesDetail";
+import { serviceCategories, servicesDetail, telecomProductGroups } from "@/data/servicesDetail";
 import ProductGroupsGrid from "@/components/services/ProductGroupsGrid";
 
 interface ServiceCategoryPageProps {
@@ -65,7 +64,7 @@ export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageP
         <div className="border-t border-border">
           <ProductGroupsGrid
             id="equipment-supply"
-            index="1.15"
+            index="1.6"
             eyebrow="TELECOM PRODUCTS & INFRASTRUCTURE SOLUTIONS"
             title="Telecom products & infrastructure solutions"
             description="Tower and energy solutions, passive infrastructure, network equipment, and telecom accessories — sourced and delivered to support resilient network build and operations."
@@ -75,23 +74,10 @@ export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageP
         </div>
       )}
 
-      {categoryId === "technical-advisory" && (
-        <div className="border-t border-border">
-          <SimpleItemGrid
-            id="professional-services-list"
-            index="3.3"
-            eyebrow="PROFESSIONAL SERVICES"
-            title="Expert consulting for strategic decisions"
-            description="Specialist consulting across network and IT architecture, audits, and business development — bringing outside expertise to the moments that matter most."
-            items={professionalServices}
-            background={services.length % 2 === 1 ? "muted" : undefined}
-          />
-        </div>
-      )}
-
       <FinalCta
-        title="Need a tailored ICT solution?"
-        description="Let's talk about the right combination of services for your network."
+        title="Let's deliver what's next"
+        description="Whether you're expanding telecommunications infrastructure, establishing enterprise project governance, modernizing digital infrastructure, or defining your next technology strategy, Shabakkat provides the engineering expertise, project leadership, and strategic advisory to deliver with confidence."
+        ctaLabel="CONTACT OUR TEAM"
       />
     </Layout>
   );

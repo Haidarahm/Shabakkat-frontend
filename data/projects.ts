@@ -94,7 +94,7 @@ export const projects: ProjectCaseStudy[] = [
     results: "Network Operations Center capacity expanded to support a growing base of managed multi-vendor networks.",
     photoLabel: "PHOTO — multi-vendor NOC expansion",
     photoSrc: "/images/projects/multi-vendor-noc.jpg",
-    relatedServiceHref: "/services/engineering-services#back-office-noc",
+    relatedServiceHref: "/services/engineering-services#managed-services",
   },
   {
     slug: "radio-benchmark-network-optimization",
@@ -110,7 +110,7 @@ export const projects: ProjectCaseStudy[] = [
     results: "Completed benchmarking, optimization, and QoS analysis engagements across multiple regional markets.",
     photoLabel: "PHOTO — radio benchmark & drive test data",
     photoSrc: "/images/projects/radio-benchmark.jpg",
-    relatedServiceHref: "/services/engineering-services#radio-audit",
+    relatedServiceHref: "/services/engineering-services#engineering-technical-services",
   },
   {
     slug: "consultation-professional-resourcing-program",
@@ -126,7 +126,7 @@ export const projects: ProjectCaseStudy[] = [
     results: "An ongoing resourcing program deploying PMO, program management, and engineering resources across active client engagements.",
     photoLabel: "PHOTO — engineering team on site",
     photoSrc: "/images/projects/engineering-team-onsite.jpg",
-    relatedServiceHref: "/services/pmo-project-delivery#consultancy-resourcing",
+    relatedServiceHref: "/services/pmo-project-delivery#pmo-project-delivery",
   },
   {
     slug: "iraq-national-field-operations-expansion",
