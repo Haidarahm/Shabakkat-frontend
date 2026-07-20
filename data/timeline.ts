@@ -1,118 +1,103 @@
 export interface TimelineEntry {
+  slug: string;
   year: string;
+  engagement: string;
+  service: string;
+  status: "Milestone" | "Running" | "Completed" | "Completed / Ongoing by Country";
   color: "red" | "cyan" | "navy";
-  country: string;
-  tag: string;
-  client: string;
-  title: string;
-  description: string;
   side: "left" | "right";
 }
 
+/** Journey Timeline — 10 selected engagements from the content doc. */
 export const timeline: TimelineEntry[] = [
   {
+    slug: "company-founded",
     year: "2005",
+    engagement: "Company Founded",
+    service: "Engineering & Advisory",
+    status: "Milestone",
     color: "red",
-    country: "Kuwait",
-    tag: "MILESTONE",
-    client: "Shabakkat",
-    title: "Company Founded",
-    description:
-      "Shabakkat is founded as a regional Engineering & Advisory company, laying the foundation for two decades of critical digital infrastructure delivery.",
     side: "left",
   },
   {
+    slug: "kuwait-managed-services-program",
     year: "2009",
+    engagement: "Kuwait Managed Services Program (STC, Ooredoo, Zain)",
+    service: "Managed Services, NOC, Field Operations",
+    status: "Running",
     color: "cyan",
-    country: "Kuwait",
-    tag: "RUNNING",
-    client: "STC, Ooredoo & Zain",
-    title: "Kuwait Managed Services Program",
-    description:
-      "Managed services, NOC, and field operations supporting all three national operators — an engagement that continues to run today.",
     side: "right",
   },
   {
+    slug: "iraq-nationwide-managed-services",
     year: "2010",
+    engagement: "Iraq Nationwide Managed Services",
+    service: "NOC, Field Maintenance, Core Operations, L2 Support",
+    status: "Running",
     color: "cyan",
-    country: "Iraq",
-    tag: "RUNNING",
-    client: "Iraq Nationwide",
-    title: "Iraq Nationwide Managed Services",
-    description:
-      "NOC, field maintenance, core operations, and Level 2 support delivered at national scale — ongoing.",
     side: "left",
   },
   {
+    slug: "full-turnkey-network-deployment-program",
     year: "2012",
+    engagement: "Full Turnkey Network Deployment Program",
+    service: "FTK, Civil Works, Towers, Site Build",
+    status: "Completed / Ongoing by Country",
     color: "red",
-    country: "Multi-Country",
-    tag: "COMPLETED / ONGOING",
-    client: "Regional Operators",
-    title: "Full Turnkey Network Deployment Program",
-    description:
-      "FTK, civil works, towers, and site build delivered across multiple countries — completed or ongoing depending on the market.",
     side: "right",
   },
   {
+    slug: "network-operations-center-expansion",
     year: "2014",
+    engagement: "Network Operations Center Expansion",
+    service: "Multi-Vendor NOC Operations",
+    status: "Running",
     color: "cyan",
-    country: "Regional",
-    tag: "RUNNING",
-    client: "Multi-Vendor Operators",
-    title: "Network Operations Center Expansion",
-    description: "Expanded multi-vendor NOC operations to support a growing base of managed networks.",
     side: "left",
   },
   {
+    slug: "radio-benchmark-network-optimization",
     year: "2016",
+    engagement: "Radio Benchmark & Network Optimization",
+    service: "Benchmarking, Optimization, QoS Analysis",
+    status: "Completed",
     color: "red",
-    country: "Regional",
-    tag: "COMPLETED",
-    client: "Regional Operators",
-    title: "Radio Benchmark & Network Optimization",
-    description: "Benchmarking, optimization, and QoS analysis completed across multiple markets.",
     side: "right",
   },
   {
+    slug: "consultation-professional-resourcing-program",
     year: "2018",
+    engagement: "Consultation & Professional Resourcing Program",
+    service: "PMO, Program Management, Engineering Resources",
+    status: "Running",
     color: "navy",
-    country: "Regional",
-    tag: "RUNNING",
-    client: "Multiple Clients",
-    title: "Consultation & Professional Resourcing Program",
-    description: "PMO, program management, and engineering resources deployed across active client engagements.",
     side: "left",
   },
   {
+    slug: "iraq-national-field-operations-expansion",
     year: "2020",
+    engagement: "Iraq National Field Operations Expansion",
+    service: "Field Maintenance, Site Management, E&M",
+    status: "Running",
     color: "cyan",
-    country: "Iraq",
-    tag: "RUNNING",
-    client: "Iraq",
-    title: "Iraq National Field Operations Expansion",
-    description: "Field maintenance, site management, and E&M support expanded at national scale.",
     side: "right",
   },
   {
+    slug: "pmo-governance-transformation",
     year: "2023",
+    engagement: "PMO & Governance Transformation",
+    service: "Project Governance, Executive Reporting, PMO",
+    status: "Running",
     color: "navy",
-    country: "Regional",
-    tag: "RUNNING",
-    client: "Multiple Clients",
-    title: "PMO & Governance Transformation",
-    description: "Project governance, executive reporting, and PMO transformation delivered for clients across the region.",
     side: "left",
   },
   {
+    slug: "engineering-digital-infrastructure-expansion",
     year: "2025",
+    engagement: "Engineering & Digital Infrastructure Expansion",
+    service: "Engineering, Advisory, Data Centers, Infrastructure",
+    status: "Running",
     color: "red",
-    country: "Regional",
-    tag: "RUNNING",
-    client: "Multiple Clients",
-    title: "Engineering & Digital Infrastructure Expansion",
-    description:
-      "Engineering, advisory, data centers, and infrastructure capabilities expanded to meet growing regional demand.",
     side: "right",
   },
 ];

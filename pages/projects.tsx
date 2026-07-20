@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
+import Timeline from "@/components/sections/Timeline";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import ProjectCard from "@/components/projects/ProjectCard";
@@ -15,7 +16,7 @@ export default function Projects() {
   return (
     <Layout
       title="Projects"
-      description="Case studies from Shabakkat's mega projects across the Middle East and Africa — rollout, managed services, turnkey builds, and more."
+      description="Two decades of delivering critical infrastructure, long-term operations, and strategic transformation across the Middle East and Africa."
     >
       <Hero
         photoLabel="PHOTO — engineers reviewing a rollout site, full-bleed"
@@ -47,6 +48,8 @@ export default function Projects() {
           ))}
         </StaggerGrid>
       </div>
+
+      <Timeline />
 
       <FinalCta
         title="Have a project in mind?"

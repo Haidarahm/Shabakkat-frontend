@@ -13,11 +13,13 @@ export default function ProjectCard({ project }: { project: ProjectCaseStudy }) 
       <PhotoPlaceholder label={project.photoLabel} src={project.photoSrc} className="h-[180px] rounded-none" />
       <div className="p-6 lg:p-7">
         <div className="flex flex-wrap items-center gap-2.5">
-          <div className={`rounded-full px-2.5 py-[3px] font-heading text-[10px] tracking-[0.05em] ${accentText[project.color]} ${accentBg[project.color]}/10`}>
+          <div
+            className={`rounded-full px-2.5 py-[3px] font-heading text-[10px] tracking-[0.05em] ${accentText[project.color]} ${accentBg[project.color]}/10`}
+          >
             {project.tag}
           </div>
           <div className="text-xs text-text-muted">
-            {project.country} · {project.year}
+            {project.country} - {project.year}
           </div>
         </div>
 
@@ -46,7 +48,7 @@ export default function ProjectCard({ project }: { project: ProjectCaseStudy }) 
           href={project.relatedServiceHref}
           className="mt-4 inline-flex items-center gap-1.5 font-heading text-[12.5px] tracking-[0.04em] text-cyan hover:text-navy"
         >
-          EXPLORE THIS SERVICE <span>→</span>
+          EXPLORE THIS SERVICE <span>{'->'}</span>
         </Link>
       </div>
     </div>
