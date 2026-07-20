@@ -1,26 +1,8 @@
 import { useState } from "react";
-import { motion, type Variants } from "framer-motion";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
-
-const workforce = [
-  { label: "Engineers", value: 85, color: "bg-red" },
-  { label: "Management", value: 5, color: "bg-cyan" },
-  { label: "Business Dev.", value: 5, color: "bg-navy" },
-  { label: "Marketing & Sales", value: 5, color: "bg-text-muted" },
-];
-
-const barContainer: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-};
-
-const barFill = (value: number): Variants => ({
-  hidden: { width: "0%" },
-  visible: { width: `${value}%`, transition: { duration: 1, ease: "easeOut" } },
-});
 
 export default function CompanyOverview() {
   const [titleDone, setTitleDone] = useState(false);
@@ -57,35 +39,15 @@ export default function CompanyOverview() {
           organization, we provide our clients with one strategic partner capable of transforming vision into
           successful execution.
         </AnimatedParagraph>
-        <div className="mt-7 flex gap-3.5">
+        <div className="mt-7 flex flex-wrap gap-3.5">
           <div className="border-l-[3px] border-red bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
             21+ Years
           </div>
           <div className="border-l-[3px] border-cyan bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
             15 Countries
           </div>
-        </div>
-        <div className="mt-7">
-          <div className="mb-3 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
-            Our 900+ Workforce
-          </div>
-          <motion.div
-            className="flex h-3.5 overflow-hidden rounded-full"
-            variants={barContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.6 }}
-          >
-            {workforce.map((w) => (
-              <motion.div key={w.label} className={w.color} variants={barFill(w.value)} />
-            ))}
-          </motion.div>
-          <div className="mt-3 flex flex-wrap gap-[18px] text-[12.5px] text-text-body">
-            {workforce.map((w) => (
-              <div key={w.label}>
-                <span className="font-heading text-navy">{w.value}%</span> {w.label}
-              </div>
-            ))}
+          <div className="border-l-[3px] border-navy bg-bg-muted px-[18px] py-3.5 font-heading text-[13px]">
+            900+ Workforce
           </div>
         </div>
       </div>

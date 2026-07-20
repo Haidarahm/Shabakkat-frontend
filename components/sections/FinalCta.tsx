@@ -34,11 +34,11 @@ export default function FinalCta({
           {description}
         </AnimatedParagraph>
         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-          <Button href={ctaHref} size="lg">
+          <Button href={ctaHref} variant="outline" size="lg">
             {ctaLabel}
           </Button>
           {secondaryCtaLabel && secondaryCtaHref && (
-            <Button href={secondaryCtaHref} variant="outline" size="lg">
+            <Button href={secondaryCtaHref} size="lg">
               {secondaryCtaLabel}
             </Button>
           )}

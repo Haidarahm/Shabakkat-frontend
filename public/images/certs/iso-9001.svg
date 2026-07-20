@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="ISO 9001">
+  <circle cx="60" cy="60" r="56" stroke="#102a43" stroke-width="3"/>
+  <circle cx="60" cy="60" r="48" stroke="#102a43" stroke-width="1.5"/>
+  <path d="M60 18 L66 30 H54 Z" fill="#c8102e"/>
+  <text x="60" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#102a43">ISO</text>
+  <text x="60" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#102a43">9001</text>
+  <text x="60" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.5" fill="#5c6b7a">CERTIFIED</text>
+</svg>

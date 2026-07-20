@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Eyebrow from "./Eyebrow";
 import AnimatedTitle from "./AnimatedTitle";
 import AnimatedParagraph from "./AnimatedParagraph";
+import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
   eyebrow: string;
@@ -22,7 +23,7 @@ export default function SectionHeading({
   const [titleDone, setTitleDone] = useState(false);
 
   return (
-    <div className={className}>
+    <div className={cn("max-w-[720px] text-left", className)}>
       <Eyebrow>{eyebrow}</Eyebrow>
       <AnimatedTitle
         text={title}
@@ -34,9 +35,9 @@ export default function SectionHeading({
       />
       {description && (
         <AnimatedParagraph
-          as="div"
+          as="p"
           active={titleDone}
-          className="mt-3.5 max-w-[720px] text-[15.5px] leading-[1.7] text-text-body"
+          className="mt-3.5 text-[15.5px] leading-[1.7] text-pretty text-text-body"
         >
           {description}
         </AnimatedParagraph>

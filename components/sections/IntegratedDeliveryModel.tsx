@@ -4,7 +4,6 @@ import Card from "@/components/ui/Card";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import { deliveryModel } from "@/data/deliveryModel";
-import { accentText, accentBg } from "@/lib/colorMap";
 
 export default function IntegratedDeliveryModel() {
   return (
@@ -15,8 +14,8 @@ export default function IntegratedDeliveryModel() {
           <StaggerItem key={item.title}>
             <Link href={item.href} className="block h-full">
               <Card className="h-full bg-white p-7">
-                <div className={`h-[3px] w-10 rounded-full ${accentBg[item.color]}`} />
-                <div className={`mt-4 font-heading text-lg ${accentText[item.color]}`}>{item.title}</div>
+                <div className="h-[3px] w-10 rounded-full bg-cyan" />
+                <div className="mt-4 font-heading text-lg text-navy">{item.title}</div>
                 <p className="mt-2.5 text-[13.5px] leading-[1.7] text-text-body">{item.description}</p>
               </Card>
             </Link>

@@ -27,7 +27,7 @@ export default function PartnersGrid() {
           direction="left"
           speed={60}
           logoHeight={40}
-          gap={56}
+          gap={80}
           pauseOnHover
           scaleOnHover
           fadeOut
@@ -39,7 +39,7 @@ export default function PartnersGrid() {
           direction="right"
           speed={60}
           logoHeight={40}
-          gap={56}
+          gap={80}
           pauseOnHover
           scaleOnHover
           fadeOut

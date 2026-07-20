@@ -8,7 +8,7 @@ export default function VisionMission() {
   const [missionTitleDone, setMissionTitleDone] = useState(false);
 
   return (
-    <div className="section-px section-py grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
+    <div className="section-px section-py grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
       <div className="rounded-xl border border-border-tint bg-bg-tint p-6 sm:p-8 lg:p-12">
         <Eyebrow>VISION</Eyebrow>
         <AnimatedTitle
@@ -25,14 +25,17 @@ export default function VisionMission() {
           infrastructure lifecycle.
         </AnimatedParagraph>
       </div>
-      <div>
+      <div className="rounded-xl border border-border bg-bg-muted p-6 sm:p-8 lg:p-12">
         <Eyebrow>MISSION</Eyebrow>
         <AnimatedTitle
           text="Delivering infrastructure that moves nations forward"
-          className="mt-4 font-heading text-[24px] font-semibold uppercase leading-[1.15] text-navy sm:text-[28px] lg:text-[34px]"
+          className="mt-[18px] font-heading text-[22px] font-semibold uppercase text-navy sm:text-[26px] lg:text-[30px]"
           onAnimationComplete={() => setMissionTitleDone(true)}
         />
-        <AnimatedParagraph active={missionTitleDone} className="mt-4 text-[15.5px] leading-[1.7] text-text-body">
+        <AnimatedParagraph
+          active={missionTitleDone}
+          className="mt-[18px] text-[15.5px] leading-[1.75] text-text-body-alt"
+        >
           To deliver integrated Engineering Services, PMO &amp; Project Delivery, and Technical Advisory that enable
           our clients to build, modernize, and operate critical digital infrastructure with confidence, precision,
           and long-term value.
