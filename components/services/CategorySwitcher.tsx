@@ -8,6 +8,12 @@ interface CategorySwitcherProps {
   mode?: "route" | "hash";
 }
 
+function scrollToCategory(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 export default function CategorySwitcher({ activeId, mode = "route" }: CategorySwitcherProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const drag = useRef({ isDown: false, moved: false, startX: 0, scrollLeft: 0 });
@@ -25,7 +31,11 @@ export default function CategorySwitcher({ activeId, mode = "route" }: CategoryS
 
     syncFromHash();
     window.addEventListener("hashchange", syncFromHash);
-    return () => window.removeEventListener("hashchange", syncFromHash);
+    window.addEventListener("popstate", syncFromHash);
+    return () => {
+      window.removeEventListener("hashchange", syncFromHash);
+      window.removeEventListener("popstate", syncFromHash);
+    };
   }, [mode]);
 
   const currentActive = mode === "hash" ? hashActiveId : activeId;
@@ -64,6 +74,14 @@ export default function CategorySwitcher({ activeId, mode = "route" }: CategoryS
     }
   }
 
+  function onHashClick(e: MouseEvent<HTMLAnchorElement>, categoryId: string) {
+    if (mode !== "hash" || drag.current.moved) return;
+    e.preventDefault();
+    setHashActiveId(categoryId);
+    scrollToCategory(categoryId);
+    window.history.pushState(null, "", `/services#${categoryId}`);
+  }
+
   return (
     <div
       ref={trackRef}
@@ -82,11 +100,11 @@ export default function CategorySwitcher({ activeId, mode = "route" }: CategoryS
             key={category.id}
             href={href}
             draggable={false}
-            onClick={() => {
-              if (mode === "hash") setHashActiveId(category.id);
-            }}
+            onClick={(e) => onHashClick(e, category.id)}
             className={`whitespace-nowrap rounded-full border px-4 py-2 font-heading text-[12.5px] tracking-[0.03em] ${
-              active ? "border-cyan bg-cyan text-white" : "border-border bg-white text-navy hover:border-cyan hover:text-cyan"
+              active
+                ? "border-cyan bg-cyan text-white"
+                : "border-border bg-white text-navy hover:border-cyan hover:text-cyan"
             }`}
           >
             {category.title}

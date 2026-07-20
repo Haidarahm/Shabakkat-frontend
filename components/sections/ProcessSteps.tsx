@@ -1,8 +1,24 @@
 import { motion, type Variants } from "framer-motion";
+import {
+  HiOutlineArrowTrendingUp,
+  HiOutlineClipboardDocumentList,
+  HiOutlineLightBulb,
+  HiOutlineServerStack,
+  HiOutlineWrenchScrewdriver,
+} from "react-icons/hi2";
+import type { IconType } from "react-icons";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import { processSteps } from "@/data/processSteps";
 import { accentBg } from "@/lib/colorMap";
+
+const stepIcons: Record<number, IconType> = {
+  1: HiOutlineLightBulb,
+  2: HiOutlineClipboardDocumentList,
+  3: HiOutlineWrenchScrewdriver,
+  4: HiOutlineServerStack,
+  5: HiOutlineArrowTrendingUp,
+};
 
 const stepGrid: Variants = {
   hidden: {},
@@ -33,27 +49,31 @@ export default function ProcessSteps() {
           }}
         />
         <motion.div
-          className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5"
+          className="relative z-10 grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-5"
           variants={stepGrid}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {processSteps.map((step) => (
-            <motion.div key={step.number} variants={stepItem} className="h-full">
-              <div className="flex items-center justify-center">
-                <div
-                  className={`flex h-[52px] w-[52px] items-center justify-center rounded-full font-heading text-base text-white shadow-[0_0_0_6px_#fff] ${accentBg[step.color]}`}
-                >
-                  {step.number}
+          {processSteps.map((step) => {
+            const Icon = stepIcons[step.number];
+            return (
+              <motion.div key={step.number} variants={stepItem}>
+                <div className="flex items-center justify-center">
+                  <div
+                    className={`flex h-[52px] w-[52px] items-center justify-center rounded-full font-heading text-base text-white shadow-[0_0_0_6px_#fff] ${accentBg[step.color]}`}
+                  >
+                    {step.number}
+                  </div>
                 </div>
-              </div>
-              <Card className="mt-4 min-h-[150px] p-[18px] text-center">
-                <div className="font-heading text-[14.5px] text-navy">{step.title}</div>
-                <div className="mt-2 text-[13px] leading-[1.6] text-text-body">{step.description}</div>
-              </Card>
-            </motion.div>
-          ))}
+                <Card className="mt-4 !h-auto p-5 text-center">
+                  {Icon && <Icon className="mx-auto text-red" size={26} aria-hidden />}
+                  <div className="mt-3 font-heading text-[14.5px] text-navy">{step.title}</div>
+                  <div className="mt-2.5 text-[13px] leading-[1.65] text-text-body">{step.description}</div>
+                </Card>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </div>

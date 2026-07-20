@@ -1,10 +1,21 @@
 import { useState } from "react";
+import { motion, type Variants } from "framer-motion";
 import type { ServiceDetail } from "@/data/servicesDetail";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Chip from "@/components/ui/Chip";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
+
+const chipContainer: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.06 } },
+};
+
+const chipItem: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
 
 interface ServiceDetailBlockProps {
   service: ServiceDetail;
@@ -31,11 +42,18 @@ export default function ServiceDetailBlock({ service, background }: ServiceDetai
           <div className="mb-2.5 font-heading text-xs uppercase tracking-[0.08em] text-text-muted">
             Capabilities
           </div>
-          <div className="flex flex-wrap gap-2.5">
+          <motion.div
+            className="flex flex-wrap gap-2.5"
+            variants={chipContainer}
+            initial="hidden"
+            animate={titleDone ? "visible" : "hidden"}
+          >
             {service.capabilities.map((c) => (
-              <Chip key={c}>{c}</Chip>
+              <motion.div key={c} variants={chipItem}>
+                <Chip>{c}</Chip>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       )}
     </div>
