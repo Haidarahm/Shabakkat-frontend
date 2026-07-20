@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import HomeHero from "@/components/sections/HomeHero";
-import StatBar from "@/components/sections/StatBar";
 import CompanyOverview from "@/components/sections/CompanyOverview";
 import IntegratedDeliveryModel from "@/components/sections/IntegratedDeliveryModel";
 import WhyUsGrid from "@/components/sections/WhyUsGrid";
@@ -54,7 +53,6 @@ export default function Home() {
         </div>
       </HomeHero>
 
-      <StatBar />
       <CompanyOverview />
       <IntegratedDeliveryModel />
       <WhyUsGrid />
