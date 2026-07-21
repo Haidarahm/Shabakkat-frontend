@@ -42,7 +42,7 @@ export default function Header() {
           })}
         </nav>
 
-        <Button href="/careers" variant="primary" className="hidden lg:inline-block">
+        <Button href="/contact" variant="primary" className="hidden lg:inline-block">
           GET IN TOUCH
         </Button>
 
@@ -76,7 +76,7 @@ export default function Header() {
               </Link>
             );
           })}
-          <Button href="/careers" variant="primary" className="mt-2 text-center" onClick={() => setOpen(false)}>
+          <Button href="/contact" variant="primary" className="mt-2 text-center" onClick={() => setOpen(false)}>
             GET IN TOUCH
           </Button>
         </nav>

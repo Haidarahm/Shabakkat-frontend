@@ -16,7 +16,7 @@ export default function FinalCta({
   title,
   description,
   ctaLabel = "CONTACT SHABAKKAT",
-  ctaHref = "/careers",
+  ctaHref = "/contact",
   secondaryCtaLabel,
   secondaryCtaHref,
 }: FinalCtaProps) {

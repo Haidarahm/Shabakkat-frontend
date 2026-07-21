@@ -47,7 +47,7 @@ export default function Home() {
         </AnimatedParagraph>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Button href="/services">EXPLORE OUR SERVICES</Button>
-          <Button href="/careers" variant="outline-light">
+          <Button href="/contact" variant="outline-light">
             CONTACT US
           </Button>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
         ctaLabel="EXPLORE OUR SERVICES"
         ctaHref="/services"
         secondaryCtaLabel="CONTACT US"
-        secondaryCtaHref="/careers"
+        secondaryCtaHref="/contact"
       />
     </Layout>
   );
