@@ -8,10 +8,10 @@ export default function ProjectCard({ project }: { project: ProjectCaseStudy }) 
   return (
     <div
       id={project.slug}
-      className="scroll-mt-[132px] overflow-hidden rounded-xl border border-border bg-white lg:scroll-mt-[160px]"
+      className="flex h-full scroll-mt-[132px] flex-col overflow-hidden rounded-xl border border-border bg-white lg:scroll-mt-[160px]"
     >
-      <PhotoPlaceholder label={project.photoLabel} src={project.photoSrc} className="h-[180px] rounded-none" />
-      <div className="p-6 lg:p-7">
+      <PhotoPlaceholder label={project.photoLabel} src={project.photoSrc} className="h-[180px] shrink-0 rounded-none" />
+      <div className="flex flex-1 flex-col p-6 lg:p-7">
         <div className="flex flex-wrap items-center gap-2.5">
           <div
             className={`rounded-full px-2.5 py-[3px] font-heading text-[10px] tracking-[0.05em] ${accentText[project.color]} ${accentBg[project.color]}/10`}
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }: { project: ProjectCaseStudy }) 
 
         <Link
           href={project.relatedServiceHref}
-          className="mt-4 inline-flex items-center gap-1.5 font-heading text-[12.5px] tracking-[0.04em] text-cyan hover:text-navy"
+          className="mt-auto inline-flex items-center gap-1.5 pt-4 font-heading text-[12.5px] tracking-[0.04em] text-cyan hover:text-navy"
         >
           EXPLORE THIS SERVICE <span>{'->'}</span>
         </Link>
