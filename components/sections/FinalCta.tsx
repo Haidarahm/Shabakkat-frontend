@@ -1,7 +1,18 @@
 import { useState } from "react";
+import { motion, type Variants } from "framer-motion";
 import Button from "@/components/ui/Button";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
+
+const buttonRow: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const buttonItem: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
 
 interface FinalCtaProps {
   title: string;
@@ -33,16 +44,25 @@ export default function FinalCta({
         <AnimatedParagraph active={titleDone} className="mt-4 mb-7 text-base text-text-body-alt">
           {description}
         </AnimatedParagraph>
-        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-          <Button href={ctaHref} variant="outline" size="lg">
-            {ctaLabel}
-          </Button>
-          {secondaryCtaLabel && secondaryCtaHref && (
-            <Button href={secondaryCtaHref} size="lg">
-              {secondaryCtaLabel}
+        <motion.div
+          className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
+          variants={buttonRow}
+          initial="hidden"
+          animate={titleDone ? "visible" : "hidden"}
+        >
+          <motion.div variants={buttonItem}>
+            <Button href={ctaHref} variant="outline" size="lg">
+              {ctaLabel}
             </Button>
+          </motion.div>
+          {secondaryCtaLabel && secondaryCtaHref && (
+            <motion.div variants={buttonItem}>
+              <Button href={secondaryCtaHref} size="lg">
+                {secondaryCtaLabel}
+              </Button>
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

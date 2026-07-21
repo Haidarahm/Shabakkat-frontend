@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, type Variants } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import HomeHero from "@/components/sections/HomeHero";
 import CompanyOverview from "@/components/sections/CompanyOverview";
@@ -13,6 +14,16 @@ import FinalCta from "@/components/sections/FinalCta";
 import Button from "@/components/ui/Button";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
+
+const heroButtonRow: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.12 } },
+};
+
+const heroButtonItem: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
 
 export default function Home() {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
@@ -45,12 +56,21 @@ export default function Home() {
           enterprises, and governments to deliver resilient infrastructure, accelerate digital transformation, and
           build sustainable networks for the future.
         </AnimatedParagraph>
-        <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <Button href="/services">EXPLORE OUR SERVICES</Button>
-          <Button href="/contact" variant="outline-light">
-            CONTACT US
-          </Button>
-        </div>
+        <motion.div
+          className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4"
+          variants={heroButtonRow}
+          initial="hidden"
+          animate={heroTitleDone ? "visible" : "hidden"}
+        >
+          <motion.div variants={heroButtonItem}>
+            <Button href="/services">EXPLORE OUR SERVICES</Button>
+          </motion.div>
+          <motion.div variants={heroButtonItem}>
+            <Button href="/contact" variant="outline-light">
+              CONTACT US
+            </Button>
+          </motion.div>
+        </motion.div>
       </HomeHero>
 
       <CompanyOverview />
