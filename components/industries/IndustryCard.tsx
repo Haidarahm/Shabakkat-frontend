@@ -3,10 +3,16 @@ import Chip from "@/components/ui/Chip";
 import type { Industry } from "@/data/industries";
 import { accentText, accentBorder } from "@/lib/colorMap";
 
-export default function IndustryCard({ industry }: { industry: Industry }) {
+export default function IndustryCard({ industry, index }: { industry: Industry; index: number }) {
+  const number = String(index).padStart(2, "0");
+
   return (
-    <div id={industry.slug} className={`scroll-mt-[132px] h-full rounded-xl border-t-[3px] border border-border bg-white p-7 lg:scroll-mt-[160px] ${accentBorder[industry.color]}`}>
-      <div className={`font-heading text-lg ${accentText[industry.color]}`}>{industry.title}</div>
+    <div
+      id={industry.slug}
+      className={`scroll-mt-[132px] h-full rounded-xl border border-t-[3px] border-border bg-white p-7 lg:scroll-mt-[160px] ${accentBorder[industry.color]}`}
+    >
+      <div className={`font-heading text-xs tracking-[0.05em] ${accentText[industry.color]}`}>{number}</div>
+      <div className={`mt-2.5 font-heading text-lg ${accentText[industry.color]}`}>{industry.title}</div>
       <div className="mt-1.5 font-heading text-[13px] tracking-[0.02em] text-navy">{industry.tagline}</div>
       <p className="mt-2.5 text-[13.5px] leading-[1.7] text-text-body">{industry.summary}</p>
       <div className="mt-3 text-[12.5px] text-text-muted">{industry.notableNames}</div>

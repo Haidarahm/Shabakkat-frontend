@@ -12,6 +12,27 @@ export interface Industry {
 
 export const industries: Industry[] = [
   {
+    slug: "diverse-markets",
+    title: "Engineering Solutions for Diverse Markets",
+    tagline: "Markets We Serve",
+    color: "cyan",
+    summary:
+      "Every market presents unique operational, regulatory, and business challenges. Understanding those challenges is essential to delivering infrastructure that creates lasting value. Shabakkat partners with organizations across multiple sectors, combining engineering expertise, project leadership, and technical advisory to deliver solutions aligned with each client's objectives and long-term vision.",
+    notableNames: "Telecom, Government, Data Centers, Enterprise, Energy & Utilities",
+    focusAreas: [
+      "Market-aligned engineering",
+      "Cross-sector project leadership",
+      "Technical advisory",
+      "Long-term operational value",
+    ],
+    relevantServices: [
+      { label: "Engineering Services", href: "/services#engineering-services" },
+      { label: "PMO & Project Delivery", href: "/services#pmo-project-delivery" },
+      { label: "Technical Advisory", href: "/services#technical-advisory" },
+    ],
+    relatedProjectHref: "/projects",
+  },
+  {
     slug: "telecom-operators",
     title: "Telecommunications Operators",
     tagline: "Enabling the Future of Connectivity",
@@ -55,9 +76,17 @@ export const industries: Industry[] = [
     summary:
       "As digital demand continues to accelerate, data centers have become the backbone of modern business and cloud services. Shabakkat supports the development, modernization, and expansion of resilient digital infrastructure that delivers high availability, operational efficiency, scalability, and long-term business continuity.",
     notableNames: "Data center developers & operators",
-    focusAreas: ["Data center infrastructure & fit-out", "Critical power & cooling", "Structured cabling", "Disaster recovery infrastructure"],
+    focusAreas: [
+      "Data center infrastructure & fit-out",
+      "Critical power & cooling",
+      "Structured cabling",
+      "Disaster recovery infrastructure",
+    ],
     relevantServices: [
-      { label: "Data Centers & Digital Infrastructure", href: "/services/engineering-services#data-centers-digital-infrastructure" },
+      {
+        label: "Data Centers & Digital Infrastructure",
+        href: "/services/engineering-services#data-centers-digital-infrastructure",
+      },
       { label: "Engineering & Technical Services", href: "/services/engineering-services#engineering-technical-services" },
     ],
     relatedProjectHref: "/projects#engineering-digital-infrastructure-expansion",
@@ -77,7 +106,10 @@ export const industries: Industry[] = [
       "Managed operations",
     ],
     relevantServices: [
-      { label: "Data Centers & Digital Infrastructure", href: "/services/engineering-services#data-centers-digital-infrastructure" },
+      {
+        label: "Data Centers & Digital Infrastructure",
+        href: "/services/engineering-services#data-centers-digital-infrastructure",
+      },
       { label: "Wireless & Fixed Networks", href: "/services/engineering-services#wireless-fixed-networks" },
       { label: "Technical Advisory", href: "/services/technical-advisory#technical-advisory" },
       { label: "Managed Operations", href: "/services/engineering-services#managed-services" },
@@ -91,7 +123,12 @@ export const industries: Industry[] = [
     summary:
       "Reliable communications and resilient infrastructure are essential to the continuity of energy and utility operations. Shabakkat supports organizations in modernizing critical infrastructure, improving operational resilience, and enabling secure, reliable communications that support essential services.",
     notableNames: "Energy & utility operators",
-    focusAreas: ["Critical infrastructure modernization", "Network infrastructure", "Operational resilience", "Reliable communications"],
+    focusAreas: [
+      "Critical infrastructure modernization",
+      "Network infrastructure",
+      "Operational resilience",
+      "Reliable communications",
+    ],
     relevantServices: [
       { label: "Network Infrastructure & Deployment", href: "/services/engineering-services#network-rollout" },
       { label: "Engineering & Technical Services", href: "/services/engineering-services#engineering-technical-services" },

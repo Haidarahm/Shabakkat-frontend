@@ -1,18 +1,15 @@
-import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import IndustryCard from "@/components/industries/IndustryCard";
 import { industries } from "@/data/industries";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
-import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
 export default function Industries() {
-  const [heroTitleDone, setHeroTitleDone] = useState(false);
-
   return (
     <Layout
       title="Industries"
@@ -20,45 +17,29 @@ export default function Industries() {
     >
       <Hero
         photoLabel="PHOTO — regional client sites, full-bleed"
-        heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
+        heightClassName="h-[240px] sm:h-[280px] lg:h-[300px]"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
           as="h1"
-          text="Engineering solutions for diverse markets"
-          className="mx-auto mb-2.5 font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
-          onAnimationComplete={() => setHeroTitleDone(true)}
+          text="Industries"
+          className="mx-auto font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
         />
-        <AnimatedParagraph
-          active={heroTitleDone}
-          className="mx-auto max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
-        >
-          Every market presents unique operational, regulatory, and business challenges. Understanding those
-          challenges is essential to delivering infrastructure that creates lasting value.
-        </AnimatedParagraph>
-        <AnimatedParagraph
-          active={heroTitleDone}
-          delay={0.04}
-          className="mx-auto mt-3 max-w-[640px] text-sm text-white/85 lg:text-[15.5px]"
-        >
-          Shabakkat partners with organizations across multiple sectors, combining engineering expertise, project
-          leadership, and technical advisory to deliver solutions aligned with each client&apos;s objectives and
-          long-term vision.
-        </AnimatedParagraph>
       </Hero>
 
       <div className="section-px section-py">
         <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2" animateOnMount>
-          {industries.map((industry) => (
+          {industries.map((industry, index) => (
             <StaggerItem key={industry.slug}>
-              <IndustryCard industry={industry} />
+              <IndustryCard industry={industry} index={index + 1} />
             </StaggerItem>
           ))}
         </StaggerGrid>
       </div>
 
-      <div className="section-px section-py bg-bg-muted">
+      <div className="section-px section-py grid grid-cols-1 items-center gap-10 bg-bg-muted lg:grid-cols-2 lg:gap-14">
         <SectionHeading
+          className="max-w-none"
           eyebrow="OUR APPROACH"
           title="Understanding every market before engineering every solution"
           description={
@@ -73,6 +54,13 @@ export default function Industries() {
               </span>
             </>
           }
+        />
+        <PhotoPlaceholder
+          label="PHOTO — engineering team assessing market conditions on site"
+          src="/images/projects/engineering-team-onsite.jpg"
+          alt="Shabakkat engineering team on site"
+          className="h-[240px] rounded-xl sm:h-[300px] lg:h-[380px]"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </div>
 
