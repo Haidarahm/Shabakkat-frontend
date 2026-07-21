@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import Button from "@/components/ui/Button";
 import OpeningCard from "@/components/careers/OpeningCard";
 import FinalCta from "@/components/sections/FinalCta";
@@ -35,20 +36,31 @@ export default function Careers() {
         </AnimatedParagraph>
       </Hero>
 
-      <div className="section-px section-py">
-        <SectionHeading
-          eyebrow="CAREERS"
-          title="Build your future with Shabakkat"
-          description="At Shabakkat, we believe our people are our greatest strength. We are always looking for passionate professionals who are committed to engineering excellence, innovation, and delivering meaningful impact across the region. Whether you're an experienced professional or an emerging talent, you'll find opportunities to work on challenging projects, collaborate with industry experts, and contribute to shaping the future of digital infrastructure."
-        />
+      <div className="section-px section-py grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <div>
+          <SectionHeading
+            className="max-w-none"
+            eyebrow="CAREERS"
+            title="Build your future with Shabakkat"
+            description="At Shabakkat, we believe our people are our greatest strength. We are always looking for passionate professionals who are committed to engineering excellence, innovation, and delivering meaningful impact across the region. Whether you're an experienced professional or an emerging talent, you'll find opportunities to work on challenging projects, collaborate with industry experts, and contribute to shaping the future of digital infrastructure."
+          />
 
-        <Button
-          href="mailto:info@shabakkat.com?subject=CV%20Submission"
-          variant="outline"
-          className="mt-6 inline-block"
-        >
-          SUBMIT YOUR CV
-        </Button>
+          <Button
+            href="mailto:info@shabakkat.com?subject=CV%20Submission"
+            variant="outline"
+            className="mt-6 inline-block"
+          >
+            SUBMIT YOUR CV
+          </Button>
+        </div>
+
+        <PhotoPlaceholder
+          label="PHOTO — Shabakkat field engineering team"
+          src="/images/projects/kuwait-rollout-crew.jpg"
+          alt="Shabakkat engineering team on site"
+          className="h-[240px] rounded-xl sm:h-[300px] lg:h-[380px]"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+        />
       </div>
 
       <div className="section-px section-py bg-bg-muted">
