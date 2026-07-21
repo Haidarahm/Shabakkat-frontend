@@ -28,9 +28,9 @@ export default function Industries() {
       </Hero>
 
       <div className="section-px section-py">
-        <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2" animateOnMount>
+        <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2" perItemInView>
           {industries.map((industry, index) => (
-            <StaggerItem key={industry.slug}>
+            <StaggerItem key={industry.slug} inView>
               <IndustryCard industry={industry} index={index + 1} />
             </StaggerItem>
           ))}

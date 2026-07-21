@@ -9,9 +9,25 @@ const item: Variants = {
 interface StaggerItemProps {
   children: ReactNode;
   className?: string;
+  /** Animate when this item enters the viewport (use with StaggerGrid perItemInView). */
+  inView?: boolean;
 }
 
-export default function StaggerItem({ children, className = "" }: StaggerItemProps) {
+export default function StaggerItem({ children, className = "", inView = false }: StaggerItemProps) {
+  if (inView) {
+    return (
+      <motion.div
+        className={`h-full ${className}`.trim()}
+        variants={item}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15, margin: "0px 0px -40px 0px" }}
+      >
+        {children}
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div variants={item} className={`h-full ${className}`.trim()}>
       {children}

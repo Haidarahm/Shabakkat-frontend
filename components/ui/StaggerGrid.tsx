@@ -14,6 +14,8 @@ interface StaggerGridProps {
    * change), leaving the content invisible until the user scrolls.
    */
   animateOnMount?: boolean;
+  /** Each child animates when it enters the viewport (no grid-level stagger). */
+  perItemInView?: boolean;
 }
 
 export default function StaggerGrid({
@@ -22,11 +24,16 @@ export default function StaggerGrid({
   stagger = 0.09,
   amount = 0.2,
   animateOnMount = false,
+  perItemInView = false,
 }: StaggerGridProps) {
   const container: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: stagger } },
   };
+
+  if (perItemInView) {
+    return <div className={className}>{children}</div>;
+  }
 
   if (animateOnMount) {
     return (

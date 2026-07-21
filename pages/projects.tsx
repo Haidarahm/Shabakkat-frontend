@@ -40,9 +40,9 @@ export default function Projects() {
       </Hero>
 
       <div className="section-px section-py">
-        <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2" animateOnMount>
+        <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2" perItemInView>
           {projects.map((project) => (
-            <StaggerItem key={project.slug}>
+            <StaggerItem key={project.slug} inView>
               <ProjectCard project={project} />
             </StaggerItem>
           ))}
