@@ -6,6 +6,7 @@ export interface TimelineEntry {
   status: "Milestone" | "Running" | "Completed" | "Completed / Ongoing by Country";
   color: "red" | "cyan" | "navy";
   side: "left" | "right";
+  photoSrc: string;
 }
 
 /** Journey Timeline — 10 selected engagements from the content doc. */
@@ -18,6 +19,7 @@ export const timeline: TimelineEntry[] = [
     status: "Milestone",
     color: "red",
     side: "left",
+    photoSrc: "/images/projects/founding-milestone.jpg",
   },
   {
     slug: "kuwait-managed-services-program",
@@ -27,6 +29,7 @@ export const timeline: TimelineEntry[] = [
     status: "Running",
     color: "cyan",
     side: "right",
+    photoSrc: "/images/projects/kuwait-rollout-crew.jpg",
   },
   {
     slug: "iraq-nationwide-managed-services",
@@ -36,6 +39,7 @@ export const timeline: TimelineEntry[] = [
     status: "Running",
     color: "cyan",
     side: "left",
+    photoSrc: "/images/projects/iraq-network-site.jpg",
   },
   {
     slug: "full-turnkey-network-deployment-program",
@@ -45,6 +49,7 @@ export const timeline: TimelineEntry[] = [
     status: "Completed / Ongoing by Country",
     color: "red",
     side: "right",
+    photoSrc: "/images/projects/turnkey-network-deployment.jpg",
   },
   {
     slug: "network-operations-center-expansion",
@@ -54,6 +59,7 @@ export const timeline: TimelineEntry[] = [
     status: "Running",
     color: "cyan",
     side: "left",
+    photoSrc: "/images/projects/multi-vendor-noc.jpg",
   },
   {
     slug: "radio-benchmark-network-optimization",
@@ -63,6 +69,7 @@ export const timeline: TimelineEntry[] = [
     status: "Completed",
     color: "red",
     side: "right",
+    photoSrc: "/images/projects/radio-benchmark.jpg",
   },
   {
     slug: "consultation-professional-resourcing-program",
@@ -72,6 +79,7 @@ export const timeline: TimelineEntry[] = [
     status: "Running",
     color: "navy",
     side: "left",
+    photoSrc: "/images/projects/engineering-team-onsite.jpg",
   },
   {
     slug: "iraq-national-field-operations-expansion",
@@ -81,6 +89,7 @@ export const timeline: TimelineEntry[] = [
     status: "Running",
     color: "cyan",
     side: "right",
+    photoSrc: "/images/projects/iraq-field-operations.jpg",
   },
   {
     slug: "pmo-governance-transformation",
@@ -90,6 +99,7 @@ export const timeline: TimelineEntry[] = [
     status: "Running",
     color: "navy",
     side: "left",
+    photoSrc: "/images/projects/pmo-governance.jpg",
   },
   {
     slug: "engineering-digital-infrastructure-expansion",
@@ -99,5 +109,6 @@ export const timeline: TimelineEntry[] = [
     status: "Running",
     color: "red",
     side: "right",
+    photoSrc: "/images/projects/data-center-expansion.jpg",
   },
 ];
