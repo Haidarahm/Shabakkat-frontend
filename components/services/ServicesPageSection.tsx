@@ -1,10 +1,8 @@
 import CategorySwitcher from "@/components/services/CategorySwitcher";
 import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
-import ProductGroupsGrid from "@/components/services/ProductGroupsGrid";
 import {
   serviceCategories,
   servicesDetail,
-  telecomProductGroups,
   type ServiceCategory,
 } from "@/data/servicesDetail";
 
@@ -65,19 +63,6 @@ function CategoryBlocks({
           />
         ))}
       </div>
-
-      {category.id === "engineering-services" && (
-        <div className="border-t border-border">
-          <ProductGroupsGrid
-            id="equipment-supply"
-            index="1.6"
-            eyebrow="TELECOM PRODUCTS & INFRASTRUCTURE SOLUTIONS"
-            title="Telecom Products & Infrastructure Solutions"
-            groups={telecomProductGroups}
-            background={(startIndex + services.length) % 2 === 1 ? "muted" : undefined}
-          />
-        </div>
-      )}
     </section>
   );
 }
@@ -105,15 +90,18 @@ export default function ServicesPageSection({
       {categories.map((category) => {
         const services = servicesDetail.filter((s) => s.category === category.id);
         const startIndex = blockOffset;
-        blockOffset += services.length + (category.id === "engineering-services" ? 1 : 0);
+        blockOffset += services.length;
 
         // Avoid duplicating doc copy:
         // - On /services, Engineering intro is already in the hero.
         // - PMO & Advisory each have one detail block that carries the pillar paragraph.
+        // - Telecom products always show an intro above its product cards.
         const showIntro =
           category.id === "engineering-services"
             ? !isFullPage
-            : services.length > 1;
+            : category.id === "telecom-products-infrastructure"
+              ? true
+              : services.length > 1;
 
         return (
           <CategoryBlocks

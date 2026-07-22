@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <Layout
       title="Services"
-      description="Engineering Services, PMO & Project Delivery, and Technical Advisory — Shabakkat's integrated delivery model for critical digital infrastructure."
+      description="Engineering Services, PMO & Project Delivery, Technical Advisory, and Telecom Products — Shabakkat's integrated delivery model for critical digital infrastructure."
     >
       <Hero
         photoLabel="PHOTO — engineers & ICT infrastructure, full-bleed"

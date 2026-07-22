@@ -7,8 +7,8 @@ import { serviceCategories, servicesDetail } from "@/data/servicesDetail";
 export default function ServiceCategoryGrid() {
   return (
     <div className="section-px section-py bg-bg-muted">
-      <SectionHeading eyebrow="WHAT WE DO" title="Three core capabilities" />
-      <StaggerGrid className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <SectionHeading eyebrow="WHAT WE DO" title="Four core capabilities" />
+      <StaggerGrid className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {serviceCategories.map((category) => {
           const count = servicesDetail.filter((s) => s.category === category.id).length;
           return (

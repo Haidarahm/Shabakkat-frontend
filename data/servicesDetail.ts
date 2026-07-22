@@ -27,6 +27,13 @@ export const serviceCategories: ServiceCategory[] = [
     description:
       "Our advisory services help organizations make informed investment, technology, and infrastructure decisions by combining engineering knowledge with practical industry experience and independent technical assessment.",
   },
+  {
+    id: "telecom-products-infrastructure",
+    index: "04",
+    title: "Telecom Products & Infrastructure Solutions",
+    description:
+      "Supplying the tower, energy, passive infrastructure, network equipment, and accessories required to build, power, and sustain critical telecommunications sites.",
+  },
 ];
 
 export interface ServiceDetail {
@@ -224,6 +231,80 @@ export const servicesDetail: ServiceDetail[] = [
     photoSrc: "/images/services/technical-advisory.jpg",
     imageSide: "right",
   },
+
+  // 04 — Telecom Products & Infrastructure Solutions
+  {
+    id: "tower-energy-solutions",
+    category: "telecom-products-infrastructure",
+    index: "4.1",
+    eyebrow: "TOWER & ENERGY SOLUTIONS",
+    title: "Tower & Energy Solutions",
+    description:
+      "Power and energy systems that keep telecom sites running reliably — from diesel generators and hybrid power to batteries, rectifiers, and cooling.",
+    capabilities: [
+      "Diesel Generators",
+      "Hybrid Power Systems",
+      "Lithium Batteries",
+      "Rectifiers & Inverters",
+      "Cooling Solutions",
+    ],
+    photoLabel: "PHOTO — tower & energy solutions",
+    photoSrc: "/images/services/data-center-infrastructure.jpg",
+    imageSide: "right",
+  },
+  {
+    id: "towers-passive-infrastructure",
+    category: "telecom-products-infrastructure",
+    index: "4.2",
+    eyebrow: "TOWERS & PASSIVE INFRASTRUCTURE",
+    title: "Towers & Passive Infrastructure",
+    description:
+      "Structural and passive infrastructure that supports network deployment — towers, monopoles, shelters, outdoor cabinets, and civil works.",
+    capabilities: [
+      "Towers & Monopoles",
+      "Telecom Shelters",
+      "Outdoor Cabinets",
+      "Civil Infrastructure",
+    ],
+    photoLabel: "PHOTO — towers & passive infrastructure",
+    photoSrc: "/images/services/communication-tower-and-information-technology.jpg",
+    imageSide: "left",
+  },
+  {
+    id: "network-equipment",
+    category: "telecom-products-infrastructure",
+    index: "4.3",
+    eyebrow: "NETWORK EQUIPMENT",
+    title: "Network Equipment",
+    description:
+      "Connectivity equipment for operators and enterprises — CPE, fixed wireless access, and enterprise connectivity solutions.",
+    capabilities: [
+      "Customer Premises Equipment (CPE)",
+      "Fixed Wireless Access",
+      "Enterprise Connectivity Solutions",
+    ],
+    photoLabel: "PHOTO — network equipment",
+    photoSrc: "/images/services/wireless-fixed-networks.jpg",
+    imageSide: "right",
+  },
+  {
+    id: "telecom-accessories",
+    category: "telecom-products-infrastructure",
+    index: "4.4",
+    eyebrow: "TELECOM ACCESSORIES",
+    title: "Telecom Accessories",
+    description:
+      "Installation materials and accessories that complete the site build — antennas, RF solutions, power accessories, and connectivity materials.",
+    capabilities: [
+      "Antennas & RF Solutions",
+      "Telecom Site Accessories",
+      "Power & Connectivity Accessories",
+      "Installation Materials",
+    ],
+    photoLabel: "PHOTO — telecom accessories",
+    photoSrc: "/images/services/enterprise-structured-cabling.jpg",
+    imageSide: "left",
+  },
 ];
 
 export interface ProductGroup {
@@ -231,6 +312,7 @@ export interface ProductGroup {
   items: string[];
 }
 
+/** @deprecated Prefer servicesDetail entries under telecom-products-infrastructure. Kept for reference. */
 export const telecomProductGroups: ProductGroup[] = [
   {
     title: "Tower & Energy Solutions",

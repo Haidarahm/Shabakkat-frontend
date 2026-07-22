@@ -8,8 +8,11 @@ import { deliveryModel } from "@/data/deliveryModel";
 export default function IntegratedDeliveryModel() {
   return (
     <div className="section-px section-py bg-bg-muted">
-      <SectionHeading eyebrow="INTEGRATED DELIVERY MODEL" title="Three core capabilities. One strategic partner." />
-      <StaggerGrid className="mt-9 grid grid-cols-1 gap-5 lg:grid-cols-3">
+      <SectionHeading
+        eyebrow="INTEGRATED DELIVERY MODEL"
+        title="Four core capabilities. One strategic partner."
+      />
+      <StaggerGrid className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {deliveryModel.map((item) => (
           <StaggerItem key={item.title}>
             <Link href={item.href} className="block h-full">

@@ -6,7 +6,7 @@ export interface Capability {
   href: string;
 }
 
-/** Three core capabilities — derived from the same serviceCategories data. */
+/** Core capabilities — derived from the same serviceCategories data. */
 export const capabilities: Capability[] = serviceCategories.map((category) => ({
   title: category.title,
   description: category.description,

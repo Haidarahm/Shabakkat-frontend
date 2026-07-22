@@ -27,4 +27,11 @@ export const deliveryModel: DeliveryModelItem[] = [
     href: "/services#technical-advisory",
     color: "navy",
   },
+  {
+    title: "Telecom Products & Infrastructure Solutions",
+    description:
+      "Supplying tower and energy systems, passive infrastructure, network equipment, and telecom accessories that support resilient network build-out and operations.",
+    href: "/services#telecom-products-infrastructure",
+    color: "red",
+  },
 ];
