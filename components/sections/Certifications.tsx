@@ -31,11 +31,10 @@ export default function Certifications() {
                   }`}
                 >
                   <div className="relative h-[64px] w-[64px] shrink-0 sm:h-[72px] sm:w-[72px]">
-                    <Image src={cert.logoSrc} alt={`${cert.code} certificate mark`} fill sizes="72px" />
+                    <Image src={cert.logoSrc} alt={`${cert.title} certificate mark`} fill sizes="72px" />
                   </div>
-                  <div>
-                    <div className="font-heading text-[15px] text-navy">{cert.code}</div>
-                    <div className="mt-1 text-[11.5px] text-text-muted">{cert.label}</div>
+                  <div className={isLast ? "" : "sm:text-center"}>
+                    <div className="font-heading text-[15px] leading-[1.35] text-navy">{cert.title}</div>
                   </div>
                 </Card>
               </StaggerItem>

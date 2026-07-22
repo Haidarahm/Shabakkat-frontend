@@ -3,7 +3,6 @@ import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import { whyUs } from "@/data/whyUs";
-import { accentText } from "@/lib/colorMap";
 
 export default function WhyUsGrid() {
   return (
@@ -29,7 +28,7 @@ export default function WhyUsGrid() {
           {whyUs.map((item) => (
             <StaggerItem key={item.number} className={item.fullWidth ? "sm:col-span-2" : undefined}>
               <div className="h-full border border-border bg-bg-muted p-5">
-                <div className={`font-heading text-[12px] tracking-[0.05em] ${accentText[item.color]}`}>
+                <div className="font-heading text-[12px] tracking-[0.05em] text-red">
                   {item.number}
                 </div>
                 <div className="mt-1.5 font-heading text-[15px] leading-[1.35] text-navy">{item.title}</div>
