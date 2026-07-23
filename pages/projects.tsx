@@ -12,6 +12,15 @@ import { fetchProjects, fromBackend } from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
+const PROJECTS_HERO_IMAGES = [
+  "/images/services/services-hero-1.jpg",
+  "/images/services/services-hero-2.jpg",
+  "/images/services/services-hero-3.jpg",
+  "/images/services/services-hero-4.jpg",
+  "/images/services/services-hero-5.jpg",
+  "/images/services/services-hero-6.jpg",
+];
+
 interface ProjectsProps {
   projects: ProjectCaseStudy[];
 }
@@ -26,7 +35,7 @@ export default function Projects({ projects }: ProjectsProps) {
     >
       <Hero
         photoLabel="PHOTO — engineers reviewing a rollout site, full-bleed"
-        photoSrc="/images/projects/engineers-rollout-site.jpg"
+        photoSrcs={PROJECTS_HERO_IMAGES}
         heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />

@@ -12,6 +12,15 @@ import { industries as staticIndustries, industriesIntro, type Industry } from "
 import { fetchIndustries, fromBackend } from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
+const INDUSTRIES_HERO_IMAGES = [
+  "/images/services/services-hero-1.jpg",
+  "/images/services/services-hero-2.jpg",
+  "/images/services/services-hero-3.jpg",
+  "/images/services/services-hero-4.jpg",
+  "/images/services/services-hero-5.jpg",
+  "/images/services/services-hero-6.jpg",
+];
+
 interface IndustriesProps {
   industries: Industry[];
 }
@@ -24,7 +33,8 @@ export default function Industries({ industries }: IndustriesProps) {
     >
       <Hero
         photoLabel="PHOTO — regional client sites, full-bleed"
-        heightClassName="h-[240px] sm:h-[280px] lg:h-[300px]"
+        photoSrcs={INDUSTRIES_HERO_IMAGES}
+        heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle

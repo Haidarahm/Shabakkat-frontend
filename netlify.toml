@@ -1,5 +1,9 @@
 [build]
   command = "npm run build"
 
+[functions]
+  # Next loads this at runtime via config.js; Windows NFT sometimes omits it from the handler.
+  included_files = ["node_modules/next/dist/compiled/find-up/**"]
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
