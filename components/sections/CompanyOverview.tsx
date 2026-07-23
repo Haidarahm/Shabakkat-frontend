@@ -61,9 +61,11 @@ export default function CompanyOverview() {
         </motion.div>
       </div>
       <PhotoPlaceholder
-        label="PHOTO — corporate HQ / office team collaboration"
-        src="/images/company/office-team.jpg"
+        label="PHOTO — network infrastructure in a data center"
+        src="/images/company/who-we-are-infrastructure.jpg"
+        alt="Server racks with illuminated network cabling representing digital infrastructure"
         className="h-[260px] rounded-xl sm:h-[340px] lg:h-[440px]"
+        sizes="(max-width: 1024px) 100vw, 50vw"
       />
     </div>
   );
