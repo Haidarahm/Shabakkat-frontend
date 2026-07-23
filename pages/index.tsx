@@ -5,6 +5,7 @@ import HomeHero from "@/components/sections/HomeHero";
 import CompanyOverview from "@/components/sections/CompanyOverview";
 import IntegratedDeliveryModel from "@/components/sections/IntegratedDeliveryModel";
 import WhyUsGrid from "@/components/sections/WhyUsGrid";
+import ChairmanMessage from "@/components/sections/ChairmanMessage";
 import VisionMission from "@/components/sections/VisionMission";
 import CoreValues from "@/components/sections/CoreValues";
 import GlobalFootprint from "@/components/sections/GlobalFootprint";
@@ -76,6 +77,7 @@ export default function Home() {
       <CompanyOverview />
       <IntegratedDeliveryModel />
       <WhyUsGrid />
+      <ChairmanMessage />
       <VisionMission />
       <CoreValues />
       <GlobalFootprint />
