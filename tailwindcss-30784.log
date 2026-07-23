@@ -1,0 +1,140 @@
+2026-07-23T15:28:08.896045Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-07-23T15:28:08.896657Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "X:\\", pattern: "**/*", negated: false }
+2026-07-23T15:28:08.897579Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-07-23T15:28:08.897596Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "D:\\my personal files\\shabakkat\\website\\frontend" }
+2026-07-23T15:28:08.898571Z  INFO discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.898593Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.904309Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.905620Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\HseSection.tsx"
+2026-07-23T15:28:08.905635Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\StaggerItem.tsx"
+2026-07-23T15:28:08.905635Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\LogoLoop.d.ts"
+2026-07-23T15:28:08.905656Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\.claude\\launch.json"
+2026-07-23T15:28:08.905682Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\next.config.ts"
+2026-07-23T15:28:08.905698Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\IntegratedDeliveryModel.tsx"
+2026-07-23T15:28:08.905739Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\LogoLoop.jsx"
+2026-07-23T15:28:08.905744Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components.json"
+2026-07-23T15:28:08.905752Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\.claude\\settings.local.json"
+2026-07-23T15:28:08.905761Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\PartnersGrid.tsx"
+2026-07-23T15:28:08.905744Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\contact\\ContactForm.tsx"
+2026-07-23T15:28:08.905735Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\CoreValues.tsx"
+2026-07-23T15:28:08.905796Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\projects\\ProjectCard.tsx"
+2026-07-23T15:28:08.905771Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\package.json"
+2026-07-23T15:28:08.905808Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\capabilities.ts"
+2026-07-23T15:28:08.905810Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\ProcessSteps.tsx"
+2026-07-23T15:28:08.905825Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\AGENTS.md"
+2026-07-23T15:28:08.905833Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\contact\\OfficeCard.tsx"
+2026-07-23T15:28:08.905845Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\CapabilitiesGrid.tsx"
+2026-07-23T15:28:08.905859Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\api\\contact.ts"
+2026-07-23T15:28:08.905863Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\RegionalMap.tsx"
+2026-07-23T15:28:08.905867Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\certifications.ts"
+2026-07-23T15:28:08.905908Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\ServicesOverviewGrid.tsx"
+2026-07-23T15:28:08.905914Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\api\\openings\\apply.ts"
+2026-07-23T15:28:08.905906Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\processSteps.ts"
+2026-07-23T15:28:08.905956Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\coreValues.ts"
+2026-07-23T15:28:08.905957Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\StatBar.tsx"
+2026-07-23T15:28:08.905963Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\careers\\apply.tsx"
+2026-07-23T15:28:08.905963Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\ChairmanMessage.tsx"
+2026-07-23T15:28:08.905885Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\faq\\FaqItem.tsx"
+2026-07-23T15:28:08.905894Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\CLAUDE.md"
+2026-07-23T15:28:08.906003Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\Testimonials.tsx"
+2026-07-23T15:28:08.905903Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\Certifications.tsx"
+2026-07-23T15:28:08.905900Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\FaqTeaser.tsx"
+2026-07-23T15:28:08.906029Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\CompanyOverview.tsx"
+2026-07-23T15:28:08.906034Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\projects.ts"
+2026-07-23T15:28:08.906050Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\Timeline.tsx"
+2026-07-23T15:28:08.906052Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\industries\\IndustryCard.tsx"
+2026-07-23T15:28:08.906055Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\careers\\ApplicationForm.tsx"
+2026-07-23T15:28:08.906060Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\layout\\Header.tsx"
+2026-07-23T15:28:08.906082Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\FeaturedProjects.tsx"
+2026-07-23T15:28:08.906084Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\HomeHero.tsx"
+2026-07-23T15:28:08.906003Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\Hero.tsx"
+2026-07-23T15:28:08.906010Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\careers.tsx"
+2026-07-23T15:28:08.906092Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\VisionMission.tsx"
+2026-07-23T15:28:08.906007Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\deliveryModel.ts"
+2026-07-23T15:28:08.906125Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\servicesDetail.ts"
+2026-07-23T15:28:08.906127Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\GlobalFootprint.tsx"
+2026-07-23T15:28:08.906173Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\faq.ts"
+2026-07-23T15:28:08.905854Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\FinalCta.tsx"
+2026-07-23T15:28:08.906104Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\careers\\OpeningCard.tsx"
+2026-07-23T15:28:08.906106Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\layout\\Layout.tsx"
+2026-07-23T15:28:08.906210Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\services\\ServiceCategoryGrid.tsx"
+2026-07-23T15:28:08.906215Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\navLinks.ts"
+2026-07-23T15:28:08.906101Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\layout\\Footer.tsx"
+2026-07-23T15:28:08.906132Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\whyUs.ts"
+2026-07-23T15:28:08.906230Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\featuredProjects.ts"
+2026-07-23T15:28:08.906243Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\services\\ProductGroupsGrid.tsx"
+2026-07-23T15:28:08.906246Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\openings.ts"
+2026-07-23T15:28:08.906272Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\offices.ts"
+2026-07-23T15:28:08.906270Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\services\\ServiceDetailBlock.tsx"
+2026-07-23T15:28:08.906284Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\testimonials.ts"
+2026-07-23T15:28:08.906290Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\Chip.tsx"
+2026-07-23T15:28:08.906292Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\industries.ts"
+2026-07-23T15:28:08.906300Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\eslint.config.mjs"
+2026-07-23T15:28:08.906306Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\lib\\backend.ts"
+2026-07-23T15:28:08.906138Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\servicesOverview.ts"
+2026-07-23T15:28:08.906332Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\services\\ServicesPageSection.tsx"
+2026-07-23T15:28:08.906335Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\lib\\utils.ts"
+2026-07-23T15:28:08.906342Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\timeline.ts"
+2026-07-23T15:28:08.906348Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\CountUp.tsx"
+2026-07-23T15:28:08.906348Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\stats.ts"
+2026-07-23T15:28:08.906356Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\lib\\colorMap.ts"
+2026-07-23T15:28:08.906357Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\lib\\api.ts"
+2026-07-23T15:28:08.906372Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\NetworkGraphic.tsx"
+2026-07-23T15:28:08.906390Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\netlify.toml"
+2026-07-23T15:28:08.906393Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\Button.tsx"
+2026-07-23T15:28:08.906397Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\Card.tsx"
+2026-07-23T15:28:08.906405Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\Eyebrow.tsx"
+2026-07-23T15:28:08.906403Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\AnimatedTitle.tsx"
+2026-07-23T15:28:08.906407Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\_app.tsx"
+2026-07-23T15:28:08.906412Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\public\\images\\certs\\tm-forum.svg"
+2026-07-23T15:28:08.906427Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\PhotoPlaceholder.tsx"
+2026-07-23T15:28:08.906440Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\public\\images\\certs\\iso-14001.svg"
+2026-07-23T15:28:08.906447Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\SectionHeading.tsx"
+2026-07-23T15:28:08.906145Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\sections\\WhyUsGrid.tsx"
+2026-07-23T15:28:08.906451Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\_document.tsx"
+2026-07-23T15:28:08.906444Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\AnimatedParagraph.tsx"
+2026-07-23T15:28:08.906294Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\data\\partners.ts"
+2026-07-23T15:28:08.906450Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\postcss.config.mjs"
+2026-07-23T15:28:08.906455Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\ui\\StaggerGrid.tsx"
+2026-07-23T15:28:08.906508Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\public\\images\\certs\\iso-9001.svg"
+2026-07-23T15:28:08.906458Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\faq.tsx"
+2026-07-23T15:28:08.906553Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\Website_content_-_16Jul26.md"
+2026-07-23T15:28:08.906488Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\public\\images\\certs\\iso-27001.svg"
+2026-07-23T15:28:08.906575Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\services\\CategorySwitcher.tsx"
+2026-07-23T15:28:08.906152Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\contact.tsx"
+2026-07-23T15:28:08.906530Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\privacy.tsx"
+2026-07-23T15:28:08.906535Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\README.md"
+2026-07-23T15:28:08.906616Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\services\\[category].tsx"
+2026-07-23T15:28:08.906544Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\tsconfig.json"
+2026-07-23T15:28:08.906626Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\test.txt"
+2026-07-23T15:28:08.906476Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\public\\images\\certs\\iso-45001.svg"
+2026-07-23T15:28:08.906566Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\projects.tsx"
+2026-07-23T15:28:08.906566Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\services\\index.tsx"
+2026-07-23T15:28:08.906583Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\public\\map.html"
+2026-07-23T15:28:08.906736Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\public\\map.svg"
+2026-07-23T15:28:08.906669Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\industries.tsx"
+2026-07-23T15:28:08.906760Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\pages\\index.tsx"
+2026-07-23T15:28:08.906972Z  INFO discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.906984Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.906988Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.906999Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.909430Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.909454Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.909465Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.909468Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 2 file(s)
+2026-07-23T15:28:08.909552Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\components\\LogoLoop.css"
+2026-07-23T15:28:08.909553Z  INFO tailwindcss_oxide::scanner: Reading "D:\\my personal files\\shabakkat\\website\\frontend\\styles\\globals.css"
+2026-07-23T15:28:08.909598Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.909619Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.909624Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.909958Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.909989Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.910434Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.911274Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.911293Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.911297Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.911763Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.912090Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.912095Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-23T15:28:08.912098Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-23T15:28:08.920657Z  INFO get_globs: tailwindcss_oxide::scanner: exit
