@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
-import Chip from "@/components/ui/Chip";
 import type { ProjectCaseStudy } from "@/data/projects";
 import { accentText, accentBg } from "@/lib/colorMap";
 
@@ -28,12 +27,16 @@ export default function ProjectCard({ project }: { project: ProjectCaseStudy }) 
 
         <p className="mt-3 text-[13.5px] leading-[1.7] text-text-body">{project.challenge}</p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.scope.map((item) => (
-            <Chip key={item} className="!py-1.5 text-[12px]">
-              {item}
-            </Chip>
-          ))}
+        <div className="mt-4">
+          <div className="mb-2 font-heading text-[11px] uppercase tracking-[0.08em] text-text-muted">Scope</div>
+          <ul className="flex flex-col gap-2">
+            {project.scope.map((item) => (
+              <li key={item} className="flex items-start gap-2.5 text-[13.5px] leading-[1.55] text-text-body">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {project.scale && (
