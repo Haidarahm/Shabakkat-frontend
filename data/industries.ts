@@ -10,28 +10,16 @@ export interface Industry {
   relatedProjectHref?: string;
 }
 
+export const industriesIntro = {
+  eyebrow: "MARKETS WE SERVE",
+  title: "Engineering solutions for diverse markets",
+  description: [
+    "Every market presents unique operational, regulatory, and business challenges. Understanding those challenges is essential to delivering infrastructure that creates lasting value.",
+    "Shabakkat partners with organizations across multiple sectors, combining engineering expertise, project leadership, and technical advisory to deliver solutions aligned with each client's objectives and long-term vision.",
+  ],
+} as const;
+
 export const industries: Industry[] = [
-  {
-    slug: "diverse-markets",
-    title: "Engineering Solutions for Diverse Markets",
-    tagline: "Markets We Serve",
-    color: "cyan",
-    summary:
-      "Every market presents unique operational, regulatory, and business challenges. Understanding those challenges is essential to delivering infrastructure that creates lasting value. Shabakkat partners with organizations across multiple sectors, combining engineering expertise, project leadership, and technical advisory to deliver solutions aligned with each client's objectives and long-term vision.",
-    notableNames: "Telecom, Government, Data Centers, Enterprise, Energy & Utilities",
-    focusAreas: [
-      "Market-aligned engineering",
-      "Cross-sector project leadership",
-      "Technical advisory",
-      "Long-term operational value",
-    ],
-    relevantServices: [
-      { label: "Engineering Services", href: "/services#engineering-services" },
-      { label: "PMO & Project Delivery", href: "/services#pmo-project-delivery" },
-      { label: "Technical Advisory", href: "/services#technical-advisory" },
-    ],
-    relatedProjectHref: "/projects",
-  },
   {
     slug: "telecom-operators",
     title: "Telecommunications Operators",

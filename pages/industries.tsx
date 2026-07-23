@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
@@ -6,7 +7,7 @@ import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import IndustryCard from "@/components/industries/IndustryCard";
-import { industries } from "@/data/industries";
+import { industries, industriesIntro } from "@/data/industries";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
 export default function Industries() {
@@ -28,7 +29,38 @@ export default function Industries() {
       </Hero>
 
       <div className="section-px section-py">
-        <StaggerGrid className="grid grid-cols-1 gap-6 lg:grid-cols-2" perItemInView>
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <SectionHeading
+            className="max-w-none"
+            eyebrow={industriesIntro.eyebrow}
+            title={industriesIntro.title}
+            description={
+              <>
+                {industriesIntro.description.map((paragraph, i) => (
+                  <span key={paragraph} className={i === 0 ? "block" : "mt-3.5 block"}>
+                    {paragraph}
+                  </span>
+                ))}
+              </>
+            }
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <PhotoPlaceholder
+              label="PHOTO — infrastructure across regional markets"
+              src="/images/projects/iraq-network-site.jpg"
+              alt="Network infrastructure across regional markets"
+              className="h-[240px] rounded-xl sm:h-[300px] lg:h-[380px]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </motion.div>
+        </div>
+
+        <StaggerGrid className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2" perItemInView>
           {industries.map((industry, index) => (
             <StaggerItem key={industry.slug} inView>
               <IndustryCard industry={industry} index={index + 1} />
