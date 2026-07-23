@@ -71,7 +71,9 @@ function isTrustedOrigin(req: NextApiRequest): boolean {
   return process.env.NODE_ENV !== "production";
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<ContactResponse>) {
+const BACKEND_API_URL = process.env.BACKEND_API_URL ?? "http://127.0.0.1:8000/api";
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse<ContactResponse>) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ ok: false, error: "Method not allowed" });
@@ -107,8 +109,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Contac
     return res.status(400).json({ ok: false, error: "Please provide a valid email address" });
   }
 
-  // TODO: wire up to a real email/CRM provider once one is chosen — for now, log the inquiry.
-  console.log("Contact inquiry received:", { name, company, email, phone, service, message });
+  // Forward the validated inquiry to Laravel (server-to-server).
+  try {
+    const backendRes = await fetch(`${BACKEND_API_URL}/contact`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ name, company, email, phone, service, message }),
+      signal: AbortSignal.timeout(8000),
+    });
+
+    if (!backendRes.ok) {
+      return res.status(502).json({ ok: false, error: "Unable to submit your message right now" });
+    }
+  } catch {
+    return res.status(502).json({ ok: false, error: "Unable to reach the server — please try again later" });
+  }
 
   return res.status(200).json({ ok: true });
 }

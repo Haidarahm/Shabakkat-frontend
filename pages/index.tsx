@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { GetStaticProps } from "next";
 import { motion, type Variants } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import HomeHero from "@/components/sections/HomeHero";
@@ -15,6 +16,18 @@ import FinalCta from "@/components/sections/FinalCta";
 import Button from "@/components/ui/Button";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
+import { partners as staticPartners, type Partner } from "@/data/partners";
+import { certifications as staticCertifications, type Certification } from "@/data/certifications";
+import { footprintLocations as staticFootprint, type FootprintLocation } from "@/data/offices";
+import { stats as staticStats, type Stat } from "@/data/stats";
+import {
+  fetchPartners,
+  fetchCertifications,
+  fetchOffices,
+  fetchStats,
+  officesToFootprint,
+  fromBackend,
+} from "@/lib/backend";
 
 const heroButtonRow: Variants = {
   hidden: {},
@@ -26,7 +39,14 @@ const heroButtonItem: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
-export default function Home() {
+interface HomeProps {
+  partners: Partner[];
+  certifications: Certification[];
+  locations: FootprintLocation[];
+  stats: Stat[];
+}
+
+export default function Home({ partners, certifications, locations, stats }: HomeProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
@@ -74,15 +94,15 @@ export default function Home() {
         </motion.div>
       </HomeHero>
 
-      <CompanyOverview />
+      <CompanyOverview stats={stats} />
       <IntegratedDeliveryModel />
       <WhyUsGrid />
       <ChairmanMessage />
       <VisionMission />
       <CoreValues />
-      <GlobalFootprint />
-      <Certifications />
-      <PartnersGrid />
+      <GlobalFootprint locations={locations} />
+      <Certifications certifications={certifications} />
+      <PartnersGrid partners={partners} />
       <FinalCta
         title="Let's build what's next"
         description="Whether you're expanding national infrastructure, delivering complex transformation programs, or shaping the next generation of digital connectivity, Shabakkat brings together the engineering expertise, project leadership, and strategic advisory needed to deliver with confidence."
@@ -94,3 +114,17 @@ export default function Home() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const [partners, certifications, locations, stats] = await Promise.all([
+    fromBackend(fetchPartners, staticPartners),
+    fromBackend(fetchCertifications, staticCertifications),
+    fromBackend(async () => officesToFootprint(await fetchOffices()), staticFootprint),
+    fromBackend(fetchStats, staticStats),
+  ]);
+
+  return {
+    props: { partners, certifications, locations, stats },
+    revalidate: 60,
+  };
+};

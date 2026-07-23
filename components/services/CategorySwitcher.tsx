@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import Link from "next/link";
-import { serviceCategories } from "@/data/servicesDetail";
+import type { ServiceCategory } from "@/data/servicesDetail";
 
 interface CategorySwitcherProps {
   activeId: string;
   /** `route` → /services/[id] · `hash` → /services#[id] (same-page scroll) */
   mode?: "route" | "hash";
+  categories: ServiceCategory[];
 }
 
 function scrollToCategory(id: string) {
@@ -14,7 +15,11 @@ function scrollToCategory(id: string) {
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-export default function CategorySwitcher({ activeId, mode = "route" }: CategorySwitcherProps) {
+export default function CategorySwitcher({
+  activeId,
+  mode = "route",
+  categories,
+}: CategorySwitcherProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const drag = useRef({ isDown: false, moved: false, startX: 0, scrollLeft: 0 });
   const [hashActiveId, setHashActiveId] = useState(activeId);
@@ -24,7 +29,7 @@ export default function CategorySwitcher({ activeId, mode = "route" }: CategoryS
 
     function syncFromHash() {
       const id = window.location.hash.replace(/^#/, "");
-      if (id && serviceCategories.some((c) => c.id === id)) {
+      if (id && categories.some((c) => c.id === id)) {
         setHashActiveId(id);
       }
     }
@@ -36,7 +41,7 @@ export default function CategorySwitcher({ activeId, mode = "route" }: CategoryS
       window.removeEventListener("hashchange", syncFromHash);
       window.removeEventListener("popstate", syncFromHash);
     };
-  }, [mode]);
+  }, [mode, categories]);
 
   const currentActive = mode === "hash" ? hashActiveId : activeId;
 
@@ -92,7 +97,7 @@ export default function CategorySwitcher({ activeId, mode = "route" }: CategoryS
       onClickCapture={onClickCapture}
       className="section-px sticky top-[72px] z-[90] flex cursor-grab select-none gap-2.5 overflow-x-auto border-b border-border bg-bg-muted py-4 [-ms-overflow-style:none] [scrollbar-width:none] lg:top-[84px] [&::-webkit-scrollbar]:hidden"
     >
-      {serviceCategories.map((category) => {
+      {categories.map((category) => {
         const active = category.id === currentActive;
         const href = mode === "hash" ? `/services#${category.id}` : `/services/${category.id}`;
         return (

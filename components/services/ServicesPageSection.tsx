@@ -1,10 +1,6 @@
 import CategorySwitcher from "@/components/services/CategorySwitcher";
 import ServiceDetailBlock from "@/components/services/ServiceDetailBlock";
-import {
-  serviceCategories,
-  servicesDetail,
-  type ServiceCategory,
-} from "@/data/servicesDetail";
+import type { ServiceCategory, ServiceDetail } from "@/data/servicesDetail";
 
 export const SERVICES_CTA = {
   title: "Let's deliver what's next",
@@ -18,20 +14,21 @@ interface ServicesPageSectionProps {
   categoryId?: string;
   /** How category switcher links behave. */
   switcherMode?: "route" | "hash";
+  categories: ServiceCategory[];
+  services: ServiceDetail[];
 }
 
 function CategoryBlocks({
   category,
+  services,
   startIndex,
   showIntro,
 }: {
   category: ServiceCategory;
+  services: ServiceDetail[];
   startIndex: number;
-  /** Show pillar intro once — skip when hero already covered it, or when the only detail block carries the same copy. */
   showIntro: boolean;
 }) {
-  const services = servicesDetail.filter((s) => s.category === category.id);
-
   return (
     <section id={category.id} className="scroll-mt-[140px] lg:scroll-mt-[160px]">
       {showIntro && (
@@ -74,28 +71,26 @@ function CategoryBlocks({
 export default function ServicesPageSection({
   categoryId,
   switcherMode = categoryId ? "route" : "hash",
+  categories: allCategories,
+  services: allServices,
 }: ServicesPageSectionProps) {
   const categories = categoryId
-    ? serviceCategories.filter((c) => c.id === categoryId)
-    : serviceCategories;
+    ? allCategories.filter((c) => c.id === categoryId)
+    : allCategories;
 
-  const activeId = categoryId ?? serviceCategories[0]?.id ?? "";
+  const activeId = categoryId ?? allCategories[0]?.id ?? "";
   const isFullPage = !categoryId;
 
   let blockOffset = 0;
 
   return (
     <>
-      <CategorySwitcher activeId={activeId} mode={switcherMode} />
+      <CategorySwitcher activeId={activeId} mode={switcherMode} categories={allCategories} />
       {categories.map((category) => {
-        const services = servicesDetail.filter((s) => s.category === category.id);
+        const services = allServices.filter((s) => s.category === category.id);
         const startIndex = blockOffset;
         blockOffset += services.length;
 
-        // Avoid duplicating doc copy:
-        // - On /services, Engineering intro is already in the hero.
-        // - PMO & Advisory each have one detail block that carries the pillar paragraph.
-        // - Telecom products always show an intro above its product cards.
         const showIntro =
           category.id === "engineering-services"
             ? !isFullPage
@@ -107,6 +102,7 @@ export default function ServicesPageSection({
           <CategoryBlocks
             key={category.id}
             category={category}
+            services={services}
             startIndex={startIndex}
             showIntro={showIntro}
           />

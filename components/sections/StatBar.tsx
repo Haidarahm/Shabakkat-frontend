@@ -1,7 +1,11 @@
-import { stats } from "@/data/stats";
+import type { Stat } from "@/data/stats";
 import CountUp from "@/components/ui/CountUp";
 
-export default function StatBar() {
+interface StatBarProps {
+  stats: Stat[];
+}
+
+export default function StatBar({ stats }: StatBarProps) {
   return (
     <div className="section-px relative z-10 -mt-8 sm:-mt-10 lg:-mt-12">
       <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-5 lg:gap-5">

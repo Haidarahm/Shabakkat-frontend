@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import type { GetStaticProps } from "next";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
@@ -7,10 +8,15 @@ import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import IndustryCard from "@/components/industries/IndustryCard";
-import { industries, industriesIntro } from "@/data/industries";
+import { industries as staticIndustries, industriesIntro, type Industry } from "@/data/industries";
+import { fetchIndustries, fromBackend } from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 
-export default function Industries() {
+interface IndustriesProps {
+  industries: Industry[];
+}
+
+export default function Industries({ industries }: IndustriesProps) {
   return (
     <Layout
       title="Industries"
@@ -105,3 +111,8 @@ export default function Industries() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps<IndustriesProps> = async () => ({
+  props: { industries: await fromBackend(fetchIndustries, staticIndustries) },
+  revalidate: 60,
+});

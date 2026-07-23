@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { GetStaticProps } from "next";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
@@ -6,11 +7,16 @@ import Timeline from "@/components/sections/Timeline";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import ProjectCard from "@/components/projects/ProjectCard";
-import { projects } from "@/data/projects";
+import { projects as staticProjects, type ProjectCaseStudy } from "@/data/projects";
+import { fetchProjects, fromBackend } from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function Projects() {
+interface ProjectsProps {
+  projects: ProjectCaseStudy[];
+}
+
+export default function Projects({ projects }: ProjectsProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
@@ -58,3 +64,8 @@ export default function Projects() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps<ProjectsProps> = async () => ({
+  props: { projects: await fromBackend(fetchProjects, staticProjects) },
+  revalidate: 60,
+});

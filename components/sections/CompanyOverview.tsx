@@ -4,12 +4,15 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
+import type { Stat } from "@/data/stats";
 
-const stats = [
+const fallbackChipStats = [
   { label: "21+ Years", border: "border-red" },
   { label: "15 Countries", border: "border-cyan" },
   { label: "900+ Workforce", border: "border-navy" },
 ];
+
+const chipBorders = ["border-red", "border-cyan", "border-navy"] as const;
 
 const statsRow: Variants = {
   hidden: {},
@@ -21,8 +24,21 @@ const statsItem: Variants = {
   visible: { opacity: 1, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
-export default function CompanyOverview() {
+interface CompanyOverviewProps {
+  /** When provided, chip labels are built from backend stats (first 3). */
+  stats?: Stat[];
+}
+
+export default function CompanyOverview({ stats }: CompanyOverviewProps) {
   const [titleDone, setTitleDone] = useState(false);
+
+  const chips =
+    stats && stats.length > 0
+      ? stats.slice(0, 3).map((stat, i) => ({
+          label: `${stat.value}${stat.suffix ?? ""} ${stat.label}`.replace(/\s+/g, " ").trim(),
+          border: chipBorders[i % chipBorders.length],
+        }))
+      : fallbackChipStats;
 
   return (
     <div className="section-px section-py grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -49,7 +65,7 @@ export default function CompanyOverview() {
           initial="hidden"
           animate={titleDone ? "visible" : "hidden"}
         >
-          {stats.map((stat) => (
+          {chips.map((stat) => (
             <motion.div
               key={stat.label}
               variants={statsItem}

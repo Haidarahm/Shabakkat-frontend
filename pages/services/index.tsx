@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { GetStaticProps } from "next";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
@@ -6,8 +7,20 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import ServicesPageSection, { SERVICES_CTA } from "@/components/services/ServicesPageSection";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
+import {
+  serviceCategories as staticCategories,
+  servicesDetail as staticServices,
+  type ServiceCategory,
+  type ServiceDetail,
+} from "@/data/servicesDetail";
+import { fetchServiceCategories, fetchServices, fromBackend } from "@/lib/backend";
 
-export default function Services() {
+interface ServicesProps {
+  categories: ServiceCategory[];
+  services: ServiceDetail[];
+}
+
+export default function Services({ categories, services }: ServicesProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
@@ -36,7 +49,7 @@ export default function Services() {
         </AnimatedParagraph>
       </Hero>
 
-      <ServicesPageSection switcherMode="hash" />
+      <ServicesPageSection switcherMode="hash" categories={categories} services={services} />
       <ProcessSteps />
 
       <FinalCta
@@ -47,3 +60,15 @@ export default function Services() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps<ServicesProps> = async () => {
+  const [categories, services] = await Promise.all([
+    fromBackend(fetchServiceCategories, staticCategories),
+    fromBackend(fetchServices, staticServices),
+  ]);
+
+  return {
+    props: { categories, services },
+    revalidate: 60,
+  };
+};

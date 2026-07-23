@@ -1,16 +1,20 @@
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FaqItem from "@/components/faq/FaqItem";
-import { faqHighlights } from "@/data/faq";
+import type { FaqItem as FaqItemData } from "@/data/faq";
 
-export default function FaqTeaser() {
+interface FaqTeaserProps {
+  highlights: FaqItemData[];
+}
+
+export default function FaqTeaser({ highlights }: FaqTeaserProps) {
   return (
     <div className="section-px section-py">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
         <SectionHeading eyebrow="FAQ" title="Frequently asked questions" />
       </div>
       <div className="mx-auto mt-8 max-w-[760px]">
-        {faqHighlights.map((item) => (
+        {highlights.map((item) => (
           <FaqItem key={item.question} item={item} />
         ))}
       </div>

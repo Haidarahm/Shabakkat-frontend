@@ -4,20 +4,24 @@ import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 import RegionalMap from "@/components/sections/RegionalMap";
-import { footprintLocations } from "@/data/offices";
+import type { FootprintLocation } from "@/data/offices";
 
 const legend = [
   { color: "bg-red", label: "Headquarters" },
   { color: "bg-cyan", label: "Regional office" },
 ];
 
-const roleAccent: Record<(typeof footprintLocations)[number]["role"], string> = {
+const roleAccent: Record<FootprintLocation["role"], string> = {
   Headquarters: "border-l-red",
   "Regional office": "border-l-cyan",
   "Project delivery": "border-l-border",
 };
 
-export default function GlobalFootprint() {
+interface GlobalFootprintProps {
+  locations: FootprintLocation[];
+}
+
+export default function GlobalFootprint({ locations }: GlobalFootprintProps) {
   const [activeLocation, setActiveLocation] = useState<string | null>(null);
 
   return (
@@ -29,11 +33,11 @@ export default function GlobalFootprint() {
       />
       <div className="mt-7 grid grid-cols-1 gap-x-9 gap-y-3.5 lg:grid-cols-[1.5fr_1fr]">
         <div className="order-1">
-          <RegionalMap activePin={activeLocation} onPinHover={setActiveLocation} />
+          <RegionalMap locations={locations} activePin={activeLocation} onPinHover={setActiveLocation} />
         </div>
 
         <StaggerGrid className="order-3 grid h-full grid-cols-1 gap-3 sm:grid-cols-2 sm:grid-rows-2 lg:order-2">
-          {footprintLocations.map((loc) => {
+          {locations.map((loc) => {
             const isActive = activeLocation === loc.name;
             return (
               <StaggerItem key={loc.name}>

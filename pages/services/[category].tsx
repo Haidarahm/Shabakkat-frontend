@@ -6,24 +6,49 @@ import FinalCta from "@/components/sections/FinalCta";
 import ServicesPageSection, { SERVICES_CTA } from "@/components/services/ServicesPageSection";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
-import { serviceCategories } from "@/data/servicesDetail";
+import {
+  serviceCategories as staticCategories,
+  servicesDetail as staticServices,
+  type ServiceCategory,
+  type ServiceDetail,
+} from "@/data/servicesDetail";
+import { fetchServiceCategories, fetchServices, fromBackend } from "@/lib/backend";
 
 interface ServiceCategoryPageProps {
   categoryId: string;
+  categories: ServiceCategory[];
+  services: ServiceDetail[];
 }
 
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: serviceCategories.map((category) => ({ params: { category: category.id } })),
-  fallback: false,
-});
-
-export const getStaticProps: GetStaticProps<ServiceCategoryPageProps> = async ({ params }) => {
-  return { props: { categoryId: params!.category as string } };
+export const getStaticPaths: GetStaticPaths = async () => {
+  const categories = await fromBackend(fetchServiceCategories, staticCategories);
+  return {
+    paths: categories.map((category) => ({ params: { category: category.id } })),
+    fallback: false,
+  };
 };
 
-export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageProps) {
+export const getStaticProps: GetStaticProps<ServiceCategoryPageProps> = async ({ params }) => {
+  const [categories, services] = await Promise.all([
+    fromBackend(fetchServiceCategories, staticCategories),
+    fromBackend(fetchServices, staticServices),
+  ]);
+
+  return {
+    props: {
+      categoryId: params!.category as string,
+      categories,
+      services,
+    },
+    revalidate: 60,
+  };
+};
+
+export default function ServiceCategoryPage({ categoryId, categories, services }: ServiceCategoryPageProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
-  const category = serviceCategories.find((c) => c.id === categoryId)!;
+  const category =
+    categories.find((c) => c.id === categoryId) ??
+    staticCategories.find((c) => c.id === categoryId)!;
 
   return (
     <Layout
@@ -49,7 +74,12 @@ export default function ServiceCategoryPage({ categoryId }: ServiceCategoryPageP
         </AnimatedParagraph>
       </Hero>
 
-      <ServicesPageSection categoryId={categoryId} switcherMode="route" />
+      <ServicesPageSection
+        categoryId={categoryId}
+        switcherMode="route"
+        categories={categories}
+        services={services}
+      />
 
       <FinalCta
         title={SERVICES_CTA.title}

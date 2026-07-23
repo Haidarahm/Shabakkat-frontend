@@ -1,19 +1,22 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import LogoLoop, { type LogoItem } from "@/components/LogoLoop";
-import { partners } from "@/data/partners";
+import type { Partner } from "@/data/partners";
 
-const midpoint = Math.ceil(partners.length / 2);
-
-const toLogo = (partner: (typeof partners)[number]): LogoItem => ({
+const toLogo = (partner: Partner): LogoItem => ({
   src: partner.logoSrc,
   alt: partner.name,
   title: partner.name,
 });
 
-const topRow = partners.slice(0, midpoint).map(toLogo);
-const bottomRow = partners.slice(midpoint).map(toLogo);
+interface PartnersGridProps {
+  partners: Partner[];
+}
 
-export default function PartnersGrid() {
+export default function PartnersGrid({ partners }: PartnersGridProps) {
+  const midpoint = Math.ceil(partners.length / 2);
+  const topRow = partners.slice(0, midpoint).map(toLogo);
+  const bottomRow = partners.slice(midpoint).map(toLogo);
+
   return (
     <div className="section-px section-py">
       <SectionHeading

@@ -3,9 +3,13 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
-import { featuredProjects } from "@/data/featuredProjects";
+import type { FeaturedProject } from "@/data/featuredProjects";
 
-export default function FeaturedProjects() {
+interface FeaturedProjectsProps {
+  featuredProjects: FeaturedProject[];
+}
+
+export default function FeaturedProjects({ featuredProjects }: FeaturedProjectsProps) {
   return (
     <div className="section-px section-py bg-bg-muted">
       <SectionHeading eyebrow="FEATURED PROJECTS" title="Proof at scale" />

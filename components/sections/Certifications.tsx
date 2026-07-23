@@ -3,9 +3,13 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
-import { certifications } from "@/data/certifications";
+import type { Certification } from "@/data/certifications";
 
-export default function Certifications() {
+interface CertificationsProps {
+  certifications: Certification[];
+}
+
+export default function Certifications({ certifications }: CertificationsProps) {
   return (
     <div className="section-px section-py">
       <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">

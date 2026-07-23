@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { GetStaticProps } from "next";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -6,11 +7,26 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import ContactForm from "@/components/contact/ContactForm";
 import OfficeCard from "@/components/contact/OfficeCard";
-import { headOffice, regionalOffices } from "@/data/offices";
+import {
+  headOffice as staticHeadOffice,
+  regionalOffices as staticRegionalOffices,
+  type OfficeLocation,
+} from "@/data/offices";
+import {
+  fetchOffices,
+  officesToHeadOffice,
+  officesToRegional,
+  type BackendOffice,
+} from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function Contact() {
+interface ContactProps {
+  headOffice: OfficeLocation;
+  regionalOffices: OfficeLocation[];
+}
+
+export default function Contact({ headOffice, regionalOffices }: ContactProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
@@ -87,3 +103,22 @@ export default function Contact() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps<ContactProps> = async () => {
+  let offices: BackendOffice[] | null = null;
+  try {
+    offices = await fetchOffices();
+  } catch {
+    offices = null;
+  }
+
+  const headOffice =
+    (offices ? officesToHeadOffice(offices) : null) ?? staticHeadOffice;
+  const regionalOffices =
+    offices && offices.length > 0 ? officesToRegional(offices) : staticRegionalOffices;
+
+  return {
+    props: { headOffice, regionalOffices },
+    revalidate: 60,
+  };
+};

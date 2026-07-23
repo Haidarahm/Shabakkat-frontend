@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import { footprintLocations, mapViewBox, type FootprintLocation } from "@/data/offices";
+import { mapViewBox, type FootprintLocation } from "@/data/offices";
 import { accentBg, accentFill, type AccentColor } from "@/lib/colorMap";
 
 const roleColor: Record<FootprintLocation["role"], AccentColor> = {
@@ -10,12 +10,17 @@ const roleColor: Record<FootprintLocation["role"], AccentColor> = {
 };
 
 interface RegionalMapProps {
+  locations: FootprintLocation[];
   /** Controlled active pin name — pass this to sync hover state with an external list (e.g. office cards). */
   activePin?: string | null;
   onPinHover?: (name: string | null) => void;
 }
 
-export default function RegionalMap({ activePin: controlledActivePin, onPinHover }: RegionalMapProps = {}) {
+export default function RegionalMap({
+  locations,
+  activePin: controlledActivePin,
+  onPinHover,
+}: RegionalMapProps) {
   const [internalActivePin, setInternalActivePin] = useState<string | null>(null);
   const isControlled = controlledActivePin !== undefined;
   const activePin = isControlled ? controlledActivePin : internalActivePin;
@@ -39,7 +44,7 @@ export default function RegionalMap({ activePin: controlledActivePin, onPinHover
         draggable={false}
       />
 
-      {footprintLocations.map((loc) => {
+      {locations.map((loc) => {
         const left = (loc.mapPoint.cx / mapViewBox.width) * 100;
         const top = (loc.mapPoint.cy / mapViewBox.height) * 100;
         const color = roleColor[loc.role];
@@ -59,7 +64,6 @@ export default function RegionalMap({ activePin: controlledActivePin, onPinHover
             }`}
             style={{ left: `${left}%`, top: `${top}%` }}
           >
-            {/* Tooltip — rendered above every pin (including neighboring ones) while active */}
             <span
               className={`pointer-events-none absolute bottom-full left-1/2 z-40 mb-2.5 -translate-x-1/2 whitespace-nowrap rounded-md px-2.5 py-1 font-heading text-[11px] tracking-[0.03em] text-white shadow-lg transition-all duration-200 ${accentBg[color]} ${
                 isActive ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"
@@ -70,7 +74,6 @@ export default function RegionalMap({ activePin: controlledActivePin, onPinHover
               {loc.role}
             </span>
 
-            {/* Pin marker */}
             <span
               className={`relative block transition-transform duration-200 ease-out ${
                 isActive ? "-translate-y-2 scale-110" : "group-hover:-translate-y-1"

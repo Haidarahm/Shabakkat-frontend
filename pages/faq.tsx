@@ -1,14 +1,20 @@
 import { useState } from "react";
+import type { GetStaticProps } from "next";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import FinalCta from "@/components/sections/FinalCta";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FaqItem from "@/components/faq/FaqItem";
-import { faqCategories } from "@/data/faq";
+import { faqCategories as staticFaqCategories, type FaqCategory } from "@/data/faq";
+import { fetchFaqs, fromBackend } from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function Faq() {
+interface FaqProps {
+  categories: FaqCategory[];
+}
+
+export default function Faq({ categories }: FaqProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
@@ -35,7 +41,7 @@ export default function Faq() {
         </AnimatedParagraph>
       </Hero>
 
-      {faqCategories.map((category, i) => (
+      {categories.map((category, i) => (
         <div key={category.title} className={`section-px section-py ${i % 2 === 1 ? "bg-bg-muted" : ""}`}>
           <div className="mx-auto max-w-[760px]">
             <SectionHeading eyebrow={`${String(i + 1).padStart(2, "0")}`} title={category.title} />
@@ -55,3 +61,12 @@ export default function Faq() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps<FaqProps> = async () => {
+  const faqs = await fromBackend(fetchFaqs, { highlights: [], categories: staticFaqCategories });
+
+  return {
+    props: { categories: faqs.categories },
+    revalidate: 60,
+  };
+};

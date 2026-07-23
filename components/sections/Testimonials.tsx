@@ -1,11 +1,16 @@
 import { FaTrophy } from "react-icons/fa";
-import { testimonials, awards } from "@/data/testimonials";
+import type { Testimonial, Award } from "@/data/testimonials";
 import { accentText } from "@/lib/colorMap";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
 
-export default function Testimonials() {
+interface TestimonialsProps {
+  testimonials: Testimonial[];
+  awards: Award[];
+}
+
+export default function Testimonials({ testimonials, awards }: TestimonialsProps) {
   return (
     <div className="section-px section-py bg-bg-muted">
       <div className="flex items-center gap-2.5 font-heading text-[13px] tracking-[0.14em] text-cyan">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { GetStaticProps } from "next";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -6,11 +7,16 @@ import PhotoPlaceholder from "@/components/ui/PhotoPlaceholder";
 import Button from "@/components/ui/Button";
 import OpeningCard from "@/components/careers/OpeningCard";
 import FinalCta from "@/components/sections/FinalCta";
-import { openings } from "@/data/openings";
+import { openings as staticOpenings, type Opening } from "@/data/openings";
+import { fetchOpenings, fromBackend } from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
-export default function Careers() {
+interface CareersProps {
+  openings: Opening[];
+}
+
+export default function Careers({ openings }: CareersProps) {
   const [heroTitleDone, setHeroTitleDone] = useState(false);
 
   return (
@@ -71,7 +77,7 @@ export default function Careers() {
         />
         <div className="mt-8 flex flex-col gap-4">
           {openings.map((opening) => (
-            <OpeningCard key={opening.title} opening={opening} />
+            <OpeningCard key={`${opening.title}-${opening.location}`} opening={opening} />
           ))}
         </div>
       </div>
@@ -85,3 +91,8 @@ export default function Careers() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps<CareersProps> = async () => ({
+  props: { openings: await fromBackend(fetchOpenings, staticOpenings) },
+  revalidate: 60,
+});

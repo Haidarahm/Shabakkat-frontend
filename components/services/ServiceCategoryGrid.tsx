@@ -2,15 +2,20 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import StaggerGrid from "@/components/ui/StaggerGrid";
 import StaggerItem from "@/components/ui/StaggerItem";
-import { serviceCategories, servicesDetail } from "@/data/servicesDetail";
+import type { ServiceCategory, ServiceDetail } from "@/data/servicesDetail";
 
-export default function ServiceCategoryGrid() {
+interface ServiceCategoryGridProps {
+  categories: ServiceCategory[];
+  services: ServiceDetail[];
+}
+
+export default function ServiceCategoryGrid({ categories, services }: ServiceCategoryGridProps) {
   return (
     <div className="section-px section-py bg-bg-muted">
       <SectionHeading eyebrow="WHAT WE DO" title="Four core capabilities" />
       <StaggerGrid className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {serviceCategories.map((category) => {
-          const count = servicesDetail.filter((s) => s.category === category.id).length;
+        {categories.map((category) => {
+          const count = services.filter((s) => s.category === category.id).length;
           return (
             <StaggerItem key={category.id}>
               <Link
