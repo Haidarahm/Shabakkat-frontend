@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import type { Opening } from "@/data/openings";
 
 const inputClasses =
-  "w-full rounded-lg border border-[#DADCDE] bg-white px-3.5 py-[13px] font-body text-[14.5px] text-navy focus:border-cyan focus:outline-none";
+  "w-full rounded-lg border border-[#DADCDE] bg-white px-3.5 py-[13px] font-body text-[14.5px] text-navy transition-colors placeholder:text-text-muted/70 focus:border-cyan focus:outline-none";
 const labelClasses = "mb-2 block font-heading text-xs uppercase tracking-[0.05em] text-text-body";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -63,7 +63,11 @@ export default function ApplicationForm({ opening }: ApplicationFormProps) {
   }
 
   return (
-    <form className="mt-7 flex flex-col gap-5" onSubmit={handleSubmit} encType="multipart/form-data">
+    <form
+      className="relative mx-auto mt-9 flex w-full max-w-[560px] flex-col gap-5 text-left"
+      onSubmit={handleSubmit}
+      encType="multipart/form-data"
+    >
       {/* Honeypot — hidden from real users, bots tend to fill every field they find */}
       <div className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
         <label htmlFor="website">Website</label>
@@ -71,10 +75,10 @@ export default function ApplicationForm({ opening }: ApplicationFormProps) {
       </div>
 
       {opening && (
-        <div className="rounded-lg border border-border bg-bg-muted px-4 py-3">
+        <div className="rounded-xl border border-border bg-bg-muted px-5 py-4 text-center">
           <div className="font-heading text-xs uppercase tracking-[0.06em] text-text-muted">Applying for</div>
-          <div className="mt-1 font-heading text-[15px] text-navy">{opening.title}</div>
-          <div className="mt-1 text-[13px] text-text-muted">
+          <div className="mt-1.5 font-heading text-[16px] text-navy">{opening.title}</div>
+          <div className="mt-1.5 text-[13px] text-text-muted">
             {opening.department} · {opening.location} · {opening.type}
           </div>
         </div>
@@ -159,7 +163,7 @@ export default function ApplicationForm({ opening }: ApplicationFormProps) {
           Cover letter / Message
         </label>
         <textarea
-          className={inputClasses}
+          className={`${inputClasses} min-h-[140px] resize-y`}
           id="cover_letter"
           name="cover_letter"
           rows={5}
@@ -173,31 +177,33 @@ export default function ApplicationForm({ opening }: ApplicationFormProps) {
           CV / Resume
         </label>
         <input
-          className="w-full rounded-lg border border-[#DADCDE] bg-white px-3.5 py-[13px] font-body text-[14.5px] text-navy file:mr-4 file:rounded-md file:border-0 file:bg-cyan/10 file:px-3 file:py-1.5 file:font-heading file:text-xs file:tracking-[0.04em] file:text-cyan focus:border-cyan focus:outline-none"
+          className="w-full rounded-lg border border-dashed border-[#DADCDE] bg-bg-muted/40 px-3.5 py-4 font-body text-[14.5px] text-navy file:mr-4 file:rounded-md file:border-0 file:bg-cyan/10 file:px-3 file:py-1.5 file:font-heading file:text-xs file:tracking-[0.04em] file:text-cyan focus:border-cyan focus:outline-none"
           type="file"
           id="cv"
           name="cv"
           accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           required
         />
-        <p className="mt-2 text-[12.5px] text-text-muted">PDF, DOC, or DOCX — max 5 MB.</p>
+        <p className="mt-2 text-center text-[12.5px] text-text-muted">PDF, DOC, or DOCX — max 5 MB.</p>
       </div>
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        className="self-start rounded-md bg-cyan px-[34px] py-[15px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-red disabled:opacity-60"
-      >
-        {status === "submitting" ? "SUBMITTING..." : "SUBMIT APPLICATION"}
-      </button>
+      <div className="mt-1 flex flex-col items-center gap-3 pt-1">
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="w-full rounded-md bg-cyan px-[34px] py-[15px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-red disabled:opacity-60 sm:w-auto sm:min-w-[240px]"
+        >
+          {status === "submitting" ? "SUBMITTING..." : "SUBMIT APPLICATION"}
+        </button>
 
-      {status === "success" && (
-        <p className="text-sm text-cyan">
-          Thank you — your application has been received. Our team will review it and be in touch if there&apos;s a
-          match.
-        </p>
-      )}
-      {status === "error" && <p className="text-sm text-red">{errorMessage}</p>}
+        {status === "success" && (
+          <p className="max-w-[40ch] text-center text-sm text-cyan">
+            Thank you — your application has been received. Our team will review it and be in touch if there&apos;s a
+            match.
+          </p>
+        )}
+        {status === "error" && <p className="max-w-[40ch] text-center text-sm text-red">{errorMessage}</p>}
+      </div>
     </form>
   );
 }

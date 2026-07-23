@@ -37,67 +37,75 @@ export default function CareersApply({ openings }: ApplyProps) {
       <Hero
         photoLabel="PHOTO — Shabakkat team collaboration, full-bleed"
         heightClassName="h-[240px] sm:h-[270px] lg:h-[300px]"
-        align="bottom"
       >
-        <div className="mb-4 h-[3px] w-[60px] bg-red" />
+        <div className="mx-auto mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
           as="h1"
           text={opening ? "Apply for this role" : "Submit your CV"}
-          className="font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
+          className="mx-auto max-w-[18ch] font-heading text-[26px] font-semibold uppercase text-white sm:text-[32px] lg:text-[38px]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
-        <AnimatedParagraph active={heroTitleDone} className="mt-2.5 text-sm text-white/85 lg:text-[15.5px]">
+        <AnimatedParagraph
+          active={heroTitleDone}
+          className="mx-auto mt-2.5 max-w-[42ch] text-sm text-white/85 lg:text-[15.5px]"
+        >
           Share your details and CV — we&apos;ll review every application carefully.
         </AnimatedParagraph>
       </Hero>
 
-      <div className="section-px section-py max-w-[720px]">
-        <Link
-          href="/careers"
-          className="font-heading text-xs uppercase tracking-[0.05em] text-cyan transition-colors hover:text-red"
-        >
-          ← Back to careers
-        </Link>
+      <section className="section-px section-py">
+        <div className="mx-auto w-full max-w-[640px]">
+          <div className="text-center">
+            <Link
+              href="/careers"
+              className="inline-flex items-center gap-1.5 font-heading text-xs uppercase tracking-[0.05em] text-cyan transition-colors hover:text-red"
+            >
+              ← Back to careers
+            </Link>
+          </div>
 
-        {unknownOpening ? (
-          <div className="mt-8">
-            <SectionHeading
-              eyebrow="APPLICATION"
-              title="Opening not found"
-              description="This role may no longer be available. Browse current opportunities or submit a general CV."
-            />
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/careers"
-                className="inline-block rounded-md border-[1.5px] border-navy px-[30px] py-[14px] font-heading text-sm tracking-[0.05em] text-navy transition-colors hover:border-cyan hover:text-cyan"
-              >
-                VIEW OPENINGS
-              </Link>
-              <Link
-                href="/careers/apply"
-                className="inline-block rounded-md bg-cyan px-[30px] py-[14px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-red"
-              >
-                SUBMIT GENERAL CV
-              </Link>
+          {unknownOpening ? (
+            <div className="mt-8 text-center">
+              <SectionHeading
+                className="mx-auto text-center [&>div:first-child]:justify-center"
+                eyebrow="APPLICATION"
+                title="Opening not found"
+                description="This role may no longer be available. Browse current opportunities or submit a general CV."
+              />
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                <Link
+                  href="/careers"
+                  className="inline-block rounded-md border-[1.5px] border-navy px-[30px] py-[14px] font-heading text-sm tracking-[0.05em] text-navy transition-colors hover:border-cyan hover:text-cyan"
+                >
+                  VIEW OPENINGS
+                </Link>
+                <Link
+                  href="/careers/apply"
+                  className="inline-block rounded-md bg-cyan px-[30px] py-[14px] font-heading text-sm tracking-[0.05em] text-white transition-colors hover:bg-red"
+                >
+                  SUBMIT GENERAL CV
+                </Link>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="mt-8">
-            <SectionHeading
-              eyebrow="APPLICATION"
-              title={opening ? opening.title : isGeneral || !router.isReady ? "General application" : "Loading…"}
-              description={
-                opening
-                  ? "Complete the form below to apply for this position."
-                  : "Don't see a perfect match? Send us your CV and we'll keep you in mind for future roles."
-              }
-            />
-            {(opening || isGeneral || !router.isReady) && (
-              <ApplicationForm opening={opening} />
-            )}
-          </div>
-        )}
-      </div>
+          ) : (
+            <div className="mt-8">
+              <SectionHeading
+                className="mx-auto text-center [&>div:first-child]:justify-center"
+                eyebrow="APPLICATION"
+                title={opening ? opening.title : isGeneral || !router.isReady ? "General application" : "Loading…"}
+                description={
+                  opening
+                    ? "Complete the form below to apply for this position."
+                    : "Don't see a perfect match? Send us your CV and we'll keep you in mind for future roles."
+                }
+              />
+              {(opening || isGeneral || !router.isReady) && (
+                <ApplicationForm opening={opening} />
+              )}
+            </div>
+          )}
+        </div>
+      </section>
     </Layout>
   );
 }
