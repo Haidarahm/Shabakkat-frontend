@@ -47,15 +47,16 @@ export default function Privacy() {
         />
         <p className={paragraphClasses}>
           The only information this website collects is what you choose to submit through the inquiry form on
-          the Careers &amp; Contact page. That form asks for:
+          the Contact page, or the job application form on the Careers page. Those forms may ask for:
         </p>
         <ul className={listClasses}>
           <li>Full name</li>
           <li>Company name (optional)</li>
           <li>Email address</li>
           <li>Phone number (optional)</li>
-          <li>The service you&apos;re interested in</li>
-          <li>Your message</li>
+          <li>The service you&apos;re interested in (contact form)</li>
+          <li>Your message or cover letter</li>
+          <li>CV / resume file, LinkedIn, and portfolio links (job applications)</li>
         </ul>
         <p className={paragraphClasses}>
           We do not require you to create an account, and we do not collect payment information anywhere on this

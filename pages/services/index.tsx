@@ -15,6 +15,15 @@ import {
 } from "@/data/servicesDetail";
 import { fetchServiceCategories, fetchServices, fromBackend } from "@/lib/backend";
 
+const SERVICES_HERO_IMAGES = [
+  "/images/services/services-hero-1.jpg",
+  "/images/services/services-hero-2.jpg",
+  "/images/services/services-hero-3.jpg",
+  "/images/services/services-hero-4.jpg",
+  "/images/services/services-hero-5.jpg",
+  "/images/services/services-hero-6.jpg",
+];
+
 interface ServicesProps {
   categories: ServiceCategory[];
   services: ServiceDetail[];
@@ -30,6 +39,7 @@ export default function Services({ categories, services }: ServicesProps) {
     >
       <Hero
         photoLabel="PHOTO — engineers & ICT infrastructure, full-bleed"
+        photoSrcs={SERVICES_HERO_IMAGES}
         heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />

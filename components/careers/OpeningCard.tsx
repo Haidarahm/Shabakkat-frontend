@@ -1,6 +1,10 @@
 import type { Opening } from "@/data/openings";
+import Link from "next/link";
 
 export default function OpeningCard({ opening }: { opening: Opening }) {
+  const href =
+    opening.id != null ? `/careers/apply?opening=${opening.id}` : "/careers/apply";
+
   return (
     <div className="flex flex-col gap-3 rounded-xl border border-border bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
       <div>
@@ -9,12 +13,12 @@ export default function OpeningCard({ opening }: { opening: Opening }) {
           {opening.department} · {opening.location} · {opening.type}
         </div>
       </div>
-      <a
-        href={`mailto:info@shabakkat.com?subject=Application%3A%20${encodeURIComponent(opening.title)}`}
+      <Link
+        href={href}
         className="inline-flex shrink-0 items-center rounded-md border border-cyan px-5 py-2.5 font-heading text-[12.5px] tracking-[0.03em] text-cyan transition-colors hover:bg-cyan hover:text-white"
       >
         APPLY NOW
-      </a>
+      </Link>
     </div>
   );
 }

@@ -52,7 +52,7 @@ export default function Careers({ openings }: CareersProps) {
           />
 
           <Button
-            href="mailto:info@shabakkat.com?subject=CV%20Submission"
+            href="/careers/apply"
             variant="outline"
             className="mt-6 inline-block"
           >
@@ -77,7 +77,7 @@ export default function Careers({ openings }: CareersProps) {
         />
         <div className="mt-8 flex flex-col gap-4">
           {openings.map((opening) => (
-            <OpeningCard key={`${opening.title}-${opening.location}`} opening={opening} />
+            <OpeningCard key={opening.id ?? `${opening.title}-${opening.location}`} opening={opening} />
           ))}
         </div>
       </div>

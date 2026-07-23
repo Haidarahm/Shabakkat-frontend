@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
@@ -11,46 +11,25 @@ const paragraphs = [
   "What differentiates us is our steadfastness in responding to our clients' needs, our flexibility in adapting our offerings to their challenges, and our skill in project management and quality assurance. Shabakkat will always be a true partner of your business and make your challenge its own.",
 ];
 
-const imageStack: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.18, delayChildren: 0.08 } },
-};
-
-const imageItem: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
-};
-
 export default function ChairmanMessage() {
   const [titleDone, setTitleDone] = useState(false);
 
   return (
     <div className="section-px section-py bg-bg-muted">
-      <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <motion.div
-          className="flex flex-col gap-4"
-          variants={imageStack}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
         >
-          <motion.div variants={imageItem}>
-            <PhotoPlaceholder
-              label="PHOTO — Abdulaziz Behbehani, Chairman"
-              alt="Abdulaziz Behbehani, Chairman of Shabakkat"
-              className="h-[320px] rounded-xl sm:h-[400px] lg:h-[480px]"
-              sizes="(max-width: 1024px) 100vw, 42vw"
-            />
-          </motion.div>
-          <motion.div variants={imageItem}>
-            <PhotoPlaceholder
-              label="PHOTO — Shabakkat leadership & team"
-              src="/images/company/office-team.jpg"
-              alt="Shabakkat corporate team"
-              className="h-[180px] rounded-xl sm:h-[220px] lg:h-[240px]"
-              sizes="(max-width: 1024px) 100vw, 42vw"
-            />
-          </motion.div>
+          <PhotoPlaceholder
+            label="PHOTO — Shabakkat leadership & team"
+            src="/images/company/office-team.jpg"
+            alt="Shabakkat corporate team"
+            className="h-[280px] rounded-xl sm:h-[360px] lg:h-[480px]"
+            sizes="(max-width: 1024px) 100vw, 42vw"
+          />
         </motion.div>
 
         <div>
