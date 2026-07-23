@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { navLinks } from "@/data/navLinks";
@@ -19,8 +20,15 @@ export default function Header() {
   return (
     <header className="section-px sticky top-0 z-[100] border-b border-border bg-white">
       <div className="flex h-[72px] items-center justify-between lg:h-[84px]">
-        <Link href="/" className="font-heading text-lg font-semibold uppercase tracking-[0.05em] text-navy">
-          Shabakkat
+        <Link href="/" aria-label="Shabakkat home" className="relative block h-12 w-[180px] sm:h-14 sm:w-[220px] lg:h-16 lg:w-[240px]">
+          <Image
+            src="/logo.png"
+            alt="Shabakkat"
+            fill
+            priority
+            sizes="240px"
+            className="object-contain object-left"
+          />
         </Link>
 
         <nav className="hidden items-center gap-10 lg:flex">

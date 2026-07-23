@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedinIn, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { navLinks } from "@/data/navLinks";
@@ -13,7 +14,15 @@ export default function Footer() {
     <footer className="section-px border-t border-border bg-bg-muted pb-7 pt-10 text-text-subtle lg:pt-16">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-10">
         <div>
-          <div className="font-heading text-xl font-semibold uppercase text-navy">Shabakkat</div>
+          <Link href="/" aria-label="Shabakkat home" className="relative block h-14 w-[220px] sm:h-16 sm:w-[260px]">
+            <Image
+              src="/logo.png"
+              alt="Shabakkat"
+              fill
+              sizes="260px"
+              className="object-contain object-left"
+            />
+          </Link>
           <p className="mt-4 max-w-[280px] text-[13.5px] leading-[1.7]">
             A regional Engineering &amp; Advisory company delivering critical digital infrastructure across the
             Middle East and Africa since 2005.
