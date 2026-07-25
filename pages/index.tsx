@@ -58,27 +58,27 @@ export default function Home({ partners, certifications, locations, stats }: Hom
         <AnimatedTitle
           as="h1"
           text="Engineering the digital backbone of nations"
-          className="max-w-[620px] font-heading text-[30px] font-semibold uppercase leading-[1.2] text-white sm:text-[38px] lg:text-[46px] lg:leading-[1.14]"
+          className="mx-auto max-w-[620px] font-heading text-[30px] font-semibold uppercase leading-[1.2] text-white sm:text-[38px] lg:mx-0 lg:text-[46px] lg:leading-[1.14]"
           onAnimationComplete={() => setHeroTitleDone(true)}
         />
         <AnimatedParagraph
           active={heroTitleDone}
-          className="mt-4 max-w-[560px] text-sm text-white/80 sm:text-base lg:text-[16.5px]"
+          className="mx-auto mt-4 max-w-[620px] text-sm leading-[1.7] text-white/80 sm:text-base lg:mx-0 lg:text-[16.5px]"
         >
           Shabakkat is a regional Engineering &amp; Advisory company delivering critical digital infrastructure across
-          the Middle East and Africa.
+          the Middle East and Africa since 2005.
         </AnimatedParagraph>
         <AnimatedParagraph
           active={heroTitleDone}
           delay={0.04}
-          className="mt-3 max-w-[560px] text-sm text-white/80 sm:text-base lg:text-[16.5px]"
+          className="mx-auto mt-3 max-w-[620px] text-sm leading-[1.7] text-white/80 sm:text-base lg:mx-0 lg:text-[16.5px]"
         >
           Through Engineering Services, PMO &amp; Project Delivery, and Technical Advisory, we enable operators,
           enterprises, and governments to deliver resilient infrastructure, accelerate digital transformation, and
           build sustainable networks for the future.
         </AnimatedParagraph>
         <motion.div
-          className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4"
+          className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start"
           variants={heroButtonRow}
           initial="hidden"
           animate={heroTitleDone ? "visible" : "hidden"}

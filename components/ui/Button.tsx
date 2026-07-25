@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps {
   href: string;
@@ -33,7 +34,12 @@ export default function Button({
     <Link
       href={href}
       onClick={onClick}
-      className={`inline-block rounded-md font-heading text-sm tracking-[0.05em] transition-colors ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
+      className={cn(
+        "inline-block rounded-md font-heading text-sm tracking-[0.05em] transition-colors",
+        sizeClasses[size],
+        variantClasses[variant],
+        className,
+      )}
     >
       {children}
     </Link>

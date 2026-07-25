@@ -37,7 +37,7 @@ export default function SectionHeading({
         <AnimatedParagraph
           as="p"
           active={titleDone}
-          className="mt-3.5 text-[15.5px] leading-[1.7] text-pretty text-text-body"
+          className="mt-3.5 w-full text-[15px] leading-[1.7] text-text-body sm:text-[15.5px]"
         >
           {description}
         </AnimatedParagraph>

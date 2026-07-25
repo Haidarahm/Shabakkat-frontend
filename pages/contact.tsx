@@ -63,14 +63,10 @@ export default function Contact({ headOffice, regionalOffices }: ContactProps) {
           <div className="mt-3.5">
             <OfficeCard office={headOffice} />
           </div>
-          <div className="mt-5 grid grid-cols-1 gap-4 text-[13.5px] text-text-body sm:grid-cols-2">
+          <div className="mt-5 text-[13.5px] text-text-body">
             <div className="rounded-lg border border-border bg-bg-muted px-4 py-3">
               <div className="font-heading text-xs uppercase tracking-[0.06em] text-text-muted">Email</div>
               <div className="mt-1">info@shabakkat.com</div>
-            </div>
-            <div className="rounded-lg border border-border bg-bg-muted px-4 py-3">
-              <div className="font-heading text-xs uppercase tracking-[0.06em] text-text-muted">Business hours</div>
-              <div className="mt-1">Sun – Thu, 8:00 AM – 5:00 PM (GMT+3)</div>
             </div>
           </div>
           <PhotoPlaceholder label="MAP — Kuwait head office" className="mt-5 h-[220px] rounded-xl" />
