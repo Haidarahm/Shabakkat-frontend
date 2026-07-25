@@ -35,8 +35,13 @@ export default function Header() {
               className="object-contain object-center"
             />
           </span>
-          <span className="font-heading text-[20px] font-semibold uppercase tracking-[0.06em] text-[#F18A00] sm:text-[24px] lg:text-[28px]">
-            Shabakkat
+          <span
+            aria-hidden
+            className="font-heading text-[20px] font-semibold uppercase tracking-[0.06em] sm:text-[24px] lg:text-[28px]"
+          >
+            <span className="text-navy">Shaba</span>
+            <span className="text-[#F18A00]">kk</span>
+            <span className="text-navy">at</span>
           </span>
         </Link>
 
