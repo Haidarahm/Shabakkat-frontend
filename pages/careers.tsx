@@ -12,6 +12,15 @@ import { fetchOpenings, fromBackend } from "@/lib/backend";
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
+const CAREERS_HERO_IMAGES = [
+  "/images/careers/careers-hero-1.jpg",
+  "/images/careers/careers-hero-2.jpg",
+  "/images/careers/careers-hero-3.jpg",
+  "/images/careers/careers-hero-4.jpg",
+  "/images/careers/careers-hero-5.jpg",
+  "/images/careers/careers-hero-6.jpg",
+];
+
 interface CareersProps {
   openings: Opening[];
 }
@@ -26,7 +35,8 @@ export default function Careers({ openings }: CareersProps) {
     >
       <Hero
         photoLabel="PHOTO — Shabakkat team collaboration, full-bleed"
-        heightClassName="h-[240px] sm:h-[270px] lg:h-[300px]"
+        photoSrcs={CAREERS_HERO_IMAGES}
+        heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
         align="bottom"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
@@ -62,8 +72,8 @@ export default function Careers({ openings }: CareersProps) {
 
         <PhotoPlaceholder
           label="PHOTO — Shabakkat field engineering team"
-          src="/images/projects/kuwait-rollout-crew.jpg"
-          alt="Shabakkat engineering team on site"
+          src="/images/careers/careers-hero-3.jpg"
+          alt="Engineers collaborating on technical infrastructure"
           className="h-[240px] rounded-xl sm:h-[300px] lg:h-[380px]"
           sizes="(max-width: 1024px) 100vw, 50vw"
         />

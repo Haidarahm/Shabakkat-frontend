@@ -36,7 +36,13 @@ export default function CareersApply({ openings }: ApplyProps) {
     >
       <Hero
         photoLabel="PHOTO — Shabakkat team collaboration, full-bleed"
-        heightClassName="h-[240px] sm:h-[270px] lg:h-[300px]"
+        photoSrcs={[
+          "/images/careers/careers-hero-1.jpg",
+          "/images/careers/careers-hero-2.jpg",
+          "/images/careers/careers-hero-4.jpg",
+          "/images/careers/careers-hero-5.jpg",
+        ]}
+        heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
       >
         <div className="mx-auto mb-4 h-[3px] w-[60px] bg-red" />
         <AnimatedTitle
