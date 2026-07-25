@@ -21,6 +21,15 @@ import {
 import AnimatedTitle from "@/components/ui/AnimatedTitle";
 import AnimatedParagraph from "@/components/ui/AnimatedParagraph";
 
+const CONTACT_HERO_IMAGES = [
+  "/images/contact/contact-hero-1.jpg",
+  "/images/contact/contact-hero-2.jpg",
+  "/images/contact/contact-hero-3.jpg",
+  "/images/contact/contact-hero-4.jpg",
+  "/images/contact/contact-hero-5.jpg",
+  "/images/contact/contact-hero-6.jpg",
+];
+
 interface ContactProps {
   headOffice: OfficeLocation;
   regionalOffices: OfficeLocation[];
@@ -36,7 +45,8 @@ export default function Contact({ headOffice, regionalOffices }: ContactProps) {
     >
       <Hero
         photoLabel="PHOTO — Shabakkat corporate office, full-bleed"
-        heightClassName="h-[240px] sm:h-[270px] lg:h-[300px]"
+        photoSrcs={CONTACT_HERO_IMAGES}
+        heightClassName="h-[300px] sm:h-[330px] lg:h-[360px]"
         align="bottom"
       >
         <div className="mb-4 h-[3px] w-[60px] bg-red" />
