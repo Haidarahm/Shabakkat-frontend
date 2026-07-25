@@ -32,23 +32,13 @@ export const timeline: TimelineEntry[] = [
     photoSrc: "/images/projects/engineers-rollout-site.jpg",
   },
   {
-    slug: "zain-sudan-ftk-site-build",
-    year: "2007",
-    engagement: "Zain Sudan",
-    service: "FTK Site Build & Managed Services",
-    status: "Completed",
-    color: "red",
-    side: "left",
-    photoSrc: "/images/projects/turnkey-network-deployment.jpg",
-  },
-  {
     slug: "zain-ghana-ftk-site-build",
     year: "2008",
     engagement: "Zain Ghana",
     service: "FTK Site Build & Managed Services",
     status: "Completed",
     color: "navy",
-    side: "right",
+    side: "left",
     photoSrc: "/images/projects/kuwait-rollout-crew.jpg",
   },
   {
@@ -58,7 +48,7 @@ export const timeline: TimelineEntry[] = [
     service: "Managed Services, NOC, Field Operations",
     status: "Running",
     color: "cyan",
-    side: "left",
+    side: "right",
     photoSrc: "/images/projects/kuwait-rollout-crew.jpg",
   },
   {
@@ -68,7 +58,7 @@ export const timeline: TimelineEntry[] = [
     service: "NOC, Field Maintenance, Core Operations, L2 Support",
     status: "Running",
     color: "cyan",
-    side: "right",
+    side: "left",
     photoSrc: "/images/projects/iraq-network-site.jpg",
   },
   {
@@ -78,7 +68,7 @@ export const timeline: TimelineEntry[] = [
     service: "FTK, Civil Works, Towers, Site Build",
     status: "Completed / Ongoing by Country",
     color: "red",
-    side: "left",
+    side: "right",
     photoSrc: "/images/projects/turnkey-network-deployment.jpg",
   },
   {
@@ -88,7 +78,7 @@ export const timeline: TimelineEntry[] = [
     service: "Multi-Vendor NOC Operations",
     status: "Running",
     color: "cyan",
-    side: "right",
+    side: "left",
     photoSrc: "/images/projects/multi-vendor-noc.jpg",
   },
   {
@@ -98,7 +88,7 @@ export const timeline: TimelineEntry[] = [
     service: "Benchmarking, Optimization, QoS Analysis",
     status: "Completed",
     color: "red",
-    side: "left",
+    side: "right",
     photoSrc: "/images/projects/radio-benchmark.jpg",
   },
   {
@@ -108,7 +98,7 @@ export const timeline: TimelineEntry[] = [
     service: "PMO, Program Management, Engineering Resources",
     status: "Running",
     color: "navy",
-    side: "right",
+    side: "left",
     photoSrc: "/images/projects/engineering-team-onsite.jpg",
   },
   {
@@ -118,7 +108,7 @@ export const timeline: TimelineEntry[] = [
     service: "Field Maintenance, Site Management, E&M",
     status: "Running",
     color: "cyan",
-    side: "left",
+    side: "right",
     photoSrc: "/images/projects/iraq-field-operations.jpg",
   },
   {
@@ -128,7 +118,7 @@ export const timeline: TimelineEntry[] = [
     service: "Project Governance, Executive Reporting, PMO",
     status: "Running",
     color: "navy",
-    side: "right",
+    side: "left",
     photoSrc: "/images/projects/pmo-governance.jpg",
   },
   {
@@ -138,7 +128,7 @@ export const timeline: TimelineEntry[] = [
     service: "Engineering, Advisory, Data Centers, Infrastructure",
     status: "Running",
     color: "red",
-    side: "left",
+    side: "right",
     photoSrc: "/images/projects/data-center-expansion.jpg",
   },
 ];
