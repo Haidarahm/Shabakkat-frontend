@@ -1,12 +1,27 @@
 import type { ReactNode } from "react";
-import NetworkGraphic from "@/components/ui/NetworkGraphic";
 
 export default function HomeHero({ children }: { children: ReactNode }) {
   return (
     <div className="relative overflow-hidden bg-navy-dark">
-      <div className="section-px relative z-10 grid grid-cols-1 items-center gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8 lg:py-28">
-        <div className="text-center lg:text-left">{children}</div>
-        <NetworkGraphic className="hidden h-auto w-full max-w-[440px] justify-self-end lg:block" />
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/hero-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(8,30,47,0.55) 0%, rgba(8,30,47,0.78) 55%, rgba(8,30,47,0.88) 100%)",
+        }}
+      />
+      <div className="section-px relative z-10 flex min-h-[420px] items-center py-16 sm:min-h-[480px] sm:py-20 lg:min-h-[560px] lg:py-28">
+        <div className="w-full max-w-[720px] text-center lg:text-left">{children}</div>
       </div>
     </div>
   );
