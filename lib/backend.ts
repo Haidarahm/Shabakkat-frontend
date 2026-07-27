@@ -15,7 +15,7 @@ import type { FootprintLocation, OfficeLocation } from "@/data/offices";
  * Used only from getStaticProps / API routes — never from the browser
  * (keeps CSP connect-src 'self' intact).
  */
-const BASE_URL = process.env.BACKEND_API_URL ?? "http://127.0.0.1:8000/api";
+const BASE_URL = process.env.BACKEND_API_URL ?? "https://back.shabakkat.com/api";
 
 async function getJson<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE_URL}${path}`, {
